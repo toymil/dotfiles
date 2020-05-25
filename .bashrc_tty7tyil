@@ -107,16 +107,21 @@ alias "demo_prompt"="export PS1=\"\${demo_prompt}\""
 alias "sudo"="sudo "
 
 alias "ll"="\
-LC_COLLATE=C \
+LC_COLLATE=en_US.UTF-8 \
 ls \
 -aFhl \
---color \
+--color=always \
 --group-directories-first \
 --show-control-chars\
 "
 
 # vim related alias
-alias "delete-vimundo"="find / -type f -name '.*.un~' -exec rm -i {} \;"
+alias "delete-vimundo"="\
+find / \
+\( -not -readable -prune \) \
+-o \
+\( -type f -name '.*.un~' -exec rm -i {} \; \)\
+"
 
 ## update alias
 # apt update
