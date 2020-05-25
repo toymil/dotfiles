@@ -1,0 +1,156 @@
+################################################################################
+#                            CUSTOMIZE BASH PROMPT                             #
+################################################################################
+
+# `\[` - begin sequence of non-printing characters
+# `\]` - end sequence of non-printing characters
+# used for bash to correctly calculates the size of the prompt
+bnp="\["
+enp="\]"
+
+b_title="${bnp}\e]0;"
+e_title="\a${enp}"
+b_command="\$("
+e_command=")"
+
+# more information: https://en.wikipedia.org/wiki/ANSI_escape_code
+# color sequence format:`[<PREFIX>];[<COLOR>];[<TEXT DECORATION>]`
+#   prefix 256 colors foreground: `38;5`
+#   prefix 256 colors background: `48;5`
+#   decoration bold: `1`
+#   decoration underline: `4`
+bcs="${bnp}\e["  # begin control sequence
+ecs="m${enp}"  # end control sequence
+reset_color="${bcs}0${ecs}"
+
+# git
+export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWSTASHSTATE=1
+export GIT_PS1_SHOWUNTRACKEDFILES=1
+export GIT_PS1_SHOWUPSTREAM="verbose name"
+export GIT_PS1_STATESEPARATOR=" | "
+export GIT_PS1_SHOWCOLORHINTS=1
+
+command_number="\#"
+date_time="${b_command}date +'%Y-%m-%d %H:%M:%S %:z'${e_command}"
+directory="\w"
+git_info_line="${b_command}__git_ps1 '(%s) '${e_command}"
+hostname="\h"
+terminal="\l"
+username="\u"
+
+# normal prompt
+title="\
+${b_title}\
+${username}@${hostname} {${terminal}} [${directory}]\
+${e_title}\
+"
+
+line_1="\
+${reset_color}\n\
+${bcs}38;5;213;1${ecs}> \
+${bcs}38;5;81${ecs}${username} \
+${bcs}38;5;7${ecs}@ \
+${bcs}38;5;84${ecs}${hostname} \
+${reset_color}${bcs}38;5;7${ecs}{${terminal}} \
+${bcs}38;5;15${ecs}[${date_time}] \
+${bcs}38;5;7${ecs}In \
+${bcs}38;5;15${ecs}[${command_number}] \
+${bcs}38;5;7${ecs}:\
+${reset_color}\n\
+"
+line_2="\
+${bcs}38;5;213;1${ecs}- \
+${reset_color}${bcs}1${ecs}${git_info_line}\
+${reset_color}${bcs}38;5;229${ecs}${directory}\
+${reset_color}\n\
+"
+line_3="\
+${bcs}38;5;202;1${ecs}\\$ \
+${reset_color}${bcs}38;5;253${ecs}\
+"
+
+normal_prompt="${title}${line_1}${line_2}${line_3}"
+
+# demo prompt
+date_time_demo="${b_command}date --utc +'%Y-%m-%d %H:%M Z'${e_command}"
+title_demo="${b_title}# DEMO MODE #${e_title}"
+
+line_1_demo="\
+${reset_color}\n\
+${bcs}38;5;213;1${ecs}> \
+${reset_color}${bcs}38;5;15${ecs}[${date_time_demo}] \
+${bcs}38;5;7${ecs}In \
+${bcs}38;5;15${ecs}[${command_number}] \
+${bcs}38;5;7${ecs}:\
+${reset_color}\n\
+"
+
+demo_prompt="${title_demo}${line_1_demo}${line_3}"
+
+# set prompt
+export PS1="${normal_prompt}"
+alias "normal_prompt"="export PS1=\"\${normal_prompt}\""
+alias "demo_prompt"="export PS1=\"\${demo_prompt}\""
+
+
+################################################################################
+#                                 CUSTOM ALIAS                                 #
+################################################################################
+
+# "
+# The first word of each simple command, if unquoted, is checked to see if it
+# has an alias. … If the last character of the alias value is a blank, then the
+# next command word following the alias is also checked for alias expansion.
+# " - quote from https://www.gnu.org/software/bash/manual/bash.html#Aliases
+# Therefore, to make alias work after sudo, you need the following alias:
+alias "sudo"="sudo "
+
+alias "ll"="\
+LC_COLLATE=C \
+ls \
+-aFhl \
+--color \
+--group-directories-first \
+--show-control-chars\
+"
+
+# vim related alias
+alias "delete-vimundo"="find / -type f -name '.*.un~' -exec rm -i {} \;"
+
+## update alias
+# apt update
+alias "apt-update"="\
+apt-get update &&
+apt-get -y upgrade &&
+apt-get -y dist-upgrade &&
+apt-get -y install -f
+"
+alias "apt-clean"="\
+apt-get autoremove &&
+apt-get clean &&
+dpkg -l | grep '^rc' | awk '{print \$2}' | xargs dpkg --purge
+"
+
+# npm update
+alias "npm-update"="npm update -g"
+
+# conda update
+alias "conda-update"="conda update --all"
+alias "conda-clean"="conda clean --all"
+
+# vim update
+alias "vim-update"="vim +PluginUpdate +qall"
+alias "vim-ycm-com"="\
+cd ~/.vim/bundle/YouCompleteMe &&
+python3 ./install.py --clang-completer &&
+cd -
+"
+
+# all update
+alias "all-update"="\
+apt-update &&
+npm-update &&
+conda-update &&
+vim-update
+"
