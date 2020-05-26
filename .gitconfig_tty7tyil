@@ -17,6 +17,7 @@
     ada = add --all
     ncommit = commit -a --allow-empty-message -m ''
     mnc = merge --no-commit
+    mff = merge --ff-only
     pff = pull --ff-only
     skip-add = update-index --skip-worktree
     skip-remove = update-index --no-skip-worktree
