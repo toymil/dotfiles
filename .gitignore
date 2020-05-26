@@ -1,0 +1,5 @@
+# vim temp file
+.*.swp
+
+# vim undo file
+*.un~
