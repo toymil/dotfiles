@@ -1,0 +1,19 @@
+[core]
+    ignorecase = false
+    editor = vim
+    safecrlf = true
+    autocrlf = input
+[merge]
+    ff = false
+[alias]
+    lg = log --all --decorate=short --author-date-order --graph --date=format:'%Y-%m-%d' --format=format:'%C(bold reverse 167) %h %C(120) %ad %C(no-reverse) > %Creset%s%C(bold 229)%d%C(81) <%an>'
+    lgd = log --all --decorate=short --author-date-order --graph --date=format:'%Y-%m-%d' --stat --full-diff --format=format:'%C(bold reverse 167) %h %C(120) %ad %C(no-reverse) > %Creset%s%C(bold 229)%d%C(81) <%an>%n'
+    lgf = log --all --decorate=full --author-date-order --graph --date=format:'%Y-%m-%d %H:%M:%S %z' --format=format:'%C(bold 167)Commit     :%C(reverse) %H %C(no-reverse 229)%d%n%C(bold 120)Author Date:%C(reverse) %ad %C(no-reverse) (%ar)%n%C(bold 229)Parent     :%C(reverse) %P %C(no-reverse)%n%C(bold 81)Author     : %an <%ae>%n%n%B%n'
+    lgdf = lgf -p --full-diff
+    ada = add --all
+    ncommit = commit -a --allow-empty-message -m ''
+    mnc = merge --no-commit
+    pff = pull --ff-only
+    skip-add = update-index --skip-worktree
+    skip-remove = update-index --no-skip-worktree
+    skip-list = ls-files -v . | grep ^S
