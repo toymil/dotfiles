@@ -126,15 +126,15 @@ find / \
 ## update alias
 # apt update
 alias "apt-update"="\
-apt-get update &&
-apt-get -y upgrade &&
-apt-get -y dist-upgrade &&
-apt-get -y install -f
+apt-get update \
+&& apt-get -y upgrade \
+&& apt-get -y dist-upgrade \
+&& apt-get -y install -f\
 "
 alias "apt-clean"="\
-apt-get autoremove &&
-apt-get clean &&
-dpkg -l | grep '^rc' | awk '{print \$2}' | xargs dpkg --purge
+apt-get autoremove \
+&& apt-get clean \
+&& dpkg -l | grep '^rc' | awk '{print \$2}' | xargs dpkg --purge\
 "
 
 # npm update
@@ -147,15 +147,15 @@ alias "conda-clean"="conda clean --all"
 # vim update
 alias "vim-update"="vim +PluginUpdate +qall"
 alias "vim-ycm-com"="\
-cd ~/.vim/bundle/YouCompleteMe &&
-python3 ./install.py --clang-completer &&
-cd -
+cd ~/.vim/bundle/YouCompleteMe \
+&& python3 ./install.py --clang-completer \
+&& cd -\
 "
 
 # all update
 alias "all-update"="\
-apt-update &&
-npm-update &&
-conda-update &&
-vim-update
+apt-update \
+&& npm-update \
+&& conda-update \
+&& vim-update\
 "
