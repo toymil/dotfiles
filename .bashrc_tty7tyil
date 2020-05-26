@@ -114,6 +114,7 @@ ls \
 --group-directories-first \
 --show-control-chars\
 "
+alias "llv"="ll -v"
 
 # vim related alias
 alias "delete-vimundo"="\
