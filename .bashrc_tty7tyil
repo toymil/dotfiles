@@ -116,6 +116,9 @@ ls \
 "
 alias "llv"="ll -v"
 
+alias "digc"="dig +all +nocookie"
+alias "digcs"="digc +short"
+
 # vim related alias
 alias "delete-vimundo"="\
 find / \
