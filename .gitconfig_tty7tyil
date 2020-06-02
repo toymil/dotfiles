@@ -6,9 +6,18 @@
 [merge]
     ff = false
 [pager]
-    log = diff-highlight | less
-    show = diff-highlight | less
-    diff = diff-highlight | less
+    ; ; `diff-highlight` might not be available on every platform, therefore it is
+    ; ; recommended to set these pager locally.
+    ; ;
+    ; ; You can use the following commands:
+    ; ; ```
+    ; ; git config --global pager.log 'diff-highlight | less'
+    ; ; git config --global pager.show 'diff-highlight | less'
+    ; ; git config --global pager.diff 'diff-highlight | less'
+    ; ; ```
+    ; log = diff-highlight | less
+    ; show = diff-highlight | less
+    ; diff = diff-highlight | less
 [alias]
     lg = log --all --decorate=short --author-date-order --graph --date=format:'%Y-%m-%d' --format=format:'%C(bold reverse 167) %h %C(120) %ad %C(no-reverse) > %Creset%s%C(bold 229)%d%C(81) <%an>'
     lgd = log --all --decorate=short --author-date-order --graph --date=format:'%Y-%m-%d' --stat --full-diff --format=format:'%C(bold reverse 167) %h %C(120) %ad %C(no-reverse) > %Creset%s%C(bold 229)%d%C(81) <%an>%n'
