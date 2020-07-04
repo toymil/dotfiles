@@ -106,14 +106,15 @@ alias "demo_prompt"="export PS1=\"\${demo_prompt}\""
 # Therefore, to make alias work after sudo, you need the following alias:
 alias "sudo"="sudo "
 
-alias "ll"="\
-LC_COLLATE=en_US.UTF-8 \
+ll="\
 ls \
 -aFhl \
 --color=always \
 --group-directories-first \
 --show-control-chars\
 "
+alias "ll"="LC_COLLATE=en_US.UTF-8 ${ll}"
+alias "llc"="LC_COLLATE=C ${ll}"
 alias "llv"="ll -v"
 
 alias "digc"="dig +all +nocookie"
