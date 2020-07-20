@@ -19,8 +19,8 @@
     ; show = diff-highlight | less
     ; diff = diff-highlight | less
 [alias]
-    lg = log --all --decorate=short --author-date-order --graph --date=format:'%Y-%m-%d' --format=format:'%C(bold reverse 167) %h %C(120) %ad %C(no-reverse) > %Creset%s%C(bold 229)%d%C(81) <%an>'
-    lgd = log --all --decorate=short --author-date-order --graph --date=format:'%Y-%m-%d' --stat --full-diff --format=format:'%C(bold reverse 167) %h %C(120) %ad %C(no-reverse) > %Creset%s%C(bold 229)%d%C(81) <%an>%n'
+    lg = log --all --decorate=short --author-date-order --graph --date=format:'%Y-%m-%d' --format=format:'%>|(9)%C(bold reverse 167) %h %C(120) %ad %C(no-reverse) > %Creset%<(65,trunc)%s%C(bold 229)%d%C(81) <%an>'
+    lgd = log --all --decorate=short --author-date-order --graph --date=format:'%Y-%m-%d' --stat --full-diff --format=format:'%C(bold reverse 167) %h %C(120) %ad %C(no-reverse) > %Creset%<(65,trunc)%s%C(bold 229)%d%C(81) <%an>%n'
     lgf = log --all --decorate=full --author-date-order --graph --date=format:'%Y-%m-%d %H:%M:%S %z' --format=format:'%C(bold 167)Commit     :%C(reverse) %H %C(no-reverse 229)%d%n%C(bold 120)Author Date:%C(reverse) %ad %C(no-reverse) (%ar)%n%C(bold 229)Parent     :%C(reverse) %P %C(no-reverse)%n%C(bold 81)Author     : %an <%ae>%n%n%B%n'
     lgfd = lgf -p --full-diff
     ada = add --all
