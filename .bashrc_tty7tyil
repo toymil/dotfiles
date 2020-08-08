@@ -131,14 +131,14 @@ find / \
 ## update alias
 # apt update
 alias "apt-update"="\
-apt-get update \
-&& apt-get -y upgrade \
-&& apt-get -y dist-upgrade \
-&& apt-get -y install -f\
+apt update \
+&& apt -y upgrade \
+&& apt -y full-upgrade \
+&& apt -y install -f\
 "
 alias "apt-clean"="\
-apt-get autoremove \
-&& apt-get clean \
+apt autoremove \
+&& apt clean \
 && dpkg -l | grep '^rc' | awk '{print \$2}' | xargs dpkg --purge\
 "
 
