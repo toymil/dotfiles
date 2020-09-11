@@ -205,6 +205,7 @@ autocmd WinEnter * call UnmapWindowOperation()
 " #                        SOURCE BUNDLES CONFIGURATION                        #
 " ##############################################################################
 
-if filereadable(expand('~/.vimrc_tty7tyil_bundles'))
-    source ~/.vimrc_tty7tyil_bundles
+let path_vimrc_tty7tyil_bundles = fnamemodify(resolve(expand('<sfile>:p')), ':h') . '/.vimrc_tty7tyil_bundles'
+if filereadable(path_vimrc_tty7tyil_bundles)
+    execute 'source ' . path_vimrc_tty7tyil_bundles
 endif

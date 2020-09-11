@@ -4,27 +4,26 @@
 
 def insert_bashrc():
     # # Recommend to put this at the end of user `.bashrc`.
-    # path_to_file='/path/to/file'
-    # if [ -f "${path_to_file}" ]; then
-    #     source "${path_to_file}"
+    # path_bashrc_tty7tyil='/path/to/file'
+    # if [ -f "${path_bashrc_tty7tyil}" ]; then
+    #     source "${path_bashrc_tty7tyil}"
     # fi
     pass
 
 
 def insert_gitconfig():
     # [include]
-    # ; !! POSITION OF THIS SECTION MATTERS !!
-    # ;
-    # ; The included config key will be overrode
-    # ; by later key with the same name!
-    # ;
-    # ; Therefore it is recommended to put this
-    # ; section at the end of global `.gitconfig`.
+    # ; Recommended to put this section at the end of global `.gitconfig`.
     #     path = /path/to/file
     pass
 
 
 def insert_vimrc():
+    # " Recommended to put this at the end of user `.vimrc`.
+    # let path_vimrc_tty7tyil = '/path/to/file'
+    # if filereadable(path_vimrc_tty7tyil)
+    #     execute 'source ' . path_vimrc_tty7tyil
+    # endif
     pass
 
 
