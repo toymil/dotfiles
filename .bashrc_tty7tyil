@@ -183,7 +183,7 @@ rsync \
 --preallocate \
 --no-compress\
 "
-alias "cncp-nas"="cncp --no-group --no-owner --safe-links --info=skip --chmod=D755,F644"
+alias "cncp-nas"="cncp --verbose --no-group --no-owner --safe-links --info=skip --chmod=D755,F644"
 
 alias "digc"="dig +all +nocookie"
 alias "digcs"="digc +short"
