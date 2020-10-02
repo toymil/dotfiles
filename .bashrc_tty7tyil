@@ -165,7 +165,7 @@ alias "llv"="ll -v"
 #   --safe-links            ignore symlinks that point outside the tree
 #   --keep-dirlinks         treat symlinked dir on receiver as dir
 #
-#   --chmod=644
+#   --chmod=D0755,F0644
 #   --chown=USER:GROUP
 
 # custom **normal** copy using rsync
@@ -183,7 +183,7 @@ rsync \
 --preallocate \
 --no-compress\
 "
-alias "cncp-nas"="cncp --verbose --no-group --no-owner --safe-links --info=skip --chmod=D755,F644"
+alias "cncp-nas"="cncp --verbose --no-group --no-owner --safe-links --info=skip --chmod=D0755,F0644"
 
 alias "digc"="dig +all +nocookie"
 alias "digcs"="digc +short"
