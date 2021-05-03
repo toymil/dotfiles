@@ -11,6 +11,13 @@ def insert_bashrc():
     pass
 
 
+def insert_powershell_profile():
+    # # The path of PowerShell profiles file is given by the `$profile` variable,
+    # # remember to use the actual path on your machine.
+    # . ~/tty7tyil_dotfiles/PowerShell_profile_tty7tyil.ps1
+    pass
+
+
 def insert_gitconfig():
     # [include]
     # ; Recommended to put this section at the end of global `.gitconfig`.
