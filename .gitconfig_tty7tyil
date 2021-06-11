@@ -4,8 +4,10 @@
     safecrlf = true
     autocrlf = input
 
+
 [merge]
     ff = false
+
 
 [pager]
     ; ; `diff-highlight` might not be available on every platform, therefore it is
@@ -20,6 +22,7 @@
     ; log = diff-highlight | less
     ; show = diff-highlight | less
     ; diff = diff-highlight | less
+
 
 [alias]
     lg = log --decorate=short --author-date-order --graph --date=format:'%Y-%m-%d' --format=format:'%>|(9)%C(bold reverse 167) %h %C(120) %ad %C(no-reverse) > %Creset%<(65,trunc)%s%C(bold 229)%d%C(81) <%an>'
