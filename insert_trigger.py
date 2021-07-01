@@ -11,6 +11,11 @@ def insert_bashrc():
     pass
 
 
+def insert_inputrc():
+    # $include /path/to/file
+    pass
+
+
 def insert_powershell_profile():
     # # The path of PowerShell profiles file is given by the `$profile` variable,
     # # remember to use the actual path on your machine.
