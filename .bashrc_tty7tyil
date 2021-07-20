@@ -125,6 +125,10 @@ alias "ll"="LC_COLLATE=en_US.UTF-8 ${ll}"
 alias "llc"="LC_COLLATE=C ${ll}"
 alias "llv"="ll -v"
 
+alias "ct"="tree -aFC --dirsfirst"
+alias "ctp"="ct -fpugi"
+alias "cts"="ct -sh --du"
+
 # rsync
 #   --verbose
 #   --human-readable
