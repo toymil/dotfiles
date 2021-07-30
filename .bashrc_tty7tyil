@@ -220,28 +220,12 @@ apt autoremove \
 && dpkg -l | grep '^rc' | awk '{print \$2}' | xargs dpkg --purge\
 "
 
-# npm update
-alias "npm-update"="npm update -g"
-
 # conda update
 alias "conda-update"="conda update --all"
 alias "conda-clean"="conda clean --all"
 
 # vim update
 alias "vim-update"="vim +PluginUpdate +qall"
-alias "vim-ycm-com"="\
-cd ~/.vim/bundle/YouCompleteMe \
-&& python3 ./install.py --clang-completer \
-&& cd -\
-"
-
-# all update
-alias "all-update"="\
-apt-update \
-&& npm-update \
-&& conda-update \
-&& vim-update\
-"
 
 
 ################################################################################
