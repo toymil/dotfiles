@@ -187,7 +187,8 @@ rsync \
 --preallocate \
 --no-compress\
 "
-alias "crs-nas"="crs --verbose --no-group --no-owner --safe-links --info=skip --chmod=D0755,F0644"
+alias "crs-remote"="crs --verbose --info=skip --safe-links --no-perms --no-group --no-owner"
+alias "crs-remote-644"="crs-remote --chmod=D0755,F0644"
 
 alias "cdig"="dig +all +nocookie"
 alias "cdigs"="digc +short"
