@@ -189,8 +189,8 @@ rsync \
 "
 alias "crs-nas"="crs --verbose --no-group --no-owner --safe-links --info=skip --chmod=D0755,F0644"
 
-alias "digc"="dig +all +nocookie"
-alias "digcs"="digc +short"
+alias "cdig"="dig +all +nocookie"
+alias "cdigs"="digc +short"
 
 # show local git repositories
 alias "show-repo"="findc / -type d -name '.git'"
