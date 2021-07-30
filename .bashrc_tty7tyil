@@ -173,7 +173,7 @@ alias "cts"="ct -sh --du"
 #   --chown=USER:GROUP
 
 # custom **normal** copy using rsync
-alias "cncp"="\
+alias "crs"="\
 rsync \
 --human-readable \
 --info=progress2 \
@@ -187,7 +187,7 @@ rsync \
 --preallocate \
 --no-compress\
 "
-alias "cncp-nas"="cncp --verbose --no-group --no-owner --safe-links --info=skip --chmod=D0755,F0644"
+alias "crs-nas"="crs --verbose --no-group --no-owner --safe-links --info=skip --chmod=D0755,F0644"
 
 alias "digc"="dig +all +nocookie"
 alias "digcs"="digc +short"
