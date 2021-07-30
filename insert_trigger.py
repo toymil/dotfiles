@@ -4,9 +4,9 @@
 
 def insert_bashrc():
     # # Recommend to put this at the end of user `.bashrc`.
-    # path_bashrc_tty7tyil='/path/to/file'
-    # if [ -f "${path_bashrc_tty7tyil}" ]; then
-    #     source "${path_bashrc_tty7tyil}"
+    # path_tty7tyil_bashrc='/path/to/file'
+    # if [ -f "${path_tty7tyil_bashrc}" ]; then
+    #     source "${path_tty7tyil_bashrc}"
     # fi
     pass
 
@@ -32,9 +32,9 @@ def insert_gitconfig():
 
 def insert_vimrc():
     # " Recommended to put this at the end of user `.vimrc`.
-    # let path_vimrc_tty7tyil = '/path/to/file'
-    # if filereadable(path_vimrc_tty7tyil)
-    #     execute 'source ' . path_vimrc_tty7tyil
+    # let path_tty7tyil_vimrc = '/path/to/file'
+    # if filereadable(path_tty7tyil_vimrc)
+    #     execute 'source ' . path_tty7tyil_vimrc
     # endif
     pass
 
