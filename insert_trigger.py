@@ -5,7 +5,7 @@
 def insert_bashrc():
     # # Recommend to put this at the end of user `.bashrc`.
     # path_tty7tyil_bashrc='/path/to/file'
-    # if [ -f "${path_tty7tyil_bashrc}" ]; then
+    # if [ -f "${path_tty7tyil_bashrc}" ] ; then
     #     source "${path_tty7tyil_bashrc}"
     # fi
     pass
