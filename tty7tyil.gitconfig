@@ -33,6 +33,10 @@
 
     ada = add --all
 
+    skip-add = update-index --skip-worktree
+    skip-remove = update-index --no-skip-worktree
+    skip-list = ls-files -v . | grep ^S
+
     cm = commit -m
     nc = commit --allow-empty-message -m ''
     cms = commit --gpg-sign -m
@@ -42,6 +46,4 @@
     mff = merge --ff-only
     pff = pull --ff-only
 
-    skip-add = update-index --skip-worktree
-    skip-remove = update-index --no-skip-worktree
-    skip-list = ls-files -v . | grep ^S
+    clbl = clone --filter=blob:none
