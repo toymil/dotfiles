@@ -121,11 +121,11 @@ ls \
 --group-directories-first \
 --show-control-chars\
 "
-alias "ll"="LC_COLLATE=en_US.UTF-8 ${ll}"
-alias "llc"="LC_COLLATE=C ${ll}"
-alias "llv"="ll -v"
+alias "ll"="LC_COLLATE=C.UTF-8 ${ll}"
+alias "lle"="LC_COLLATE=en_US.utf8 ${ll}"
+alias "llz"="LC_COLLATE=zh_CN.utf8 ${ll}"
 
-alias "ct"="tree -aFC --dirsfirst"
+alias "ct"="LC_COLLATE=C.UTF-8 tree -aFC --dirsfirst"
 alias "ctp"="ct -fpugi"
 alias "cts"="ct -sh --du"
 
