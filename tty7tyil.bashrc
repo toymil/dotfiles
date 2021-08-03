@@ -114,14 +114,24 @@ shopt -s dotglob
 # Therefore, to make alias work after sudo, you need the following alias:
 alias "sudo"="sudo "
 
-ll="\
+ls_time_style_short="+\
+%Y-%m-%d %H %:::z
+--%m-%d %H:%M %:::z\
+"
+ls_time_style_long="+\
+%Y-%m-%d %H:%M:%S %:z
+   --%m-%d %H:%M:%S %:z\
+"
+ls_base="\
 ls \
 -aFhl \
 --color=always \
---group-directories-first \
---show-control-chars\
+--group-directories-first\
 "
+ll="${ls_base} -GN --time-style='${ls_time_style_short}'"
+lll="${ls_base} -i --time-style='${ls_time_style_long}'"
 alias "ll"="LC_COLLATE=C.UTF-8 ${ll}"
+alias "lll"="LC_COLLATE=C.UTF-8 ${lll}"
 alias "lle"="LC_COLLATE=en_US.utf8 ${ll}"
 alias "llz"="LC_COLLATE=zh_CN.utf8 ${ll}"
 
