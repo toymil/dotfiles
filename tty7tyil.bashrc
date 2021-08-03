@@ -201,7 +201,7 @@ alias "whi"="cat /etc/resolv.conf | grep nameserver | awk '{ print \$2 }'"
 
 # vim related alias
 alias "delete-vimundo"="\
-find / \
+find ./ \
 \( -not -readable -prune \) \
 -o \
 \( -type f -name '.*.un~' -exec rm -i {} \; \)\
