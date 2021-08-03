@@ -128,7 +128,7 @@ ls \
 --color=always \
 --group-directories-first\
 "
-ll="${ls_base} -GN --time-style='${ls_time_style_short}'"
+ll="${ls_base} -AGN --time-style='${ls_time_style_short}'"
 lll="${ls_base} -i --time-style='${ls_time_style_long}'"
 alias "ll"="LC_COLLATE=C.UTF-8 ${ll}"
 alias "lll"="LC_COLLATE=C.UTF-8 ${lll}"
