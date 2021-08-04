@@ -169,6 +169,17 @@ if command -v bat &> /dev/null ; then
 fi
 
 #===========================================================
+#|               modernize/customize `find`               ||
+
+if [ -x "$(command -v fdfind)" ] ; then
+    alias "fd"="fdfind"
+fi
+
+if command -v fd &> /dev/null ; then
+    alias "cf"="fd -HIg"
+fi
+
+#===========================================================
 #|           modernize/customize `cp` et. `scp`           ||
 
 # rsync
