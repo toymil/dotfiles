@@ -204,7 +204,6 @@ fi
 #   --chmod=D0755,F0644
 #   --chown=USER:GROUP
 
-# custom **normal** copy using rsync
 alias "crs"="\
 rsync \
 --human-readable \
@@ -219,7 +218,17 @@ rsync \
 --preallocate \
 --no-compress\
 "
-alias "crs-remote"="crs --verbose --info=skip --safe-links --no-perms --no-group --no-owner"
+
+alias "crs-remote"="\
+crs \
+--verbose \
+--info=skip \
+--safe-links \
+--no-perms \
+--no-group \
+--no-owner\
+"
+
 alias "crs-remote-644"="crs-remote --chmod=D0755,F0644"
 
 alias "cdig"="dig +all +nocookie"
