@@ -154,6 +154,12 @@ if [ -x "$(command -v exa)" ] ; then
     alias "etp"="et -gl --color-scale --time-style=iso"
 fi
 
+if [ -x "$(command -v bat)" ] ; then
+    alias "cat"="bat -p"
+elif [ -x "$(command -v batcat)" ] ; then
+    alias "cat"="batcat -p"
+fi
+
 # rsync
 #   --verbose
 #   --human-readable
