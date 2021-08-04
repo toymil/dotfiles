@@ -143,15 +143,15 @@ alias "ctp"="ct -fpugi"
 alias "cts"="ct -sh --du"
 
 if [ -x "$(command -v exa)" ] ; then
-alias   "e"="exa -aF --color=always --group-directories-first"
-# exa does not support the `+FORMAT` time style yet (TODO)
-alias  "el"="e -l --color-scale --time-style=iso"
-alias "ell"="e -agHil --color-scale --time-style=long-iso"
-alias  "et"="e -T"
-# # `--no-filesize` and `--no-time` was added in v0.10.0, which is not yet
-# # distributed to debian repository (TODO)
-# alias "etp"="et -gl --no-filesize --no-time"
-alias "etp"="et -gl --color-scale --time-style=iso"
+    alias   "e"="exa -aF --color=always --group-directories-first"
+    # exa does not support the `+FORMAT` time style yet (TODO)
+    alias  "el"="e -l --color-scale --time-style=iso"
+    alias "ell"="e -agHil --color-scale --time-style=long-iso"
+    alias  "et"="e -T"
+    # # `--no-filesize` and `--no-time` was added in v0.10.0, which is not yet
+    # # distributed to debian repository (TODO)
+    # alias "etp"="et -gl --no-filesize --no-time"
+    alias "etp"="et -gl --color-scale --time-style=iso"
 fi
 
 # rsync
