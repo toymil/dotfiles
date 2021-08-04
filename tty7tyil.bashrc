@@ -103,7 +103,7 @@ shopt -s dotglob
 
 
 ################################################################################
-#                                 CUSTOM ALIAS                                 #
+#                                   ALIASES                                    #
 ################################################################################
 
 # "
@@ -113,6 +113,9 @@ shopt -s dotglob
 # " - quote from https://www.gnu.org/software/bash/manual/bash.html#Aliases
 # Therefore, to make alias work after sudo, you need the following alias:
 alias "sudo"="sudo "
+
+#===========================================================
+#|          modernize/customize `ls` et. `tree`           ||
 
 ls_time_style_short="+\
 %Y-%m-%d %H %:::z
@@ -154,12 +157,18 @@ if [ -x "$(command -v exa)" ] ; then
     alias "etp"="et -gl --color-scale --time-style=iso"
 fi
 
+#===========================================================
+#|               modernize/customize `cat`                ||
+
 if [ -x "$(command -v bat)" ] ; then
     alias "cat"="bat -p"
 elif [ -x "$(command -v batcat)" ] ; then
     alias "bat"="batcat"
     alias "cat"="batcat -p"
 fi
+
+#===========================================================
+#|           modernize/customize `cp` et. `scp`           ||
 
 # rsync
 #   --verbose
@@ -231,24 +240,15 @@ crs \
 
 alias "crs-remote-644"="crs-remote --chmod=D0755,F0644"
 
+#===========================================================
+#|                    customize `dig`                     ||
+
 alias "cdig"="dig +all +nocookie"
 alias "cdigs"="digc +short"
 
-# show local git repositories
-alias "show-repo"="findc / -type d -name '.git'"
+#===========================================================
+#|                'update' q.o.l. aliases                 ||
 
-# alias to get windows host ip in wsl (whi = wsl host ip)
-alias "whi"="cat /etc/resolv.conf | grep nameserver | awk '{ print \$2 }'"
-
-# vim related alias
-alias "delete-vimundo"="\
-find ./ \
-\( -not -readable -prune \) \
--o \
-\( -type f -name '.*.un~' -exec rm -i {} \; \)\
-"
-
-## update alias
 # apt update
 alias "apt-update"="\
 apt update \
@@ -268,6 +268,23 @@ alias "conda-clean"="conda clean --all"
 
 # vim update
 alias "vim-update"="vim +PluginUpdate +qall"
+
+#===========================================================
+#|                 functionality aliases                  ||
+
+# show local git repositories
+alias "show-repo"="findc / -type d -name '.git'"
+
+# alias to get windows host ip in wsl (whi = wsl host ip)
+alias "whi"="cat /etc/resolv.conf | grep nameserver | awk '{ print \$2 }'"
+
+# vim related alias
+alias "delete-vimundo"="\
+find ./ \
+\( -not -readable -prune \) \
+-o \
+\( -type f -name '.*.un~' -exec rm -i {} \; \)\
+"
 
 
 ################################################################################
