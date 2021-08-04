@@ -124,14 +124,15 @@ ls_time_style_long="+\
 "
 ls_base="\
 ls \
--aFhl \
+-AF \
 --color=always \
 --group-directories-first\
 "
-ll="${ls_base} -AGN --time-style='${ls_time_style_short}'"
-lll="${ls_base} -i --time-style='${ls_time_style_long}'"
+l="${ls_base} -N"
+ll="${ls_base} -GhlN --time-style='${ls_time_style_short}'"
+lll="${ls_base} -ahil --time-style='${ls_time_style_long}'"
 
-alias   "l"="LC_COLLATE=C.UTF-8 ls -AFN --color=always --group-directories-first"
+alias   "l"="LC_COLLATE=C.UTF-8 ${l}"
 alias  "ll"="LC_COLLATE=C.UTF-8 ${ll}"
 alias "lll"="LC_COLLATE=C.UTF-8 ${lll}"
 alias "lle"="LC_COLLATE=en_US.utf8 ${ll}"
