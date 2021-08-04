@@ -160,11 +160,12 @@ fi
 #===========================================================
 #|               modernize/customize `cat`                ||
 
-if [ -x "$(command -v bat)" ] ; then
-    alias "cat"="bat -p"
-elif [ -x "$(command -v batcat)" ] ; then
+if [ -x "$(command -v batcat)" ] ; then
     alias "bat"="batcat"
-    alias "cat"="batcat -p"
+fi
+
+if command -v bat &> /dev/null ; then
+    alias "cat"="bat -p"
 fi
 
 #===========================================================
