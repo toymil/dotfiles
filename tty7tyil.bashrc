@@ -285,22 +285,16 @@ alias "vim-update"="vim +PluginUpdate +qall"
 #|                 functionality aliases                  ||
 
 # show local git repositories
-alias "show-repo"="findc / -type d -name '.git'"
+alias "show-repo"="cf -s -t d '.git' /"
 
 # alias to get windows host ip in wsl (whi = wsl host ip)
 alias "whi"="cat /etc/resolv.conf | grep nameserver | awk '{ print \$2 }'"
 
 # vim related alias
-alias "delete-vimundo"="\
-find ./ \
-\( -not -readable -prune \) \
--o \
-\( -type f -name '.*.un~' -exec rm -i {} \; \)\
-"
+alias "delete-vimundo"="cf -s -t f '.*.un~' / -X rm -i {} \;"
 
 
 ################################################################################
 #                               CUSTOM FUNCTION                                #
 ################################################################################
 
-findc() { find "$1" \( -not -readable -prune \) -o \( "${@:2}" -print \); }
