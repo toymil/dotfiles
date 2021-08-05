@@ -38,9 +38,9 @@
     skip-list = ls-files -v . | grep ^S
 
     cm = commit -m
-    nc = commit --allow-empty-message -m ''
     cms = commit --gpg-sign -m
-    ncs = commit --gpg-sign --allow-empty-message -m ''
+    cn = commit --allow-empty-message -m ''
+    cns = commit --gpg-sign --allow-empty-message -m ''
 
     mnc = merge --no-commit
     mff = merge --ff-only
