@@ -36,6 +36,11 @@
 
 [delta]
     diff-highlight = true
+    file-style = yellow
+    file-decoration-style = blue box ul
+    hunk-header-style = line-number syntax
+    hunk-header-decoration-style = blue box
+    zero-style = syntax
     keep-plus-minus-markers = true
     line-numbers = true
     line-numbers-minus-style = red
