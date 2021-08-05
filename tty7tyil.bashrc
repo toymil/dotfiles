@@ -284,11 +284,11 @@ alias "vim-update"="vim +PluginUpdate +qall"
 # show local git repositories
 alias "show-repo"="cf -s -t d '.git' /"
 
+# delete vim undo history files
+alias "delete-vimundo"="cf -s -t f '.*.un~' / -X rm -i {} \;"
+
 # alias to get windows host ip in wsl (whi = wsl host ip)
 alias "whi"="cat /etc/resolv.conf | grep nameserver | awk '{ print \$2 }'"
-
-# vim related alias
-alias "delete-vimundo"="cf -s -t f '.*.un~' / -X rm -i {} \;"
 
 
 ################################################################################
