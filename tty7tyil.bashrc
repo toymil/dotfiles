@@ -163,6 +163,8 @@ fi
 
 if command -v bat &> /dev/null ; then
     alias "cat"="bat -p"
+    alias "cato"="bat --style=header,grid,numbers --wrap=never"
+    alias "catl"="bat -pr"
 fi
 
 #===========================================================
