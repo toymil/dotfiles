@@ -255,7 +255,7 @@ alias "crs-remote-644"="crs-remote --chmod=D0755,F0644"
 #|                    customize `dig`                     ||
 
 alias "cdig"="dig +all +nocookie"
-alias "cdigs"="digc +short"
+alias "cdigs"="cdig +short"
 
 #===========================================================
 #|                'update' q.o.l. aliases                 ||
