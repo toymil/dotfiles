@@ -55,6 +55,7 @@ return
 CapsLock::Escape
 Escape::`
 +CapsLock::CapsLock
+^+CapsLock::^+Escape  ; so that we can launch task manager
 
 ^Left::Send {Home}
 ^Right::Send {End}
