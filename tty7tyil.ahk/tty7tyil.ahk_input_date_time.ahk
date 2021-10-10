@@ -14,6 +14,9 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 Menu, Tray, Tip, (AHK) Input Date &&& Time
 
 Menu, Tray, NoStandard
+Menu, Tray, Add, %A_IconTip%, Tray_Menu_Dummy, +Radio
+Menu, Tray, Check, %A_IconTip%
+Menu, Tray, Add
 Menu, Tray, Add, Script Info, Tray_Menu_Info
 Menu, Tray, Add, Reload Script, Tray_Menu_Reload
 Menu, Tray, Add
@@ -23,6 +26,9 @@ Menu, Tray, Add, Exit, Tray_Menu_Exit
 Menu, Tray, Default, Suspend Hot[key/string]s
 Menu, Tray, Click, 2
 
+return
+
+Tray_Menu_Dummy:
 return
 
 Tray_Menu_Info:
