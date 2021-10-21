@@ -7,5 +7,6 @@ function el {e -hl --blocks='permission,size,user,date,name' --date='+%Y-%m-%d %
 function ell {e -ahl --blocks='inode,permission,size,user,group,date,name' --date='+%Y-%m-%d %H:%M:%S %z' @Args}
 function et {e --tree @Args}
 
-function cs {scrcpy --bit-rate 8m --stay-awake @Args}
-function cso {cs --turn-screen-off @Args}
+function cs {scrcpy --bit-rate 8m @Args}
+function csa {cs --stay-awake @Args}
+function csao {csa --turn-screen-off @Args}
