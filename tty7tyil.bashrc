@@ -286,6 +286,9 @@ alias "vim-update"="vim +PluginUpdate +qall"
 # show local git repositories
 alias "show-repo"="cf -s -t d '.git' /"
 
+# show leftover configuration files
+alias "show-old-conf"="find /etc -name '*.dpkg-*' -o -name '*.ucf-*' -o -name '*.merge-error'"
+
 # delete vim undo history files
 alias "delete-vimundo"="cf -s -t f '.*.un~' / -X rm -i {} \;"
 
