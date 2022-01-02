@@ -16,7 +16,7 @@ Plugin 'mbbill/fencview'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'terryma/vim-multiple-cursors'
 
-Plugin 'chriskempson/base16-vim'
+Plugin 'morhetz/gruvbox'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'Yggdroot/indentLine'
@@ -45,10 +45,11 @@ filetype plugin indent on    " required
 let $FENCVIEW_TELLENC = 'fencview'
 let g:fencview_checklines = 0
 
-" base16-vim
+" gruvbox
 set termguicolors
-let base16colorspace = 256
-colorscheme base16-materia
+set background=dark
+let g:gruvbox_contrast_dark = 'hard'
+colorscheme gruvbox
 
 " airline
 let g:airline#extensions#tabline#enabled = 1
