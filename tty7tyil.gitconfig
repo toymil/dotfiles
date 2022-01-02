@@ -1,3 +1,7 @@
+[init]
+    defaultBranch = trunk
+
+
 [core]
     ignorecase = false
     editor = vim
