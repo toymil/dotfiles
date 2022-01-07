@@ -234,6 +234,8 @@ fi
 #   --chmod=D0755,F0644
 #   --chown=USER:GROUP
 
+alias "crs-dae"="rsync --daemon --no-detach"
+
 alias "crs"="\
 rsync \
 --human-readable \
