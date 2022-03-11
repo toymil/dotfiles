@@ -13,6 +13,10 @@
     ff = false
 
 
+[pull]
+    ff = only
+
+
 [pager]
     ; These pagers might not be available on your platform, therefore it is
     ; recommended to set them locally.
