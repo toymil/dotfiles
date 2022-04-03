@@ -302,7 +302,12 @@ alias "show-repo"="cf -s -t d '.git' /"
 alias "show-old-conf"="find /etc -name '*.dpkg-*' -o -name '*.ucf-*' -o -name '*.merge-error'"
 
 # delete vim undo history files
-alias "delete-vimundo"="cf -s -t f '.*.un~' / -X rm -i {} \;"
+alias "delete-vimundo"="cf -s -t f '.*.un~' ./ -X rm -i {} \;"
+alias "delete-vimundo-root"="cf -s -t f '.*.un~' / -X rm -i {} \;"
+
+# delete LaTeX compile auxiliary files
+alias "delete-latexaux"="cf --regex -s -t f '^.+\.(synctex\.gz|xdv)$' ./ -X rm -i {} \;"
+alias "delete-latexaux-root"="cf --regex -s -t f '^.+\.(synctex\.gz|xdv)$' / -X rm -i {} \;"
 
 # alias to get windows host ip in wsl (whi = wsl host ip)
 alias "whi"="cat /etc/resolv.conf | grep nameserver | awk '{ print \$2 }'"
