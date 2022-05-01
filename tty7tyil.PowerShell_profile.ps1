@@ -8,5 +8,4 @@ function ell {e -ahl --blocks='inode,permission,size,user,group,date,name' --dat
 function et {e --tree @Args}
 
 function cs {scrcpy --bit-rate 8m @Args}
-function csa {cs --stay-awake @Args}
-function csao {csa --turn-screen-off @Args}
+function cso {cs --turn-screen-off @Args}
