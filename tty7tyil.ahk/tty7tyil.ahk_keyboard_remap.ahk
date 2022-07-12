@@ -51,15 +51,43 @@ customize_tray_icon()
 ;#                                         SCRIPT CONTENT                                         ##
 ;###################################################################################################
 
-CapsLock::Escape
-Escape::`
+;#################################################
+;#              CapsLock Magic FN               ##
+;#################################################
+
+CapsLock::
+    KeyWait, CapsLock
+    If (A_PriorKey == "CapsLock") {
+        Send, {Escape}
+    }
+return
 +CapsLock::CapsLock
+
+#If, GetKeyState("CapsLock", "P")
+    w::Up
+    a::Left
+    s::Down
+    d::Right
+
+    j::Home
+    l::End
+    i::PgUp
+    k::PgDn
+
+    Left::Home
+    Right::End
+    Up::PgUp
+    Down::PgDn
+#If
+
+Escape::`  ; some keyboard put {Escape} in the place of {Tilde}, we need tilde in vscode
 ^+CapsLock::^+Escape  ; so that we can launch task manager
 
-^Left::Send {Home}
-^Right::Send {End}
-^Up::Send {PgUp}
-^Down::Send {PgDn}
+;-----
+
+;#################################################
+;#                Multimedia Key                ##
+;#################################################
 
 !^Up::Volume_Up
 !^Down::Volume_Down
@@ -69,6 +97,6 @@ Escape::`
 !^Right::Media_Next
 !^Space::Media_Play_Pause
 
-; ---
+;-----
 
 !^t::WinSet, AlwaysOnTop, Toggle, A
