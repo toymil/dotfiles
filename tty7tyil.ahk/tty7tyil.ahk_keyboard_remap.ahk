@@ -1,7 +1,7 @@
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
-SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
-SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+SendMode, Input  ; Recommended for new scripts due to its superior speed and reliability.
+SetWorkingDir, %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 #SingleInstance, Force
 
@@ -23,27 +23,27 @@ customize_tray_icon() {
     Menu, Tray, Default, Suspend Hot[key/string]s
     Menu, Tray, Click, 2
 
-    return
+    Return
 
     Tray_Menu_Dummy:
-    return
+    Return
 
     Tray_Menu_Info:
         KeyHistory
-    return
+    Return
 
     Tray_Menu_Reload:
         Reload
-    return
+    Return
 
     Tray_Menu_Suspend:
         Suspend, Toggle
         Menu, Tray, ToggleCheck, Suspend Hot[key/string]s
-    return
+    Return
 
     Tray_Menu_Exit:
         ExitApp, 0
-    return
+    Return
 }
 customize_tray_icon()
 
@@ -60,7 +60,7 @@ CapsLock::
     If (A_PriorKey == "CapsLock") {
         Send, {Escape}
     }
-return
+Return
 +CapsLock::CapsLock
 
 #If, GetKeyState("CapsLock", "P")
