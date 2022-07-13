@@ -55,15 +55,19 @@ customize_tray_icon()
 ;#              CapsLock Magic FN               ##
 ;#################################################
 
+fn1 := False
+
 CapsLock::
+    fn1 := True
     KeyWait, CapsLock
+    fn1 := False
     If (A_PriorKey == "CapsLock") {
         Send, {Escape}
     }
 Return
 +CapsLock::CapsLock
 
-#If, GetKeyState("CapsLock", "P")
+#If, fn1 == True
     w::Up
     a::Left
     s::Down
