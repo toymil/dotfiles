@@ -52,22 +52,27 @@ customize_tray_icon()
 ;###################################################################################################
 
 ;#################################################
-;#              CapsLock Magic FN               ##
+;#             Magic FN (Tap/Hold)              ##
 ;#################################################
 
 fn1 := False
+fn2 := False
+fn3 := False
 
+;#         fn1         ##
 CapsLock::
     fn1 := True
     KeyWait, CapsLock
     fn1 := False
     If (A_PriorKey == "CapsLock") {
+        ; Tap action goes here
         Send, {Escape}
     }
 Return
-+CapsLock::CapsLock
 
 #If, fn1 == True
+    ; Magic FN layer goes here
+
     BackSpace::Delete
 
     w::Up
@@ -86,10 +91,11 @@ Return
     Down::PgDn
 #If
 
+;-----
+
++CapsLock::CapsLock
 Escape::`  ; some keyboard put {Escape} in the place of {Tilde}, we need tilde in vscode
 ^+CapsLock::^+Escape  ; so that we can launch task manager
-
-;-----
 
 ;#################################################
 ;#                Multimedia Key                ##
