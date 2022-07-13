@@ -72,6 +72,7 @@ Return
 
 #If, fn1 == True
     ; Magic FN layer goes here
+    Tab::Escape  ; in case the tap action could not function properly
 
     BackSpace::Delete
 
