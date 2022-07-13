@@ -68,6 +68,8 @@ Return
 +CapsLock::CapsLock
 
 #If, fn1 == True
+    BackSpace::Delete
+
     w::Up
     a::Left
     s::Down
