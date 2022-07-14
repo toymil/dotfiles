@@ -81,10 +81,10 @@ Return
     s::Down
     d::Right
 
-    j::Home
+    h::Home
+    j::PgDn
+    k::PgUp
     l::End
-    i::PgUp
-    k::PgDn
 
     Left::Home
     Right::End
