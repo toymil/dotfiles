@@ -66,7 +66,22 @@ fn3 := False
     fn1 := False
     If (A_PriorKey == "CapsLock") {
         ; Tap action goes here
-        Send, {Blind}{Escape}
+        ;# ; Send, {Blind}{Escape}
+        ;# A note here: the above line achives the effect of `CapsLock::Escape` remap upon releasing `CapsLock` in most situations, except a few:
+        ;#     Windows Explorer:
+        ;#         - focus on Explorer window
+        ;#         - {Alt}-{Tab} once and keep holding {Alt}
+        ;#         - {Escape} ({CapsLock}) once to cancel and close the {Alt}-{Tab} window switcher
+        ;#         - release {Alt}
+        ;#         + Notice there are tooltips for Alt access keys all over Explorer's UI now.  This is consistent with the behaviour of {Escape Down} to close the window switcher and then {Alt Up} before {Escape Up}.
+        ;#         + A delay of 1ms is enough to avoid this problem.
+        ;#     Elden Ring:
+        ;#         - {Escape} ({CapsLock}) works extremely unreliably, triggers maybe 1 in 20
+        ;#         + A delay of 1ms greatly improves the reliability, but not all the way; 100ms seems to be enough.
+        ;# These annoyances can be fixed by sending the {Down} signal first, wait a bit, then send the {Up} signal.  The time delay needed varies with situations and programs.
+        Send, {Blind}{Escape DownR}
+        Sleep, 20
+        Send, {Blind}{Escape Up}
     }
 Return
 
