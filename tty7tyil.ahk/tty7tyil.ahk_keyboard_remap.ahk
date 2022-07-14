@@ -60,13 +60,13 @@ fn2 := False
 fn3 := False
 
 ;#         fn1         ##
-CapsLock::
+*CapsLock::
     fn1 := True
     KeyWait, CapsLock
     fn1 := False
     If (A_PriorKey == "CapsLock") {
         ; Tap action goes here
-        Send, {Escape}
+        Send, {Blind}{Escape}
     }
 Return
 
