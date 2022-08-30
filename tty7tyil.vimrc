@@ -202,10 +202,10 @@ autocmd WinEnter * call UnmapWindowOperation()
 
 
 " ##############################################################################
-" #                        SOURCE BUNDLE CONFIGURATION                         #
+" #                       SOURCE VIM-PLUG CONFIGURATION                        #
 " ##############################################################################
 
-let path_tty7tyil_bundle_vimrc = fnamemodify(resolve(expand('<sfile>:p')), ':h') . '/tty7tyil.bundle.vimrc'
-if filereadable(path_tty7tyil_bundle_vimrc)
-    execute 'source ' . path_tty7tyil_bundle_vimrc
+let path_tty7tyil_vim_plug = fnamemodify(resolve(expand('<sfile>:p')), ':h') . '/tty7tyil.vim-plug.vim'
+if filereadable(path_tty7tyil_vim_plug)
+    execute 'source ' . path_tty7tyil_vim_plug
 endif
