@@ -290,7 +290,7 @@ alias "conda-update"="conda update --all"
 alias "conda-clean"="conda clean --all"
 
 # vim update
-alias "vim-update"="vim +PluginUpdate +qall"
+alias "vim-update"="vim +PlugUpdate +PlugUpgrade +qa"
 
 #===========================================================
 #|                 functionality aliases                  ||
