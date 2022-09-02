@@ -59,7 +59,7 @@ fn1 := False
 fn2 := False
 fn3 := False
 
-;#         fn1         ##
+;#                     fn1                      ##
 *CapsLock::
     fn1 := True
     KeyWait, CapsLock
@@ -86,11 +86,13 @@ fn3 := False
 Return
 
 #If, fn1 == True
-    ; Magic FN layer goes here
-    Tab::Escape  ; in case the tap action could not function properly
+    ;# Magic FN layer goes here ##
 
+    Tab::Escape  ; in case the tap action could not function properly
+    Shift::CapsLock
     BackSpace::Delete
 
+    ; navigation keys
     w::Up
     a::Left
     s::Down
@@ -118,26 +120,26 @@ Return
     0::F10
     -::F11
     =::F12
+
+    ; media control
+    !Up::Volume_Up
+    !Down::Volume_Down
+    !Left::Media_Prev
+    !Right::Media_Next
+    !m::Volume_Mute
+    !Space::Media_Play_Pause
+
+    !w::Volume_Up
+    !s::Volume_Down
+    !a::Media_Prev
+    !d::Media_Next
+    !x::Volume_Mute
+    !z::Media_Play_Pause
+
 #If
 
 ;-----
 
-+CapsLock::CapsLock
 Escape::`  ; some keyboard put {Escape} in the place of {Tilde}, we need tilde in vscode
-^+CapsLock::^+Escape  ; so that we can launch task manager
-
-;#################################################
-;#                Multimedia Key                ##
-;#################################################
-
-!^Up::Volume_Up
-!^Down::Volume_Down
-!^m::Volume_Mute
-
-!^Left::Media_Prev
-!^Right::Media_Next
-!^Space::Media_Play_Pause
-
-;-----
 
 !^t::WinSet, AlwaysOnTop, Toggle, A
