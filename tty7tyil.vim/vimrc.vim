@@ -205,7 +205,7 @@ autocmd WinEnter * call UnmapWindowOperation()
 " #                       SOURCE VIM-PLUG CONFIGURATION                        #
 " ##############################################################################
 
-let path_tty7tyil_vim_plug = fnamemodify(resolve(expand('<sfile>:p')), ':h') . '/tty7tyil.vim-plug.vim'
+let path_tty7tyil_vim_plug = fnamemodify(resolve(expand('<sfile>:p')), ':h') . '/vim-plug.vim'
 if filereadable(path_tty7tyil_vim_plug)
     execute 'source ' . path_tty7tyil_vim_plug
 endif
