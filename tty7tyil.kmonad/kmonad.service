@@ -1,0 +1,14 @@
+[Unit]
+Description=KMonad Keyboard Manager
+
+[Service]
+User=
+Type=simple
+ExecStart=/path/to/kmonad_binary /path/to/kmonad_config
+Nice=-20
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=default.target
+
