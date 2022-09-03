@@ -111,6 +111,11 @@ export SUDO_EDITOR="${EDITOR}"
 # includes filenames beginning with a '.' in the results of filename expansion
 shopt -s dotglob
 
+#===========================================================
+#|                    set bash history                    ||
+
+export HISTTIMEFORMAT="[%F %T %z]  "
+
 
 ################################################################################
 #                                   ALIASES                                    #
