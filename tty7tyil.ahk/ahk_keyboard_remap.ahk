@@ -51,15 +51,15 @@ customize_tray_icon()
 ;#                                         SCRIPT CONTENT                                         ##
 ;###################################################################################################
 
+Escape::`  ; some keyboard put {Escape} in the place of {Tilde}, we need tilde
+
 ;#################################################
-;#             Magic FN (Tap/Hold)              ##
+;#                 Tap/Hold FN                  ##
 ;#################################################
 
 fn1 := False
-fn2 := False
-fn3 := False
+media_control := False
 
-;#                     fn1                      ##
 *CapsLock::
     fn1 := True
     KeyWait, CapsLock
@@ -85,11 +85,28 @@ fn3 := False
     }
 Return
 
-#If, fn1 == True
-    ;# Magic FN layer goes here ##
+#If, media_control == True
+    Up::Volume_Up
+    Down::Volume_Down
+    Left::Media_Prev
+    Right::Media_Next
+    m::Volume_Mute
+    Space::Media_Play_Pause
 
+    w::Volume_Up
+    s::Volume_Down
+    a::Media_Prev
+    d::Media_Next
+    x::Volume_Mute
+    z::Media_Play_Pause
+
+    t::WinSet, AlwaysOnTop, Toggle, A
+#If
+
+#If, fn1 == True
     Tab::Escape  ; in case the tap action could not function properly
-    Shift::CapsLock
+    LShift::CapsLock
+
     BackSpace::Delete
 
     ; navigation keys
@@ -108,6 +125,7 @@ Return
     Up::PgUp
     Down::PgDn
 
+    ; F1 - F12
     1::F1
     2::F2
     3::F3
@@ -122,24 +140,9 @@ Return
     =::F12
 
     ; media control
-    !Up::Volume_Up
-    !Down::Volume_Down
-    !Left::Media_Prev
-    !Right::Media_Next
-    !m::Volume_Mute
-    !Space::Media_Play_Pause
-
-    !w::Volume_Up
-    !s::Volume_Down
-    !a::Media_Prev
-    !d::Media_Next
-    !x::Volume_Mute
-    !z::Media_Play_Pause
-
+    *LAlt::
+        media_control := True
+        KeyWait, LAlt
+        media_control := False
+    Return
 #If
-
-;-----
-
-Escape::`  ; some keyboard put {Escape} in the place of {Tilde}, we need tilde in vscode
-
-!^t::WinSet, AlwaysOnTop, Toggle, A
