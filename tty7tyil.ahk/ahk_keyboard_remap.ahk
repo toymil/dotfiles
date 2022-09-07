@@ -100,6 +100,8 @@ Return
     x::Volume_Mute
     z::Media_Play_Pause
 
+    q::#^Left
+    e::#^Right
     t::WinSet, AlwaysOnTop, Toggle, A
 #If
 

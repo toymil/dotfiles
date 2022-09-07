@@ -74,6 +74,8 @@
 (defalias
     hf1 (tap-hold-next 200 esc (layer-toggle fn1))  ;; hold fn 1
     mec (layer-toggle media-control)  ;; media control
+    vdl M-C-left  ;; switch virtual desktop to the left
+    vdr M-C-right  ;; switch virtual desktop to the right
 )
 
 (deflayer base
@@ -94,7 +96,7 @@
 
 (deflayer media-control
     _    _    _    _    _    _    _    _    _    _    _    _    _    _
-    _    _    volu _    _    _    _    _    _    _    _    _    _    _
+    _    @vdl volu @vdr _    _    _    _    _    _    _    _    _    _
     _    prev vold next _    _    _    _    _    _    _    _    _
     _    pp   mute _    _    _    _    mute _    _    _    _                    volu
     _    _    _              pp             _              _               prev vold next
