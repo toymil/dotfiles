@@ -298,6 +298,12 @@ alias "conda-clean"="conda clean --all"
 alias "vim-update"="vim +PlugUpdate +PlugUpgrade +qa"
 
 #===========================================================
+#|                     q.o.l. aliases                     ||
+
+alias "cs"="scrcpy --bit-rate 8m"
+alias "cso"="cs --turn-screen-off"
+
+#===========================================================
 #|                 functionality aliases                  ||
 
 # show local git repositories
