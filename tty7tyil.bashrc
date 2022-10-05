@@ -307,6 +307,11 @@ alias "vim-update"="vim +PlugUpdate +PlugUpgrade +qa"
 alias "cs"="scrcpy --bit-rate 8m"
 alias "cso"="cs --turn-screen-off"
 
+alias "rmv"="rm -vr"
+alias "rmi"="rm -ir"
+alias "rmrf"="rm -vrf"
+alias "rm"="rm -v"
+
 #===========================================================
 #|                 functionality aliases                  ||
 
