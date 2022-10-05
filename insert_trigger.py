@@ -26,7 +26,7 @@ def insert_powershell_profile():
 def insert_gitconfig():
     # [include]
     # ; Recommended to put this section at the end of global `.gitconfig`.
-    #     path = /path/to/file
+    #     path = /path/to/gitconfig
     pass
 
 
