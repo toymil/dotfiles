@@ -1,4 +1,4 @@
-# TyIL TTY7’s Dotfiles
+# Collection of Dotfiles
 
 **_!! BE CAREFUL WITH THE BRANCH YOU ARE ON !!_**
 
