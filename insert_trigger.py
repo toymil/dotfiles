@@ -4,9 +4,9 @@
 
 def insert_bashrc():
     # # Recommend to put this at the end of user `.bashrc`.
-    # path_tty7tyil_bashrc='/path/to/file'
-    # if [ -f "${path_tty7tyil_bashrc}" ] ; then
-    #     source "${path_tty7tyil_bashrc}"
+    # path_bashrc='/path/to/file'
+    # if [ -f "${path_bashrc}" ] ; then
+    #     source "${path_bashrc}"
     # fi
     pass
 
@@ -19,7 +19,7 @@ def insert_inputrc():
 def insert_powershell_profile():
     # # The path of PowerShell profiles file is given by the `$profile` variable,
     # # remember to use the actual path on your machine.
-    # . ~/tty7tyil_dotfiles/PowerShell_profile_tty7tyil.ps1
+    # . /path/to/PowerShell_profile.ps1
     pass
 
 
@@ -32,9 +32,9 @@ def insert_gitconfig():
 
 def insert_vimrc():
     # " Recommended to put this at the end of user `.vimrc`.
-    # let path_tty7tyil_vimrc = '/path/to/file'
-    # if filereadable(path_tty7tyil_vimrc)
-    #     execute 'source ' . path_tty7tyil_vimrc
+    # let path_vimrc = '/path/to/file'
+    # if filereadable(path_vimrc)
+    #     execute 'source ' . path_vimrc
     # endif
     pass
 
