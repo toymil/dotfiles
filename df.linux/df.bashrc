@@ -310,7 +310,6 @@ alias "cso"="cs --turn-screen-off"
 alias "rmv"="rm -vIr"
 alias "rmf"="rm -vIrf"
 alias "rmi"="rm -ir"
-alias "rm"="rmv"
 
 #===========================================================
 #|                 functionality aliases                  ||
