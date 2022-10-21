@@ -33,6 +33,8 @@ let g:airline#extensions#tabline#left_sep = '  '
 
 " indentLine
 autocmd BufEnter * IndentLinesReset
+let g:vim_json_conceal = 0
+let g:markdown_syntax_conceal = 0
 let g:indentLine_char = '¦'
 let g:indentLine_first_char = '|'
 let g:indentLine_showFirstIndentLevel = 1
