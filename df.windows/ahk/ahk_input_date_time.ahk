@@ -57,12 +57,11 @@ send_iso_8601(date_time_format) {
     Return
 }
 
-:x:/utcd::send_iso_8601("yyyyMMdd")
-:x:/utcdl::send_iso_8601("yyyy-MM-dd")
-:x:/utct::send_iso_8601("HHmmssZ")
-:x:/utctl::send_iso_8601("HH:mm:ssZ")
-:x:/utctn::send_iso_8601("HH-mm-ss_Z")
-:x:/utcdt::send_iso_8601("yyyyMMddTHHmmssZ")
-:x:/utcdtl::send_iso_8601("yyyy-MM-ddTHH:mm:ssZ")
-:x:/utcdth::send_iso_8601("yyyy-MM-dd HH:mm:ss Z")
-:x:/utcdtn::send_iso_8601("yyyy-MM-dd_HH-mm-ss_Z")
+:x:/dtu::send_iso_8601("yyyy-MM-dd HH:mm:ss Z")
+:x:/dtnu::send_iso_8601("yyyy-MM-dd_HH-mm-ss_Z")
+:x:/dtiu::send_iso_8601("yyyy-MM-ddTHH:mm:ssZ")
+:x:/dtinu::send_iso_8601("yyyyMMddTHHmmssZ")
+:x:/du::send_iso_8601("yyyy-MM-dd")
+:x:/dsu::send_iso_8601("--MM-dd")
+:x:/tu::send_iso_8601("HH:mm:ss Z")
+:x:/tsu::send_iso_8601("HH:mm")
