@@ -61,21 +61,34 @@
     lga = lg --all
     lgd = log --decorate=short --author-date-order --graph --date=format:'%Y-%m-%d' --stat --full-diff --format=format:'%C(bold reverse 167) %h %C(120) %ad %C(no-reverse) > %Creset%<(65,trunc)%s%C(bold 229)%d%C(81) <%an>%C(nobold) %G?%n'
     lgf = log --decorate=full --author-date-order --graph --date=format:'%Y-%m-%d %H:%M:%S %z' --format=format:'%C(bold 167)Commit     :%C(reverse) %H %C(no-reverse 229)%d%n%C(bold 120)Author Date:%C(reverse) %ad %C(no-reverse) (%ar)%n%C(bold 229)Parent     :%C(reverse) %P %C(no-reverse)%n%C(bold 81)Author     : %an <%ae>%C(nobold) %G?%n%n%B%n'
-    lgfd = lgf -p --full-diff
+    lgfd = lgf --patch --full-diff
 
-    ada = add --all
+    s = status --short
+    sl = status --long
+
+    a = add --verbose
+    aa = add --verbose --all
+    ap = add --patch
+
+    d = diff
+    dc = diff --cached
+    ds = diff --stat
 
     skip-add = update-index --skip-worktree
     skip-remove = update-index --no-skip-worktree
     skip-list = ls-files -v . | grep ^S
 
-    cm = commit -m
-    cms = commit --gpg-sign -m
-    cn = commit --allow-empty-message -m ''
-    cns = commit --gpg-sign --allow-empty-message -m ''
+    cm = commit --message
+    cms = commit --gpg-sign --message
+    cn = commit --allow-empty-message --message ''
+    cns = commit --gpg-sign --allow-empty-message --message ''
+    ca = commit --amend
+    cas = commit --gpg-sign --amend
 
     mnc = merge --no-commit
     mff = merge --ff-only
+
+    fap = fetch --all --prune
     pff = pull --ff-only
 
     clbl = clone --filter=blob:none
