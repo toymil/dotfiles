@@ -61,6 +61,11 @@ ${reset_color}\n\
 "
 line_2="\
 ${bcs}38;5;213;1${ecs}- \
+${reset_color}${bcs}38;5;229${ecs}${directory}\
+${reset_color}\n\
+"
+line_2_with_git="\
+${bcs}38;5;213;1${ecs}- \
 ${reset_color}${bcs}1${ecs}${git_info_line}\
 ${reset_color}${bcs}38;5;229${ecs}${directory}\
 ${reset_color}\n\
@@ -70,7 +75,8 @@ ${bcs}38;5;202;1${ecs}\\$ \
 ${reset_color}${bcs}38;5;253${ecs}\
 "
 
-normal_prompt="${title}${line_1}${line_2}${line_3}"
+prompt_normal="${title}${line_1}${line_2}${line_3}"
+prompt_normal_with_git="${title}${line_1}${line_2_with_git}${line_3}"
 
 # demo prompt
 date_time_demo="${b_command}date --utc +'%Y-%m-%d %H:%M Z'${e_command}"
@@ -86,12 +92,13 @@ ${bcs}38;5;7${ecs}:\
 ${reset_color}\n\
 "
 
-demo_prompt="${title_demo}${line_1_demo}${line_3}"
+prompt_demo="${title_demo}${line_1_demo}${line_3}"
 
 # set prompt
-export PS1="${normal_prompt}"
-alias "normal_prompt"="export PS1=\"\${normal_prompt}\""
-alias "demo_prompt"="export PS1=\"\${demo_prompt}\""
+export PS1="${prompt_normal_with_git}"
+alias "prompt_normal"="export PS1=\"\${prompt_normal}\""
+alias "prompt_normal_with_git"="export PS1=\"\${prompt_normal_with_git}\""
+alias "prompt_demo"="export PS1=\"\${prompt_demo}\""
 
 
 ################################################################################
