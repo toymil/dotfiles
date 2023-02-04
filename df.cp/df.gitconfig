@@ -92,3 +92,5 @@
     pff = pull --ff-only
 
     clbl = clone --filter=blob:none
+    cls = clone --depth=1
+
