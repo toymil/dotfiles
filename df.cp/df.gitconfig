@@ -91,6 +91,8 @@
     fap = fetch --all --prune
     pff = pull --ff-only
 
+    ; blobless clone
     clbl = clone --filter=blob:none
+    ; shallow clone
     cls = clone --depth=1
 
