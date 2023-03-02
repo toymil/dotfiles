@@ -314,6 +314,11 @@ alias "vim-update"="vim +PlugUpdate +PlugUpgrade +qa"
 alias "cs"="scrcpy --bit-rate 8m"
 alias "cso"="cs --turn-screen-off"
 
+alias "mkv"="mkdir -vp"
+
+alias "cpv"="cp -v"
+alias "mvv"="mv -v"
+
 alias "rmv"="rm -vIr"
 alias "rmf"="rm -vIrf"
 alias "rmi"="rm -ir"
