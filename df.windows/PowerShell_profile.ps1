@@ -11,8 +11,9 @@ function el { e -hl --blocks='permission,size,user,date,name' --date='+%Y-%m-%d 
 function ell { e -ahl --blocks='inode,permission,size,user,group,date,name' --date='+%Y-%m-%d %H:%M:%S %z' @Args }
 function et { e --tree @Args }
 
-function cs { scrcpy --bit-rate 8m @Args }
+function cs { scrcpy --video-bit-rate=8M --audio-bit-rate=128K @Args }
 function cso { cs --turn-screen-off @Args }
+function csa { scrcpy --video-bit-rate=1M --audio-codec=opus --audio-bit-rate=256K --turn-screen-off @Args }
 
 function mkv { coreutils.exe mkdir -vp @Args }
 
