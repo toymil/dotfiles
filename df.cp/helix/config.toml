@@ -9,7 +9,7 @@ color-modes = true
 
 [editor.statusline]
 left = ["mode", "separator", "spinner", "file-name"]
-center = ["diagnostics", "selections", "position"]
+center = ["diagnostics", "selections", "position", "position-percentage"]
 right = [
     "file-type",
     "file-encoding",
