@@ -287,9 +287,9 @@ alias "cdigs"="cdig +short"
 # apt update
 alias "apt-update"="\
 apt update \
-&& apt -y upgrade \
-&& apt -y full-upgrade \
-&& apt -y install -f\
+&& apt upgrade \
+&& apt full-upgrade \
+&& apt install -f\
 "
 alias "apt-clean"="\
 apt autoremove \
