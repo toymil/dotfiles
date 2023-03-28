@@ -1,4 +1,10 @@
 [[language]]
+name = "toml"
+auto-format = true
+indent = { tab-width = 4, unit = "    " }
+
+
+[[language]]
 name = "rust"
 
 [language.language-server]
