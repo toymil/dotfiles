@@ -2,6 +2,7 @@ theme = "gruvbox"
 
 [editor]
 scrolloff = 8
+middle-click-paste = false
 cursorline = true
 idle-timeout = 10
 completion-trigger-len = 1
@@ -9,11 +10,21 @@ true-color = true
 rulers = [50, 80, 100, 120]
 bufferline = "multiple"
 color-modes = true
+text-width = 100
 
 [editor.statusline]
-left = ["mode", "separator", "spinner", "file-name"]
+left = [
+    "mode",
+    "separator",
+    "spinner",
+    "file-modification-indicator",
+    "file-name",
+]
 center = ["diagnostics", "selections", "position", "position-percentage"]
 right = [
+    "version-control",
+    "spacer",
+    "separator",
     "file-type",
     "file-encoding",
     "file-line-ending",
@@ -27,6 +38,7 @@ separator = "▒"
 
 [editor.lsp]
 display-messages = true
+display-inlay-hints = true
 
 [editor.file-picker]
 hidden = false
@@ -35,9 +47,12 @@ git-exclude = false
 
 [editor.whitespace.render]
 space = "all"
+nbsp = "all"
 tab = "all"
 newline = "none"
-nbsp = "all"
 
 [editor.indent-guides]
 render = true
+
+[editor.soft-wrap]
+wrap-at-text-width = true
