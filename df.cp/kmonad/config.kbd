@@ -43,8 +43,13 @@
 ------------------------------------------------------------------------------------------------- |#
 
 (defcfg
-    input ()
-    output ()
+    ;; ;; linux
+    ;; input (device-file "")
+    ;; output (uinput-sink "")
+
+    ;; ;; windows
+    ;; input (low-level-hook)
+    ;; output (send-event-sink)
 
     ;; cmp-seq
     ;; cmp-seq-delay
@@ -73,7 +78,7 @@
 
 (defalias
     hf1 (tap-hold-next 200 esc (layer-toggle fn1))  ;; hold fn 1
-    mec (layer-toggle media-control)  ;; media control
+    fn2 (layer-toggle fn2)
     vdl M-C-left  ;; switch virtual desktop to the left
     vdr M-C-right  ;; switch virtual desktop to the right
 )
@@ -91,10 +96,10 @@
     esc  _    up   _    _    _    _    _    _    _    _    _    _    _
     _    left down rght _    _    home pgdn pgup end  _    _    _
     caps _    _    _    _    _    _    _    _    _    _    _                    pgup
-    _    _    @mec           _              _              _               home pgdn end
+    _    _    @fn2           _              _              _               home pgdn end
 )
 
-(deflayer media-control
+(deflayer fn2
     _    _    _    _    _    _    _    _    _    _    _    _    _    _
     _    @vdl volu @vdr _    _    _    _    _    _    _    _    _    _
     _    prev vold next _    _    _    _    _    _    _    _    _

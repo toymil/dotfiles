@@ -2,13 +2,16 @@
 Description=KMonad Keyboard Manager
 
 [Service]
-User=
 Type=simple
-ExecStart=/path/to/kmonad_binary /path/to/kmonad_config
-Nice=-20
 Restart=always
 RestartSec=3
+Nice=-20
+User=${SPECIFY}
+
+ExecStart=${SPECIFY path to kmonad executable} \
+    ${SPECIFY path to kmonad config file} \
+    --input "${SPECIFY}"
+    --output "${SPECIFY}"
 
 [Install]
 WantedBy=default.target
-
