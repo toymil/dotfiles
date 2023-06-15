@@ -10,7 +10,7 @@ User=${SPECIFY}
 
 ExecStart=${SPECIFY path to kmonad executable} \
     ${SPECIFY path to kmonad config file} \
-    --input "${SPECIFY}"
+    --input "${SPECIFY}" \
     --output "${SPECIFY}"
 
 [Install]
