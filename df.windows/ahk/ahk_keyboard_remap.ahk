@@ -58,7 +58,7 @@ Escape::`  ; some keyboard put {Escape} in the place of {Tilde}, we need tilde
 ;#################################################
 
 fn1 := False
-media_control := False
+fn2 := False
 
 *CapsLock::
     fn1 := True
@@ -85,7 +85,7 @@ media_control := False
     }
 Return
 
-#If, media_control == True
+#If, fn2 == True
     Up::Volume_Up
     Down::Volume_Down
     Left::Media_Prev
@@ -141,10 +141,9 @@ Return
     -::F11
     =::F12
 
-    ; media control
     *LAlt::
-        media_control := True
+        fn2 := True
         KeyWait, LAlt
-        media_control := False
+        fn2 := False
     Return
 #If
