@@ -49,7 +49,7 @@
 
     ;; ;; windows
     ;; input (low-level-hook)
-    ;; output (send-event-sink)
+    ;; output (send-event-sink [ delay (in ms) ] [ rate (in ms) ])
 
     ;; cmp-seq
     ;; cmp-seq-delay
