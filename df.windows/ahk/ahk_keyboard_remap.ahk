@@ -80,7 +80,7 @@ fn2 := False
         ;#         + A delay of 1ms greatly improves the reliability, but not all the way; 100ms seems to be enough.
         ;# These annoyances can be fixed by sending the {Down} signal first, wait a bit, then send the {Up} signal.  The time delay needed varies with situations and programs.
         Send, {Blind}{Escape DownR}
-        Sleep, 20
+        Sleep, 35
         Send, {Blind}{Escape Up}
     }
 Return
