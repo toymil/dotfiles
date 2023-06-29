@@ -101,9 +101,9 @@ alias "cdigs"="cdig +short"
 
 alias "mkv"="mkdir -vp"
 
-alias "cpv"="cp -v"
-alias "mvv"="mv -v"
+alias "cpv"="cp -vri"
+alias "mvv"="mv -vi"
 
-alias "rmv"="rm -vIr"
-alias "rmf"="rm -vIrf"
-alias "rmi"="rm -ir"
+alias "rmv"="rm -vrI"
+alias "rmf"="rm -vrfI"
+alias "rmi"="rm -ri"

@@ -317,12 +317,12 @@ alias "csa"="scrcpy --video-bit-rate=1M --audio-codec=opus --audio-bit-rate=256K
 
 alias "mkv"="mkdir -vp"
 
-alias "cpv"="cp -v"
-alias "mvv"="mv -v"
+alias "cpv"="cp -vri"
+alias "mvv"="mv -vi"
 
-alias "rmv"="rm -vIr"
-alias "rmf"="rm -vIrf"
-alias "rmi"="rm -ir"
+alias "rmv"="rm -vrI"
+alias "rmf"="rm -vrfI"
+alias "rmi"="rm -ri"
 
 #===========================================================
 #|                 functionality aliases                  ||
