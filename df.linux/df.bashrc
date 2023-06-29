@@ -315,6 +315,8 @@ alias "cs"="scrcpy --video-bit-rate=8M --audio-bit-rate=128K"
 alias "cso"="cs --turn-screen-off"
 alias "csa"="scrcpy --video-bit-rate=1M --audio-codec=opus --audio-bit-rate=256K --turn-screen-off"
 
+alias "tmux"="tmux -u"
+
 alias "mkv"="mkdir -vp"
 
 alias "cpv"="cp -vri"

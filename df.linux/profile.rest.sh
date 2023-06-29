@@ -99,6 +99,8 @@ alias "cdigs"="cdig +short"
 #===========================================================
 #|                     q.o.l. aliases                     ||
 
+alias "tmux"="tmux -u"
+
 alias "mkv"="mkdir -vp"
 
 alias "cpv"="cp -vri"
