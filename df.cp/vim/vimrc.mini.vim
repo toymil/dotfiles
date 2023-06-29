@@ -4,6 +4,7 @@
 
 " color
 set t_Co=256
+set termguicolors
 syntax enable
 
 " encode
@@ -205,5 +206,4 @@ autocmd WinEnter * call UnmapWindowOperation()
 " #                       SOURCE VIM-PLUG CONFIGURATION                        #
 " ##############################################################################
 
-set termguicolors
 colorscheme delek

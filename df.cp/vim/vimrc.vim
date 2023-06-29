@@ -4,6 +4,7 @@
 
 " color
 set t_Co=256
+set termguicolors
 syntax enable
 
 " encode

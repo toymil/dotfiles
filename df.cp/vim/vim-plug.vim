@@ -21,8 +21,8 @@ call plug#end()
 let $FENCVIEW_TELLENC = 'fencview'
 let g:fencview_checklines = 0
 
-" gruvbox
 set termguicolors
+" gruvbox
 set background=dark
 let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_italic = 1
