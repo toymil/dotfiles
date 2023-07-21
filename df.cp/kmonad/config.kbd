@@ -79,8 +79,11 @@
 (defalias
     hf1 (tap-hold-next 200 (around esc (pause 35)) (layer-toggle fn1))  ;; hold fn 1
     fn2 (layer-toggle fn2)
-    vdl M-C-left  ;; switch virtual desktop to the left
+
+    vdl M-C-left   ;; switch virtual desktop to the left
     vdr M-C-right  ;; switch virtual desktop to the right
+
+    adc C-A-f9  ;; cycle default audio device
 )
 
 (deflayer base
@@ -103,7 +106,7 @@
     _    _    _    _    _    _    _    _    _    _    _    _    _    _
     _    @vdl volu @vdr _    _    _    _    _    _    _    _    _    _
     _    prev vold next _    _    _    _    _    _    _    _    _
-    _    pp   mute _    _    _    _    mute _    _    _    _                    volu
+    _    pp   mute @adc _    _    _    mute _    _    _    _                    volu
     _    _    _              pp             _              _               prev vold next
 )
 
