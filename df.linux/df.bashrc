@@ -95,7 +95,8 @@ ${reset_color}\n\
 prompt_demo="${title_demo}${line_1_demo}${line_3}"
 
 # set prompt
-export PS1="${prompt_normal_with_git}"
+# export PS1="${prompt_normal_with_git}"
+eval "$(starship init bash)"
 alias "prompt_normal"="export PS1=\"\${prompt_normal}\""
 alias "prompt_normal_with_git"="export PS1=\"\${prompt_normal_with_git}\""
 alias "prompt_demo"="export PS1=\"\${prompt_demo}\""

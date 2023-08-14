@@ -1,0 +1,66 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[>](bold 213) $username $hostname $shell $time [:](7)
+[-](bold 213) $directory(
+[-](bold 213) ($git_branch )($git_commit )($git_state )$git_status)
+$character """
+add_newline = true
+
+[username]
+    show_always = true
+    format = "[$user]($style)"
+    style_user = "bold 81"
+    style_root = "bold red"
+
+[hostname]
+    ssh_only = false
+    format = "[[@$ssh_symbol](7) $hostname]($style)"
+    style = "bold 84"
+    ssh_symbol = "⇌"
+
+[shell]
+    disabled = false
+    format = "[{$indicator}]($style)"
+    style = "7"
+    bash_indicator = "BASH"
+    fish_indicator = "FISH"
+    zsh_indicator = "ZSH"
+    powershell_indicator = "POSH"
+
+[time]
+    disabled = false
+    format = "[\\[$time\\]]($style)"
+    style = "15"
+    time_format = "%Y-%m-%d W%W-%u | %H:%M:%S %:z"
+
+[directory]
+    truncation_length = 0
+    truncate_to_repo = false
+    format = "([$read_only]($read_only_style) )[$path]($style)"
+    repo_root_format = "([$read_only]($read_only_style) )[$before_root_path]($before_repo_root_style)[$repo_root]($repo_root_style)[$path]($style)"
+    style = "229"
+    repo_root_style = "bold 229"
+    read_only = "[RO]"
+
+[git_branch]
+    format = "[$symbol $branch( : $remote_name/$remote_branch)]($style)"
+    style = "bold"
+    always_show_remote = true
+    symbol = ""
+
+[git_commit]
+    format = "[\\($hash( \\[$tag\\])\\)]($style)"
+    tag_disabled = false
+    tag_symbol = ""
+
+[git_state]
+    format = "\\([$state( $progress_current/$progress_total)]($style)\\)"
+
+[git_status]
+    format = "([\\[$all_status$ahead_behind\\]]($style))"
+
+[character]
+    format = "$symbol"
+    success_symbol = "[\\$](bold 202)"
+    error_symbol = "[\\$](bold yellow)"
