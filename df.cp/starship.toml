@@ -1,7 +1,7 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-[>](bold 213) $username $hostname $shell $time [:](7)
+[>](bold 213) $username $hostname $shell $time $status [:](7)
 [-](bold 213) $directory(
 [-](bold 213) ($git_branch )($git_commit )($git_state )$git_status)
 $character """
@@ -32,7 +32,13 @@ add_newline = true
     disabled = false
     format = "[\\[$time\\]]($style)"
     style = "15"
-    time_format = "%Y-%m-%d W%W-%u | %H:%M:%S %:z"
+    time_format = "%Y-%m-%d %H:%M:%S %:z"
+
+[status]
+    disabled = false
+    format = "[\\([$status]($style)\\)](7)"
+    success_symbol = " "
+    recognize_signal_code = false
 
 [directory]
     truncation_length = 0
