@@ -7,10 +7,11 @@ function l { coreutils.exe ls -AF --color=always --group-directories-first -N @A
 function ll { coreutils.exe ls -AF --color=always --group-directories-first -GhlN --time-style="+%Y-%m-%d %H %:::z" @Args }
 function lll { coreutils.exe ls -AF --color=always --group-directories-first -ahil --time-style="+%Y-%m-%d %H:%M:%S %:z" @Args }
 
-function e { lsd -AF --color=always --group-dirs=first --icon=never @Args }
-function el { e -hl --blocks='permission,size,user,date,name' --date='+%Y-%m-%d %H:%M %z' @Args }
-function ell { e -ahl --blocks='inode,permission,size,user,group,date,name' --date='+%Y-%m-%d %H:%M:%S %z' @Args }
-function et { e --tree @Args }
+function e { eza -aF --color=always --group-directories-first @Args }
+function el { e -l --color-scale --time-style=iso @Args }
+function ell { e -agHil --color-scale --time-style=long-iso @Args }
+function et { e -T @Args }
+function etl { et -gl --color-scale --no-time @Args }
 
 function cs { scrcpy --video-bit-rate=8M --audio-bit-rate=128K @Args }
 function cso { cs --turn-screen-off @Args }
