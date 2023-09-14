@@ -324,7 +324,7 @@ alias "cpv"="cp -vri"
 alias "mvv"="mv -vi"
 
 alias "rmv"="rm -vrI"
-alias "rmf"="rm -vrfI"
+alias "rmf"="rm -vrf"
 alias "rmi"="rm -ri"
 
 #===========================================================

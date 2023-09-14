@@ -23,5 +23,5 @@ function cpv { coreutils.exe cp -vri @Args }
 function mvv { coreutils.exe mv -vi @Args }
 
 function rmv { coreutils.exe rm -vrI @Args }
-function rmf { coreutils.exe rm -vrfI @Args }
+function rmf { coreutils.exe rm -vrf @Args }
 function rmi { coreutils.exe rm -ri @Args }
