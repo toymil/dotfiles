@@ -13,6 +13,13 @@ function ell { e -agHil --color-scale --time-style=long-iso @Args }
 function et { e -T @Args }
 function etl { et -gl --color-scale --no-time @Args }
 
+function cat { bat -p @Args }
+function catp { bat -pp @Args }
+function catf { bat --style=header,grid,numbers --wrap=never @Args }
+
+function cdig { dig +all +nocookie @Args }
+function cdigs { cdig +short @Args }
+
 function cs { scrcpy --video-bit-rate=8M --audio-bit-rate=128K @Args }
 function cso { cs --turn-screen-off @Args }
 function csa { scrcpy --video-bit-rate=1M --audio-codec=opus --audio-bit-rate=256K --turn-screen-off @Args }
