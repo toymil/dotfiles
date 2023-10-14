@@ -175,6 +175,9 @@ if [ -x "$(command -v exa)" ] ; then
     alias "ell"="e -agHil --color-scale --time-style=long-iso"
     alias  "et"="e -T"
     alias "etl"="et -gl --color-scale --no-time"
+    alias "etl1"="etl -L 1"
+    alias "etl2"="etl -L 2"
+    alias "etl3"="etl -L 3"
 fi
 
 #===========================================================
