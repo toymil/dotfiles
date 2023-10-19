@@ -202,6 +202,14 @@ alias "rmv"="rm -vrI"
 alias "rmf"="rm -vrf"
 alias "rmi"="rm -ri"
 
+if [ -x "$(command -v nvim)" ] ; then
+    alias "nv"="nvim"
+fi
+
+if [ -x "$(command -v zellij)" ] ; then
+    alias "zj"="zellij"
+fi
+
 #===========================================================
 #|                 functionality aliases                  ||
 
