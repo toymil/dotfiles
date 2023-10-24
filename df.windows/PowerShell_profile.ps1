@@ -7,11 +7,16 @@ function l { coreutils.exe ls -AF --color=always --group-directories-first -N @A
 function ll { coreutils.exe ls -AF --color=always --group-directories-first -GhlN --time-style="+%Y-%m-%d %H %:::z" @Args }
 function lll { coreutils.exe ls -AF --color=always --group-directories-first -ahil --time-style="+%Y-%m-%d %H:%M:%S %:z" @Args }
 
-function e { eza -aF --color=always --group-directories-first @Args }
-function el { e -l --color-scale --time-style=iso @Args }
-function ell { e -agHil --color-scale --time-style=long-iso @Args }
-function et { e -T @Args }
-function etl { et -gl --color-scale --no-time @Args }
+function e { eza --all --sort=name --group-directories-first --classify --color=automatic --color-scale --icons=never @Args }
+function e1 { e --oneline --no-quotes @Args }
+function el { e --long --no-quotes --binary --time-style='+%Y-%m-%d %H:%M %:::z' @Args }
+function ell { el --all --header --group --links --mounts --time-style='+%Y-%m-%d %H:%M:%S %:z' @Args }
+function elll { ell --inode --blocksize --extended --context --time-style='+%Y-%m-%d %H:%M:%S.%3f %::z' @Args }
+function et { e --tree --no-quotes @Args }
+function etl { et --long --binary --group --no-time @Args }
+function etl1 { etl -L 1 @Args }
+function etl2 { etl -L 2 @Args }
+function etl3 { etl -L 3 @Args }
 
 function cat { bat -p @Args }
 function catp { bat -pp @Args }
