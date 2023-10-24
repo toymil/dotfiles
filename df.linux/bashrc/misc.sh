@@ -2,10 +2,10 @@
 
 function test-modernization() {
     echo "---"
-    echo -n "\`exa\`: "
-    if [ -x "$(command -v exa)" ] ; then
-        echo "$(command -v exa)"
-        exa --version | sed 's/^/    /'
+    echo -n "\`eza\`: "
+    if [ -x "$(command -v eza)" ] ; then
+        echo "$(command -v eza)"
+        eza --version | sed 's/^/    /'
     else
         echo "NOT FOUND"
     fi
