@@ -40,16 +40,62 @@ alias  "ct"="LC_COLLATE=C.UTF-8 tree -aFC --dirsfirst"
 alias "ctp"="ct -fpugi"
 alias "cts"="ct -sh --du"
 
-if [ -x "$(command -v exa)" ] ; then
-    alias   "e"="exa -aF --color=always --group-directories-first"
-    # exa does not support the `+FORMAT` time style yet (TODO)
-    alias  "el"="e -l --color-scale --time-style=iso"
-    alias "ell"="e -agHil --color-scale --time-style=long-iso"
-    alias  "et"="e -T"
-    alias "etl"="et -gl --color-scale --no-time"
-    alias "etl1"="etl -L 1"
-    alias "etl2"="etl -L 2"
-    alias "etl3"="etl -L 3"
+if [ -x "$(command -v eza)" ] ; then
+
+alias "e"="eza \
+--all \
+--sort=name \
+--group-directories-first \
+--classify \
+--color=automatic \
+--color-scale \
+--icons=never\
+"
+
+alias "e1"="e \
+--oneline \
+--no-quotes\
+"
+
+# TODO: eza doesn't support setting different time
+# style format string for recent/non-recent files
+# (yet).
+alias "el"="e \
+--long \
+--no-quotes \
+--binary \
+--time-style='+%Y-%m-%d %H:%M %:::z'\
+"
+alias "ell"="el \
+--all \
+--header \
+--group \
+--links \
+--mounts \
+--time-style='+%Y-%m-%d %H:%M:%S %:z'\
+"
+alias "elll"="ell \
+--inode \
+--blocksize \
+--extended \
+--context \
+--time-style='+%Y-%m-%d %H:%M:%S.%3f %::z'\
+"
+
+alias "et"="e \
+--tree \
+--no-quotes\
+"
+alias "etl"="et \
+--long \
+--binary \
+--group \
+--no-time\
+"
+alias "etl1"="etl -L 1"
+alias "etl2"="etl -L 2"
+alias "etl3"="etl -L 3"
+
 fi
 
 #===========================================================
