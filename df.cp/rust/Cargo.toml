@@ -1,6 +1,12 @@
+[lints.rust]
+
 [lints.clippy]
     cast_possible_wrap = "warn"
-    needless_return = "allow"
+
     shadow_reuse = "allow"
     shadow_same = "warn"
     shadow_unrelated = "warn"
+
+    implicit_return = "warn"
+    needless_return = "allow"
+    semicolon_if_nothing_returned = "warn"
