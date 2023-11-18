@@ -48,7 +48,8 @@ alias "e"="eza \
 --group-directories-first \
 --classify \
 --color=automatic \
---color-scale \
+--color-scale=all \
+--color-scale-mode=gradient \
 --icons=never\
 "
 
