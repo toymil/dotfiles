@@ -1,36 +1,21 @@
 [[language]]
-name = "toml"
-auto-format = true
-indent = { tab-width = 4, unit = "    " }
+    name = "toml"
+    auto-format = true
+    indent = { tab-width = 4, unit = "    " }
 
 
 [[language]]
-name = "rust"
+    name = "rust"
 
-[language.language-server]
-command = "rustup"
-args = ["run", "stable", "rust-analyzer"]
+    [language.language-server]
+        command = "rustup"
+        args = ["run", "stable", "rust-analyzer"]
 
-[language.config]
-check.command = "clippy"
-check.extraArgs = [
-    "--",
-    "-W",
-    "clippy::shadow_same",
-    "-W",
-    "clippy::shadow_unrelated",
-    "-A",
-    "clippy::needless_return",
-    "-A",
-    "clippy::shadow_reuse",
-]
-imports.granularity.enforce = true
-inlayHints.bindingModeHints.enable = true
-inlayHints.closureReturnTypeHints.enable = "always"
-inlayHints.expressionAdjustmentHints.enable = "always"
-inlayHints.lifetimeElisionHints.enable = "skip_trivial"
-rustfmt.extraArgs = [
-    "+nightly",
-    "--config",
-    "match_block_trailing_comma=true,newline_style=Unix,reorder_imports=true,reorder_modules=true,use_field_init_shorthand=true,use_try_shorthand=true,unstable_features=true,version=Two,imports_granularity=Crate,group_imports=StdExternalCrate,format_macro_bodies=true,format_macro_matchers=true,hex_literal_case=Upper,overflow_delimited_expr=true",
-]
+    [language.config]
+        check.command = "clippy"
+        imports.granularity.enforce = true
+        inlayHints.bindingModeHints.enable = true
+        inlayHints.closureReturnTypeHints.enable = "always"
+        inlayHints.expressionAdjustmentHints.enable = "always"
+        inlayHints.lifetimeElisionHints.enable = "skip_trivial"
+        rustfmt.extraArgs = ["+nightly"]
