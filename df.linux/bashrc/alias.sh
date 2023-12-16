@@ -261,6 +261,11 @@ if [ -x "$(command -v zellij)" ] ; then
     alias "zj"="zellij"
 fi
 
+alias    ".."="cd ../"
+alias   "..."="cd ../../"
+alias  "...."="cd ../../../"
+alias "....."="cd ../../../../"
+
 #===========================================================
 #|                 functionality aliases                  ||
 
