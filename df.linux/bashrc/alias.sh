@@ -11,14 +11,18 @@ alias "sudo"="sudo "
 #===========================================================
 #|          modernize/customize `ls` et. `tree`           ||
 
-ls_time_style_short="+\
+time_style_minute="+\
 %Y-%m-%d %H %:::z
 --%m-%d %H:%M %:::z\
 "
-ls_time_style_long="+\
+time_style_second="+\
 %Y-%m-%d %H:%M:%S %:z
    --%m-%d %H:%M:%S %:z\
 "
+time_style_millisecond="+\
+%Y-%m-%d %H:%M:%S.%3f %::z\
+"
+
 ls_base="\
 ls \
 -AF \
@@ -26,8 +30,8 @@ ls \
 --group-directories-first\
 "
 l="${ls_base} -N"
-ll="${ls_base} -GhlN --time-style='${ls_time_style_short}'"
-lll="${ls_base} -ahil --time-style='${ls_time_style_long}'"
+ll="${ls_base} -GhlN --time-style='${time_style_minute}'"
+lll="${ls_base} -ahil --time-style='${time_style_second}'"
 
 alias   "l"="LC_COLLATE=C.UTF-8 ${l}"
 alias  "l1"="LC_COLLATE=C.UTF-8 ${l} -1"
@@ -58,14 +62,11 @@ alias "e1"="e \
 --no-quotes\
 "
 
-# TODO: eza doesn't support setting different time
-# style format string for recent/non-recent files
-# (yet).
 alias "el"="e \
 --long \
 --no-quotes \
 --binary \
---time-style='+%Y-%m-%d %H:%M %:::z'\
+--time-style='${time_style_minute}'\
 "
 alias "ell"="el \
 --all \
@@ -73,14 +74,14 @@ alias "ell"="el \
 --group \
 --links \
 --mounts \
---time-style='+%Y-%m-%d %H:%M:%S %:z'\
+--time-style='${time_style_second}'\
 "
 alias "elll"="ell \
 --inode \
 --blocksize \
 --extended \
 --context \
---time-style='+%Y-%m-%d %H:%M:%S.%3f %::z'\
+--time-style='${time_style_millisecond}'\
 "
 
 alias "et"="e \
