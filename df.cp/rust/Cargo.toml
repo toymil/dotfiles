@@ -1,6 +1,13 @@
 [lints.rust]
+    unsafe_code = "deny"
 
 [lints.clippy]
+    pedantic = "warn"
+    nursery = "warn"
+
+    enum_glob_use = "deny"
+    unwrap_used = "warn"
+
     # implicit_return = "warn"
     needless_return = "allow"
 
