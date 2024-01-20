@@ -1,20 +1,26 @@
 [lints.rust]
     unsafe_code = "deny"
 
+
 [lints.clippy]
+    ### category ###
     pedantic = "warn"
     nursery = "warn"
 
-    enum_glob_use = "deny"
-    unwrap_used = "warn"
 
-    # implicit_return = "warn"
     needless_return = "allow"
+    # implicit_return = "warn"
 
+
+    ## restriction
+    shadow_same = "allow"
     shadow_reuse = "allow"
-    shadow_same = "warn"
     shadow_unrelated = "warn"
 
-    cast_possible_wrap = "warn"
+    # unwrap_used = "warn"
 
-    semicolon_if_nothing_returned = "warn"
+
+    ## pedantic
+    cast_possible_wrap = "warn"
+    enum_glob_use = "deny"
+    semicolon_if_nothing_returned = "deny"
