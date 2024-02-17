@@ -7,6 +7,7 @@ function l { coreutils.exe ls -AF --color=always --group-directories-first -N @A
 function ll { coreutils.exe ls -AF --color=always --group-directories-first -GhlN --time-style="+%Y-%m-%d %H %:::z" @Args }
 function lll { coreutils.exe ls -AF --color=always --group-directories-first -ahil --time-style="+%Y-%m-%d %H:%M:%S %:z" @Args }
 
+$env:EZA_MIN_LUMINANCE=65
 function e { eza --all --sort=name --group-directories-first --classify --color=automatic --color-scale=all --color-scale-mode=gradient --icons=never @Args }
 function e1 { e --oneline --no-quotes @Args }
 function el { e --long --no-quotes --binary --time-style='+%Y-%m-%d %H:%M %:::z' @Args }

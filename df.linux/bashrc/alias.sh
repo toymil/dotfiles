@@ -46,6 +46,8 @@ alias "cts"="ct -sh --du"
 
 if [ -x "$(command -v eza)" ] ; then
 
+export EZA_MIN_LUMINANCE=65
+
 alias "e"="eza \
 --all \
 --sort=name \
