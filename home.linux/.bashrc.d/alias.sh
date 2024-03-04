@@ -9,7 +9,7 @@
 alias "sudo"="sudo "
 
 #===========================================================
-#|          modernize/customize `ls` et. `tree`           ||
+#|          modernize/customize `ls` and `tree`           ||
 
 time_style_minute="+\
 %Y-%m-%d %H %:::z
@@ -130,7 +130,7 @@ if command -v fd &> /dev/null ; then
 fi
 
 #===========================================================
-#|           modernize/customize `cp` et. `scp`           ||
+#|           modernize/customize `cp` and `scp`           ||
 
 # rsync
 #   --verbose
