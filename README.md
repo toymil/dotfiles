@@ -1,5 +1,1 @@
-# Collection of Dotfiles
-
-**_!! BE CAREFUL WITH THE BRANCH YOU ARE ON !!_**
-
-You could put `source` or `include` lines into each corresponding local dotfiles, or just run the `insert_trigger.py` script.
+***!! MAKE SURE YOU ARE ON THE CORRECT BRANCH !!***
