@@ -4,7 +4,7 @@
 # The first word of each simple command, if unquoted, is checked to see if it
 # has an alias. ... If the last character of the alias value is a blank, then
 # the next command word following the alias is also checked for alias expansion.
-# " - quote from https://www.gnu.org/software/bash/manual/bash.html#Aliases
+# " -- https://www.gnu.org/software/bash/manual/html_node/Aliases.html
 # Therefore, to make alias work after sudo, you need the following alias:
 alias "sudo"="sudo "
 

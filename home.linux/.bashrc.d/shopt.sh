@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 
-# includes filenames beginning with a '.' in the results of filename expansion
+# see: https://www.gnu.org/software/bash/manual/html_node/The-Shopt-Builtin.html
+
 shopt -s dotglob
