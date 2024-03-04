@@ -268,6 +268,3 @@ alias "delete-vimundo-root"="cf -s -t f '.*.un~' / -X rm -i {} \;"
 # delete LaTeX compile auxiliary files
 alias "delete-latexaux"="cf --regex -s -t f '^.+\.(synctex\.gz|xdv)$' ./ -X rm -i {} \;"
 alias "delete-latexaux-root"="cf --regex -s -t f '^.+\.(synctex\.gz|xdv)$' / -X rm -i {} \;"
-
-# alias to get windows host ip in wsl (whi = wsl host ip)
-alias "whi"="cat /etc/resolv.conf | grep nameserver | awk '{ print \$2 }'"
