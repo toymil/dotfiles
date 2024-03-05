@@ -15,6 +15,7 @@ function ell { el --all --header --group --links --mounts --time-style='+%Y-%m-%
 function elll { ell --inode --blocksize --extended --context --time-style='+%Y-%m-%d %H:%M:%S.%3f %::z' @Args }
 function et { e --tree --no-quotes @Args }
 function etl { et --long --binary --group --no-time @Args }
+function etg { et --git-ignore @Args }
 function et1 { et -L 1 @Args }
 function et2 { et -L 2 @Args }
 function et3 { et -L 3 @Args }

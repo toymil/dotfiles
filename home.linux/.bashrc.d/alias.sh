@@ -96,6 +96,7 @@ alias "etl"="et \
 --group \
 --no-time\
 "
+alias "etg"="et --git-ignore"
 alias "et1"="et -L 1"
 alias "et2"="et -L 2"
 alias "et3"="et -L 3"
