@@ -30,7 +30,7 @@ export GIT_PS1_STATESEPARATOR=" | "
 export GIT_PS1_SHOWCOLORHINTS=1
 
 command_number="\#"
-date_time="${b_command}date +'%Y-%m-%d %H:%M:%S %:z'${e_command}"
+date_time="${b_command}date +'%Y-%m-%d %a %H:%M:%S %:z'${e_command}"
 directory="\w"
 git_info_line="${b_command}__git_ps1 '(%s) '${e_command}"
 hostname="\h"
