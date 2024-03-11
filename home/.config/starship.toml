@@ -24,8 +24,6 @@ add_newline = true
     format = "[{$indicator}]($style)"
     style = "7"
     bash_indicator = "BASH"
-    fish_indicator = "FISH"
-    zsh_indicator = "ZSH"
     powershell_indicator = "POSH"
 
 [time]
