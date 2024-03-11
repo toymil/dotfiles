@@ -44,7 +44,7 @@ add_newline = true
     disabled = false
     format = "[\\[$time\\]]($style)"
     style = "15"
-    time_format = "%Y-%m-%d %H:%M:%S %:z"
+    time_format = "%Y-%m-%d %a %H:%M:%S %:z"
 
 [status]
     disabled = false
