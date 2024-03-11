@@ -23,8 +23,8 @@ add_newline = true
     disabled = false
     format = "[{$indicator}]($style)"
     style = "7"
-    bash_indicator = "BASH"
-    powershell_indicator = "POSH"
+    bash_indicator = "Bash"
+    powershell_indicator = "PowerShell"
 
 [time]
     disabled = false
