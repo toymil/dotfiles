@@ -34,7 +34,7 @@ add_newline = true
         openSUSE = ""
 
 [shell]
-    disabled = false
+    disabled = true
     format = "[{$indicator}]($style)"
     style = "7"
     bash_indicator = "Bash"
