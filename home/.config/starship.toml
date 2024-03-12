@@ -21,17 +21,17 @@ add_newline = true
 
 [os]
     disabled = false
-    format = "[{$symbol( $version)}]($style)"
+    format = "[{$name$symbol( $version)( $codename)}]($style)"
     style = "7"
     [os.symbols]
-        Unknown = "OS?"
+        Unknown = "?"
 
-        Linux = "Linux?"
-        Windows = "Windows"
-        Macos = "macOS"
+        Linux = "?"
+        Windows = ""
+        Macos = ""
 
-        Debian = "Debian"
-        openSUSE = "openSUSE"
+        Debian = ""
+        openSUSE = ""
 
 [shell]
     disabled = false
