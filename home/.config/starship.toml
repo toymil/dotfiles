@@ -74,7 +74,7 @@ add_newline = true
     tag_symbol = ""
 
 [git_state]
-    format = "\\([$state( $progress_current/$progress_total)]($style)\\)"
+    format = "[\\($state( $progress_current/$progress_total)\\)]($style)"
 
 [git_status]
     format = "([\\[( $all_status )$ahead_behind\\]]($style))"
