@@ -61,7 +61,7 @@ add_newline = true
     repo_root_format = "([$read_only]($read_only_style) )[$before_root_path]($style)[$repo_root]($repo_root_style)[$path]($style)"
     read_only = "[RO]"
 
-    style = "bold #bdae93"
+    style = "#d5c4a1"
     read_only_style = "#cc241d"
     repo_root_style = "bold #fe8019"
 
