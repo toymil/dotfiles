@@ -1,9 +1,9 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-[>](bold #ce5d97) $username $hostname( $os)( $shell)( $time)( $status) [:](#928374)
-[-](bold #ce5d97) $directory(
-[-](bold #ce5d97) ($git_branch )($git_commit )($git_state )$git_status)
+[>](bold #7c6f64) $username $hostname( $os)( $shell)( $time)( $status) [:](#928374)
+[-](bold #7c6f64) $directory(
+[-](bold #7c6f64) ($git_branch )($git_commit )($git_state )$git_status)
 $character """
 add_newline = true
 
