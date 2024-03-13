@@ -1,28 +1,28 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-[>](bold 213) $username $hostname( $os)( $shell)( $time)( $status) [:](7)
-[-](bold 213) $directory(
-[-](bold 213) ($git_branch )($git_commit )($git_state )$git_status)
+[>](bold #d3869b) $username $hostname( $os)( $shell)( $time)( $status) [:](#928374)
+[-](bold #d3869b) $directory(
+[-](bold #d3869b) ($git_branch )($git_commit )($git_state )$git_status)
 $character """
 add_newline = true
 
 [username]
     show_always = true
     format = "[$user]($style)"
-    style_user = "bold 81"
-    style_root = "bold red"
+    style_user = "bold #83a598"
+    style_root = "bold #fb4934"
 
 [hostname]
     ssh_only = false
-    format = "[[@$ssh_symbol](7) $hostname]($style)"
-    style = "bold 84"
+    format = "[@$ssh_symbol](#ebdbb2) [$hostname]($style)"
+    style = "bold #b8bb26"
     ssh_symbol = "⇌"
 
 [os]
     disabled = false
-    format = "[{$name$symbol( $version)( $codename)}]($style)"
-    style = "7"
+    format = "[{[$name$symbol( $version)( $codename)]($style)}](#928374)"
+    style = "#ebdbb2"
     [os.symbols]
         Unknown = "?"
 
@@ -35,49 +35,56 @@ add_newline = true
 
 [shell]
     disabled = true
-    format = "[{$indicator}]($style)"
-    style = "7"
+    format = "[{[$indicator]($style)}](#928374)"
+    style = "#ebdbb2"
     bash_indicator = "Bash"
     powershell_indicator = "PowerShell"
 
 [time]
     disabled = false
-    format = "[\\[$time\\]]($style)"
-    style = "15"
+    format = "[\\[[$time]($style)\\]](#928374)"
+    style = "#ebdbb2"
     time_format = "%Y-%m-%d %a %H:%M:%S %:z"
 
 [status]
     disabled = false
-    format = "[\\([$status]($style)\\)](7)"
+    format = "[\\([$status]($style)\\)](#928374)"
+    style = "bold #fb4934"
     success_symbol = " "
     recognize_signal_code = false
 
 [directory]
     truncation_length = 0
     truncate_to_repo = false
+
     format = "([$read_only]($read_only_style) )[$path]($style)"
-    repo_root_format = "([$read_only]($read_only_style) )[$before_root_path]($before_repo_root_style)[$repo_root]($repo_root_style)[$path]($style)"
-    style = "229"
-    repo_root_style = "bold 229"
+    repo_root_format = "([$read_only]($read_only_style) )[$before_root_path]($style)[$repo_root]($repo_root_style)[$path]($style)"
     read_only = "[RO]"
+
+    style = "#fabd2f"
+    read_only_style = "#cc241d"
+    repo_root_style = "bold #fe8019"
 
 [git_branch]
     format = "[$symbol $branch( : $remote_name/$remote_branch)]($style)"
-    style = "bold"
+    style = "bold #ebdbb2"
     always_show_remote = true
     symbol = ""
 
 [git_commit]
     format = "[\\($hash\\)( \\[$tag\\])]($style)"
+    style = "bold #b8bb26"
     only_detached = true
     tag_disabled = false
     tag_symbol = ""
 
 [git_state]
     format = "[\\($state( $progress_current/$progress_total)\\)]($style)"
+    style = "bold #fabd2f"
 
 [git_status]
     format = "([\\[( $all_status )$ahead_behind\\]]($style))"
+    style = "bold #fe8019"
 
     up_to_date = ""
     ahead = "⇡$count"
@@ -88,5 +95,5 @@ add_newline = true
 
 [character]
     format = "$symbol"
-    success_symbol = "[\\$](bold 202)"
-    error_symbol = "[\\$](bold yellow)"
+    success_symbol = "[\\$](bold #fb4934)"
+    error_symbol = "[\\$](bold #fabd2f)"
