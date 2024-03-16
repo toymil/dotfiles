@@ -47,9 +47,9 @@
     ;; input (device-file "")
     ;; output (uinput-sink "")
 
-    ;; ;; windows
+    ;; ;; windows (<delay> and <rate> unit is millisecond)
     ;; input (low-level-hook)
-    ;; output (send-event-sink [ delay (in ms) ] [ rate (in ms) ])
+    ;; output (send-event-sink [ <delay> <rate> ])
 
     ;; cmp-seq
     ;; cmp-seq-delay
