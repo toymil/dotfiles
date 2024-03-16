@@ -127,8 +127,10 @@
 |#
 
 (defalias
-    hf1 (tap-hold-next 200 (around esc (pause 35)) (layer-toggle fn1))  ;; hold fn 1
+    fn1 (layer-toggle fn1)
     fn2 (layer-toggle fn2)
+    hf1 (tap-hold-next 200 (around esc (pause 35)) @fn1)  ;; hold fn1
+    hf2 (tap-hold-next 200 (around grv (pause 35)) @fn2)  ;; hold fn2
 
     vdl M-C-left   ;; switch virtual desktop to the left
     vdr M-C-right  ;; switch virtual desktop to the right
