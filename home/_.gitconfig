@@ -85,6 +85,8 @@
     ca  = commit --amend
     cas = commit --gpg-sign --amend
 
+    m   = merge
+    ms  = merge --gpg-sign
     mnc = merge --no-commit
     mff = merge --ff-only
 
