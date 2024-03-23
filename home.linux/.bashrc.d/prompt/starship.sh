@@ -3,6 +3,9 @@
 eval "$(starship init bash)"
 
 function set_title() {
+    local path_full
+    local path_last_component
+
     path_full=$PWD
 
     path_last_component=${path_full##*/}
