@@ -30,6 +30,9 @@ vim.opt.undolevels = 512
 
 
 
+vim.opt.mouse:remove("i")
+
+
 vim.opt.filetype = "on"
 vim.opt.syntax = "on"
 
