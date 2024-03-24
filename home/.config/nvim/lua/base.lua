@@ -78,4 +78,4 @@ vim.opt.whichwrap:append("]")
 
 vim.opt.termguicolors = true
 
-vim.cmd.colorscheme("delek")
+vim.cmd("colorscheme delek")
