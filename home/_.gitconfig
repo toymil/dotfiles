@@ -18,28 +18,28 @@
 
 
 [pager]
-    ; These pagers might not be available on your platform, therefore it is
-    ; recommended to set them locally.
+    # These pagers might not be available on your platform, therefore it is
+    # recommended to set them locally.
 
-    ; ; `diff-highlight`:
-    ; ; ```
-    ; ; git config --global pager.log 'diff-highlight | less'
-    ; ; git config --global pager.show 'diff-highlight | less'
-    ; ; git config --global pager.diff 'diff-highlight | less'
-    ; ; ```
-    ; log = diff-highlight | less
-    ; show = diff-highlight | less
-    ; diff = diff-highlight | less
+    # # `diff-highlight`:
+    # # ```
+    # # git config --global pager.log 'diff-highlight | less'
+    # # git config --global pager.show 'diff-highlight | less'
+    # # git config --global pager.diff 'diff-highlight | less'
+    # # ```
+    # log = diff-highlight | less
+    # show = diff-highlight | less
+    # diff = diff-highlight | less
 
-    ; ; `git-delta`:
-    ; ; ```
-    ; ; git config --global pager.log 'delta'
-    ; ; git config --global pager.show 'delta'
-    ; ; git config --global pager.diff 'delta'
-    ; ; ```
-    ; log = delta
-    ; show = delta
-    ; diff = delta
+    # # `git-delta`:
+    # # ```
+    # # git config --global pager.log 'delta'
+    # # git config --global pager.show 'delta'
+    # # git config --global pager.diff 'delta'
+    # # ```
+    # log = delta
+    # show = delta
+    # diff = delta
 
 
 [delta]
@@ -93,8 +93,8 @@
     fap = fetch --all --prune
     pff = pull --ff-only
 
-    ; blobless clone
+    # blobless clone
     clbl = clone --filter=blob:none
-    ; shallow clone
+    # shallow clone
     cls = clone --depth=1
 
