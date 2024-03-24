@@ -25,6 +25,8 @@
 
 
 [delta]
+    navigate = true
+    dark = true
     diff-highlight = true
     file-style = yellow
     file-decoration-style = blue box ul
