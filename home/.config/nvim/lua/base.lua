@@ -7,9 +7,9 @@ vim.opt.encoding = "utf-8"
 -- }
 
 
-vim.opt.undodir = "."
-vim.opt.undofile = true
-vim.opt.undolevels = 512
+fileformats = { "unix", "dos" }
+
+fixendofline = true
 
 
 -- see: https://neovim.io/doc/user/options.html#'tabstop'
@@ -20,6 +20,11 @@ vim.opt.expandtab = true
 
 vim.opt.smarttab = true
 vim.opt.autoindent = true
+
+
+vim.opt.undodir = "."
+vim.opt.undofile = true
+vim.opt.undolevels = 512
 
 
 
