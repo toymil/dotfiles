@@ -56,7 +56,7 @@ vim.opt.colorcolumn = { "50", "80", "100", "120" }
 vim.opt.number = true
 vim.opt.ruler = true
 
-vim.opt.showtabline = 2
+-- vim.opt.showtabline = 2
 vim.opt.laststatus = 2
 
 
