@@ -78,6 +78,9 @@
     mnc = merge --no-commit
     mff = merge --ff-only
 
+    p   = push
+    pa  = push --all
+
     fap = fetch --all --prune
     pff = pull --ff-only
 
