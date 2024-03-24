@@ -17,6 +17,10 @@
     ff = only
 
 
+[diff]
+    colorMoved = default
+
+
 # # use `git-delta`
 # [core]
 #     pager = delta
