@@ -91,5 +91,7 @@
     # blobless clone
     clbl = clone --filter=blob:none
     # shallow clone
-    cls = clone --depth=1
+    cls = clone --depth=1 --recurse-submodules --shallow-submodules
+    # shallow clone without submodules
+    clsns = clone --depth=1
 
