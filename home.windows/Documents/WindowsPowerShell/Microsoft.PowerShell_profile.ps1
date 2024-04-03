@@ -3,6 +3,7 @@ Invoke-Expression (&starship init powershell)
 
 Set-PSReadLineKeyHandler -Key Tab -Function Complete
 
+
 $env:EZA_MIN_LUMINANCE=65
 function e { eza --all --sort=name --group-directories-first --classify --color=automatic --color-scale=all --color-scale-mode=gradient --icons=never @Args }
 function ee { e --oneline --no-quotes @Args }
