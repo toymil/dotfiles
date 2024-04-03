@@ -59,7 +59,7 @@ alias "e"="eza \
 --icons=never\
 "
 
-alias "e1"="e \
+alias "ee"="e \
 --oneline \
 --no-quotes\
 "
