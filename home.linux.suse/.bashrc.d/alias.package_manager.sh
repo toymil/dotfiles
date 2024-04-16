@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-alias "zp-update"="\
+alias "zp-tup"="\
 zypper refresh \
 && zypper dist-upgrade \
 && zypper install-new-recommends --no-recommends\
