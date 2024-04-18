@@ -48,7 +48,7 @@ if [ -x "$(command -v eza)" ] ; then
 
 export EZA_MIN_LUMINANCE=65
 
-alias "e"="eza \
+eza_base="eza \
 --all \
 --sort=name \
 --group-directories-first \
@@ -59,12 +59,16 @@ alias "e"="eza \
 --icons=never\
 "
 
-alias "ee"="e \
+alias "e"="${eza_base} \
+--across\
+"
+
+alias "ee"="${eza_base} \
 --oneline \
 --no-quotes\
 "
 
-alias "el"="e \
+alias "el"="${eza_base} \
 --long \
 --no-quotes \
 --binary \
@@ -86,7 +90,7 @@ alias "elll"="ell \
 --time-style='${time_style_millisecond}'\
 "
 
-alias "et"="e \
+alias "et"="${eza_base} \
 --tree \
 --no-quotes\
 "
