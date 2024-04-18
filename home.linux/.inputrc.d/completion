@@ -5,5 +5,7 @@ set colored-completion-prefix on
 set completion-ignore-case on
 set completion-map-case on
 
+set print-completions-horizontally on
+
 set show-all-if-ambiguous on
 set show-all-if-unmodified on
