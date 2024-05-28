@@ -62,9 +62,10 @@
     aa = add --verbose --all
     ap = add --patch
 
-    d  = diff
-    dc = diff --cached
-    ds = diff --stat
+    d   = diff
+    dc  = diff --cached
+    ds  = diff --stat
+    dni = diff --no-index
 
     skip-add = update-index --skip-worktree
     skip-remove = update-index --no-skip-worktree
