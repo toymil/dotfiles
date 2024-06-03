@@ -276,3 +276,7 @@ alias "delete-vimundo-root"="cf -s -t f '.*.un~' / -X rm -i {} \;"
 # delete LaTeX compile auxiliary files
 alias "delete-latexaux"="cf --regex -s -t f '^.+\.(synctex\.gz|xdv)$' ./ -X rm -i {} \;"
 alias "delete-latexaux-root"="cf --regex -s -t f '^.+\.(synctex\.gz|xdv)$' / -X rm -i {} \;"
+
+# kill vscode server (for vscode remote ssh)
+# see: https://code.visualstudio.com/docs/remote/troubleshooting#_cleaning-up-the-vs-code-server-on-the-remote
+alias "kill-vscode-server"="kill -9 \$(ps aux | grep vscode-server | grep \$USER | grep -v grep | awk '{print \$2}')"
