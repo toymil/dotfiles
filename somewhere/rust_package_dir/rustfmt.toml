@@ -1,7 +1,7 @@
 match_block_trailing_comma = true
 newline_style = "Unix"
 reorder_imports = true
-reorder_modules = true
+reorder_modules = false
 use_field_init_shorthand = true
 use_try_shorthand = true
 
