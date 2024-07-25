@@ -3,7 +3,7 @@
 
 
 [core]
-    ignorecase = false
+    ignoreCase = false
     editor = vim
     #editor = nvim
     safecrlf = true
