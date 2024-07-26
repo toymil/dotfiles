@@ -124,9 +124,11 @@ alias "etl"="et \
 "
 
 alias "etg"="et --git-ignore"
+
 alias "et1"="et -L 1"
 alias "et2"="et -L 2"
 alias "et3"="et -L 3"
+
 alias "etl1"="etl -L 1"
 alias "etl2"="etl -L 2"
 alias "etl3"="etl -L 3"
