@@ -25,8 +25,9 @@ time_style_millisecond="+\
 
 ls_base="\
 ls \
--AF \
---color=always \
+--almost-all \
+--color=auto \
+--classify=auto \
 --group-directories-first\
 "
 l="${ls_base} -N"
