@@ -53,12 +53,13 @@ ls_extra_long="${ls_long_base} \
 --time-style='${time_style_second}'\
 "
 
-alias   "l"="LC_COLLATE=C.UTF-8 ${l}"
-alias  "l1"="LC_COLLATE=C.UTF-8 ${l} -1"
-alias  "ll"="LC_COLLATE=C.UTF-8 ${ll}"
-alias "lll"="LC_COLLATE=C.UTF-8 ${lll}"
-alias "lle"="LC_COLLATE=en_US.utf8 ${ll}"
-alias "llz"="LC_COLLATE=zh_CN.utf8 ${ll}"
+alias   "l"="LC_COLLATE=C.UTF-8 ${ls_grid}"
+alias  "l1"="LC_COLLATE=C.UTF-8 ${ls_single_column}"
+alias  "ll"="LC_COLLATE=C.UTF-8 ${ls_long}"
+alias "lll"="LC_COLLATE=C.UTF-8 ${ls_extra_long}"
+
+alias "lle"="LC_COLLATE=en_US.utf8 ${ls_long}"
+alias "llz"="LC_COLLATE=zh_CN.utf8 ${ls_long}"
 
 alias  "ct"="LC_COLLATE=C.UTF-8 tree -aFC --dirsfirst"
 alias "ctp"="ct -fpugi"
