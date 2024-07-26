@@ -23,16 +23,35 @@ time_style_millisecond="+\
 %Y-%m-%d %H:%M:%S.%3f %::z\
 "
 
-ls_base="\
-ls \
+ls_base="ls \
 --almost-all \
 --color=auto \
 --classify=auto \
 --group-directories-first\
 "
-l="${ls_base} -N"
-ll="${ls_base} -GhlN --time-style='${time_style_minute}'"
-lll="${ls_base} -ahil --time-style='${time_style_second}'"
+
+ls_grid="${ls_base} \
+-C\
+"
+ls_single_column="${ls_base} \
+-1\
+"
+ls_long_base="${ls_base} \
+-l \
+--human-readable \
+--literal\
+"
+
+ls_long="${ls_long_base} \
+--no-group \
+--time-style='${time_style_minute}'\
+"
+ls_extra_long="${ls_long_base} \
+--all \
+--inode \
+--context \
+--time-style='${time_style_second}'\
+"
 
 alias   "l"="LC_COLLATE=C.UTF-8 ${l}"
 alias  "l1"="LC_COLLATE=C.UTF-8 ${l} -1"
