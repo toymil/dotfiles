@@ -112,50 +112,6 @@ alias   "el"="${eza_long} --time-style='${time_style_minute}'"
 alias  "ell"="${eza_extra_long} --time-style='${time_style_second}'"
 alias "elll"="${eza_extra_extra_long} --time-style='${time_style_millisecond}'"
 
-
-
-eza_base="eza \
---all \
---sort=name \
---group-directories-first \
---classify \
---color=automatic \
---color-scale=all \
---color-scale-mode=gradient \
---icons=never\
-"
-
-alias "e"="${eza_base} \
---across\
-"
-
-alias "ee"="${eza_base} \
---oneline \
---no-quotes\
-"
-
-alias "el"="${eza_base} \
---long \
---no-quotes \
---binary \
---time-style='${time_style_minute}'\
-"
-alias "ell"="el \
---all \
---header \
---group \
---links \
---mounts \
---time-style='${time_style_second}'\
-"
-alias "elll"="ell \
---inode \
---blocksize \
---extended \
---context \
---time-style='${time_style_millisecond}'\
-"
-
 alias "et"="${eza_base} \
 --tree \
 --no-quotes\
@@ -166,6 +122,7 @@ alias "etl"="et \
 --group \
 --no-time\
 "
+
 alias "etg"="et --git-ignore"
 alias "et1"="et -L 1"
 alias "et2"="et -L 2"
