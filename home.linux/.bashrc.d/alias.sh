@@ -287,7 +287,8 @@ alias "rmf"="rm -vrf"
 alias "rmi"="rm -ri"
 
 if [ -x "$(command -v nvim)" ] ; then
-    alias "nv"="nvim"
+    alias  "nv"="nvim"
+    alias "vim"="nvim"
 fi
 
 if [ -x "$(command -v zellij)" ] ; then
