@@ -36,12 +36,12 @@ ls_grid="${ls_base} \
 ls_single_column="${ls_base} \
 -1\
 "
+
 ls_long_base="${ls_base} \
 -l \
 --human-readable \
 --literal\
 "
-
 ls_long="${ls_long_base} \
 --no-group \
 --time-style='${time_style_minute}'\
