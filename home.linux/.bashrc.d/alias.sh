@@ -112,16 +112,27 @@ alias   "el"="${eza_long} --time-style='${time_style_minute}'"
 alias  "ell"="${eza_extra_long} --time-style='${time_style_second}'"
 alias "elll"="${eza_extra_extra_long} --time-style='${time_style_millisecond}'"
 
-alias "et"="${eza_base} \
+eza_tree="${eza_base} \
 --tree \
 --no-quotes\
 "
-alias "etl"="et \
+eza_tree_permissions="${eza_tree} \
 --long \
---binary \
 --group \
+--no-filesize \
 --no-time\
 "
+eza_tree_size="${eza_tree} \
+--long \
+--binary \
+--no-permissions \
+--no-user \
+--no-time\
+"
+
+alias  "et"="${eza_tree}"
+alias "etp"="${eza_tree_permissions}"
+alias "ets"="${eza_tree_size}"
 
 alias "etg"="et --git-ignore"
 
@@ -129,9 +140,9 @@ alias "et1"="et -L 1"
 alias "et2"="et -L 2"
 alias "et3"="et -L 3"
 
-alias "etl1"="etl -L 1"
-alias "etl2"="etl -L 2"
-alias "etl3"="etl -L 3"
+alias "etp1"="etp -L 1"
+alias "etp2"="etp -L 2"
+alias "etp3"="etp -L 3"
 
 fi
 
