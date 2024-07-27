@@ -157,6 +157,10 @@ alias "etp1"="etp -L 1"
 alias "etp2"="etp -L 2"
 alias "etp3"="etp -L 3"
 
+alias "etg1"="etg -L 1"
+alias "etg2"="etg -L 2"
+alias "etg3"="etg -L 3"
+
 fi
 
 #===========================================================
