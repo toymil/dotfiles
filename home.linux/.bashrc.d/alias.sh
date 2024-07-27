@@ -130,7 +130,7 @@ eza_tree_size="${eza_tree} \
 --no-time\
 "
 
-eza_git="${eza_tree} \
+eza_tree_git="${eza_tree} \
 --long \
 --no-permissions \
 --no-filesize \
@@ -138,7 +138,7 @@ eza_git="${eza_tree} \
 --no-time \
 --git\
 "
-eza_git_ignore="${eza_git} \
+eza_tree_git_ignore="${eza_tree_git} \
 --git-ignore\
 "
 
@@ -146,8 +146,8 @@ alias  "et"="${eza_tree}"
 alias "etp"="${eza_tree_permissions}"
 alias "ets"="${eza_tree_size}"
 
-alias  "etg"="${eza_git}"
-alias "etgi"="${eza_git_ignore}"
+alias  "etg"="${eza_tree_git}"
+alias "etgi"="${eza_tree_git_ignore}"
 
 alias "et1"="et -L 1"
 alias "et2"="et -L 2"
