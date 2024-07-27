@@ -5,20 +5,31 @@ Set-PSReadLineKeyHandler -Key Tab -Function Complete
 
 
 $env:EZA_MIN_LUMINANCE=65
-function e { eza --across --all --sort=name --group-directories-first --classify --color=automatic --color-scale=all --color-scale-mode=gradient --icons=never @Args }
-function ee { e --oneline --no-quotes @Args }
-function el { e --long --no-quotes --binary --time-style='+%Y-%m-%d %H:%M %:::z' @Args }
-function ell { el --all --header --group --links --mounts --time-style='+%Y-%m-%d %H:%M:%S %:z' @Args }
-function elll { ell --inode --blocksize --extended --context --time-style='+%Y-%m-%d %H:%M:%S.%3f %::z' @Args }
-function et { e --tree --no-quotes @Args }
-function etl { et --long --binary --group --no-time @Args }
-function etg { et --git-ignore @Args }
+
+function    e { eza --color=auto --color-scale=all --color-scale-mode=gradient --icons=never --classify=auto --all --sort=name --group-directories-first --grid @Args }
+function   ee { eza --color=auto --color-scale=all --color-scale-mode=gradient --icons=never --classify=auto --all --sort=name --group-directories-first --oneline @Args }
+function   el { eza --color=auto --color-scale=all --color-scale-mode=gradient --icons=never --classify=auto --all --sort=name --group-directories-first --long --binary --no-quotes --time-style='%Y-%m-%d %H %:::z' @Args }
+function  ell { eza --color=auto --color-scale=all --color-scale-mode=gradient --icons=never --classify=auto --all --sort=name --group-directories-first --long --binary --no-quotes --all --header --group --mounts --time-style='%Y-%m-%d %H:%M:%S %:z' @Args }
+function elll { eza --color=auto --color-scale=all --color-scale-mode=gradient --icons=never --classify=auto --all --sort=name --group-directories-first --long --binary --no-quotes --all --header --group --mounts --inode --links --flags --context --extended --time-style='%Y-%m-%d %H:%M:%S.%3f %::z' @Args }
+
+function  et { eza --color=auto --color-scale=all --color-scale-mode=gradient --icons=never --classify=auto --all --sort=name --group-directories-first --tree --no-quotes @Args }
+function etp { eza --color=auto --color-scale=all --color-scale-mode=gradient --icons=never --classify=auto --all --sort=name --group-directories-first --tree --no-quotes --long --group --no-filesize --no-time @Args }
+function ets { eza --color=auto --color-scale=all --color-scale-mode=gradient --icons=never --classify=auto --all --sort=name --group-directories-first --tree --no-quotes --long --binary --no-permissions --no-user --no-time @Args }
+
+function  etg { eza --color=auto --color-scale=all --color-scale-mode=gradient --icons=never --classify=auto --all --sort=name --group-directories-first --tree --no-quotes --long --no-permissions --no-filesize --no-user --no-time --git @Args }
+function etgi { eza --color=auto --color-scale=all --color-scale-mode=gradient --icons=never --classify=auto --all --sort=name --group-directories-first --tree --no-quotes --long --no-permissions --no-filesize --no-user --no-time --git --git-ignore @Args }
+
 function et1 { et -L 1 @Args }
 function et2 { et -L 2 @Args }
 function et3 { et -L 3 @Args }
-function etl1 { etl -L 1 @Args }
-function etl2 { etl -L 2 @Args }
-function etl3 { etl -L 3 @Args }
+
+function etp1 { etp -L 1 @Args }
+function etp2 { etp -L 2 @Args }
+function etp3 { etp -L 3 @Args }
+
+function etg1 { etg -L 1 @Args }
+function etg2 { etg -L 2 @Args }
+function etg3 { etg -L 3 @Args }
 
 
 function cat { bat -p @Args }
