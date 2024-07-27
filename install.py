@@ -104,9 +104,8 @@ def bash(dot_root_dir: str) -> tuple[str, list[tuple[str, str]]]:
                 "\n".join(
                     [
                         f"source {prompt_path}",
-                        f"for f in {bashrc_d_path}/*.sh",
-                        "do",
-                        "    source $f",
+                        f"for f in {bashrc_d_path}/*.sh ; do",
+                        "    source ${f};",
                         "done",
                     ]
                 ),
