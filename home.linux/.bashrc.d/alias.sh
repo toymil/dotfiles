@@ -171,7 +171,7 @@ if [ -x "$(command -v batcat)" ] ; then
 fi
 
 if command -v bat &> /dev/null ; then
-    alias "cat"="bat -p"
+    alias  "cat"="bat -p"
     alias "catp"="bat -pp"  # cat plain
     alias "catf"="bat --style=header,grid,numbers --wrap=never"  # cat fancy
 fi
