@@ -8,9 +8,9 @@ $env:EZA_MIN_LUMINANCE=65
 
 function    e { eza --color=auto --color-scale=all --color-scale-mode=gradient --icons=never --classify=auto --all --sort=name --group-directories-first --grid @Args }
 function   ee { eza --color=auto --color-scale=all --color-scale-mode=gradient --icons=never --classify=auto --all --sort=name --group-directories-first --oneline @Args }
-function   el { eza --color=auto --color-scale=all --color-scale-mode=gradient --icons=never --classify=auto --all --sort=name --group-directories-first --long --binary --no-quotes --time-style='%Y-%m-%d %H %:::z' @Args }
-function  ell { eza --color=auto --color-scale=all --color-scale-mode=gradient --icons=never --classify=auto --all --sort=name --group-directories-first --long --binary --no-quotes --all --header --group --mounts --time-style='%Y-%m-%d %H:%M:%S %:z' @Args }
-function elll { eza --color=auto --color-scale=all --color-scale-mode=gradient --icons=never --classify=auto --all --sort=name --group-directories-first --long --binary --no-quotes --all --header --group --mounts --inode --links --flags --context --extended --time-style='%Y-%m-%d %H:%M:%S.%3f %::z' @Args }
+function   el { eza --color=auto --color-scale=all --color-scale-mode=gradient --icons=never --classify=auto --all --sort=name --group-directories-first --long --binary --no-quotes --time-style='+%Y-%m-%d %H %:::z' @Args }
+function  ell { eza --color=auto --color-scale=all --color-scale-mode=gradient --icons=never --classify=auto --all --sort=name --group-directories-first --long --binary --no-quotes --all --header --group --mounts --time-style='+%Y-%m-%d %H:%M:%S %:z' @Args }
+function elll { eza --color=auto --color-scale=all --color-scale-mode=gradient --icons=never --classify=auto --all --sort=name --group-directories-first --long --binary --no-quotes --all --header --group --mounts --inode --links --flags --context --extended --time-style='+%Y-%m-%d %H:%M:%S.%3f %::z' @Args }
 
 function  et { eza --color=auto --color-scale=all --color-scale-mode=gradient --icons=never --classify=auto --all --sort=name --group-directories-first --tree --no-quotes @Args }
 function etp { eza --color=auto --color-scale=all --color-scale-mode=gradient --icons=never --classify=auto --all --sort=name --group-directories-first --tree --no-quotes --long --group --no-filesize --no-time @Args }
