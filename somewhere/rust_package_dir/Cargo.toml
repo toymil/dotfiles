@@ -53,6 +53,9 @@
     semicolon_inside_block = "warn"
     semicolon_outside_block = "allow"
 
+    allow_attributes = "warn"
+    allow_attributes_without_reason = "warn"
+
 
     ### category: nursery       (default: allow) ###
     nursery = { level = "warn", priority = -1 }
