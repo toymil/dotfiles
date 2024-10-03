@@ -7,7 +7,7 @@ use_try_shorthand = true
 
 
 unstable_features = true
-version = "Two"
+style_edition = "2024"
 
 
 imports_granularity = "Crate"
