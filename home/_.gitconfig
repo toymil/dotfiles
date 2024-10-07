@@ -4,10 +4,15 @@
 
 [core]
     ignoreCase = false
+
     editor = vim
     #editor = nvim
-    safecrlf = true
+
+    #eol = native  # (ignored when `core.autocrlf` is set to `true` or `input`)
+    safecrlf = warn
     autocrlf = input
+    #safecrlf = true
+    #autocrlf = true
 
 
 [merge]
