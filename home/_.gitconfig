@@ -68,8 +68,9 @@
     ap = add --patch
 
     d   = diff
-    dc  = diff --cached
     ds  = diff --stat
+    dc  = diff --cached
+    dcs = diff --cached --stat
     dni = diff --no-index
 
     skip-add = update-index --skip-worktree
