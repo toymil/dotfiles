@@ -76,18 +76,20 @@ eza_base="eza \
 --icons=never \
 --classify=auto \
 --all \
---sort=name \
+--sort=name\
+"
+eza_list_base="${eza_base} \
 --group-directories-first\
 "
 
-eza_grid="${eza_base} \
+eza_grid="${eza_list_base} \
 --grid\
 "
-eza_single_column="${eza_base} \
+eza_single_column="${eza_list_base} \
 --oneline\
 "
 
-eza_long="${eza_base} \
+eza_long="${eza_list_base} \
 --long \
 --binary \
 --no-quotes\
@@ -113,6 +115,7 @@ alias  "ell"="${eza_extra_long} --time-style='${time_style_second}'"
 alias "elll"="${eza_extra_extra_long} --time-style='${time_style_millisecond}'"
 
 eza_tree="${eza_base} \
+--group-directories-last \
 --tree \
 --no-quotes\
 "
