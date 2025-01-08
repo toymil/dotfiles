@@ -20,6 +20,7 @@ vim.opt.expandtab = true
 
 vim.opt.smarttab = true
 vim.opt.autoindent = true
+vim.opt.breakindent = true
 
 
 vim.opt.undodir = "."
