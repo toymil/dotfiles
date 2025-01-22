@@ -91,6 +91,7 @@
 
     p   = push
     pa  = push --all
+    pf  = push --force-with-lease
 
     fap = fetch --all --prune
     pff = pull --ff-only
