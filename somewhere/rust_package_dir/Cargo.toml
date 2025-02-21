@@ -57,6 +57,7 @@
 
     missing_const_for_fn = "allow"
     redundant_pub_crate = "allow"
+    iter_on_single_items = "allow"
 
 
     ### category: cargo         (default: allow) ###
