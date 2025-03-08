@@ -45,9 +45,6 @@
     shadow_reuse = "allow"
     shadow_unrelated = "warn"
 
-    semicolon_inside_block = "warn"
-    semicolon_outside_block = "allow"
-
     allow_attributes = "warn"
     allow_attributes_without_reason = "allow"
 
