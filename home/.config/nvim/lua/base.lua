@@ -50,8 +50,8 @@ vim.opt.listchars = {
 
 
 vim.opt.cursorline = true
-vim.opt.cursorlineopt = { "screenline", "number" }
-vim.opt.colorcolumn = { "50", "80", "100", "120" }
+vim.opt.cursorlineopt = { "number" }
+-- vim.opt.colorcolumn = { "50", "80", "100", "120" }
 
 
 vim.opt.number = true
