@@ -34,6 +34,8 @@
     missing_panics_doc = "allow"
     trivially_copy_pass_by_ref = "allow"
 
+    ignored_unit_patterns = "allow"
+
 
     ### category: restriction   (default: allow) ###
     # see also: `needless_return`
