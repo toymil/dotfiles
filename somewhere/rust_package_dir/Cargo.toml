@@ -35,6 +35,7 @@
     trivially_copy_pass_by_ref = "allow"
 
     ignored_unit_patterns = "allow"
+    needless_continue = "allow"
 
 
     ### category: restriction   (default: allow) ###
