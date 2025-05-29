@@ -36,6 +36,7 @@
 
     ignored_unit_patterns = "allow"
     needless_continue = "allow"
+    cast_lossless = "allow"
 
 
     ### category: restriction   (default: allow) ###
