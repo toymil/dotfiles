@@ -12,16 +12,21 @@ function   el { eza --color=auto --color-scale=all --color-scale-mode=gradient -
 function  ell { eza --color=auto --color-scale=all --color-scale-mode=gradient --icons=never --classify=auto --all --sort=name --group-directories-first --long --binary --no-quotes --all --header --group --mounts --time-style='+%Y-%m-%d %H:%M:%S %:z' @Args }
 function elll { eza --color=auto --color-scale=all --color-scale-mode=gradient --icons=never --classify=auto --all --sort=name --group-directories-first --long --binary --no-quotes --all --header --group --mounts --inode --links --flags --context --extended --time-style='+%Y-%m-%d %H:%M:%S.%3f %::z' @Args }
 
-function  et { eza --color=auto --color-scale=all --color-scale-mode=gradient --icons=never --classify=auto --all --sort=name --group-directories-first --tree --no-quotes @Args }
-function etp { eza --color=auto --color-scale=all --color-scale-mode=gradient --icons=never --classify=auto --all --sort=name --group-directories-first --tree --no-quotes --long --group --no-filesize --no-time @Args }
-function ets { eza --color=auto --color-scale=all --color-scale-mode=gradient --icons=never --classify=auto --all --sort=name --group-directories-first --tree --no-quotes --long --binary --no-permissions --no-user --no-time @Args }
+function  et { eza --color=auto --color-scale=all --color-scale-mode=gradient --icons=never --classify=auto --all --sort=name --group-directories-last --tree --no-quotes @Args }
+function etl { eza --color=auto --color-scale=all --color-scale-mode=gradient --icons=never --classify=auto --all --sort=name --group-directories-last --tree --no-quotes --long --binary --no-user --time-style='+%Y-%m-%d %H:%M:%S %:z' @Args }
+function etp { eza --color=auto --color-scale=all --color-scale-mode=gradient --icons=never --classify=auto --all --sort=name --group-directories-last --tree --no-quotes --long --group --no-filesize --no-time @Args }
+function ets { eza --color=auto --color-scale=all --color-scale-mode=gradient --icons=never --classify=auto --all --sort=name --group-directories-last --tree --no-quotes --long --binary --no-permissions --no-user --no-time @Args }
 
-function  etg { eza --color=auto --color-scale=all --color-scale-mode=gradient --icons=never --classify=auto --all --sort=name --group-directories-first --tree --no-quotes --long --no-permissions --no-filesize --no-user --no-time --git @Args }
-function etgi { eza --color=auto --color-scale=all --color-scale-mode=gradient --icons=never --classify=auto --all --sort=name --group-directories-first --tree --no-quotes --long --no-permissions --no-filesize --no-user --no-time --git --git-ignore @Args }
+function  etg { eza --color=auto --color-scale=all --color-scale-mode=gradient --icons=never --classify=auto --all --sort=name --group-directories-last --tree --no-quotes --long --no-permissions --no-filesize --no-user --no-time --git @Args }
+function etgi { eza --color=auto --color-scale=all --color-scale-mode=gradient --icons=never --classify=auto --all --sort=name --group-directories-last --tree --no-quotes --long --no-permissions --no-filesize --no-user --no-time --git --git-ignore @Args }
 
 function et1 { et -L 1 @Args }
 function et2 { et -L 2 @Args }
 function et3 { et -L 3 @Args }
+
+function etl1 { etl -L 1 @Args }
+function etl2 { etl -L 2 @Args }
+function etl3 { etl -L 3 @Args }
 
 function etp1 { etp -L 1 @Args }
 function etp2 { etp -L 2 @Args }
