@@ -299,7 +299,7 @@ alias "tmux"="tmux -u"
 
 alias "mkv"="mkdir -vp"
 
-alias "cpv"="cp -vri"
+alias "cpv"="cp -vri --preserve=timestamps"
 alias "mvv"="mv -vi"
 
 alias "rmv"="rm -vrI"

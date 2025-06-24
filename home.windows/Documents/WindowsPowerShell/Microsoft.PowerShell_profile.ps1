@@ -44,7 +44,7 @@ function csa { scrcpy --video-bit-rate=1M --audio-codec=opus --audio-bit-rate=25
 
 function mkv { coreutils.exe mkdir -vp @Args }
 
-function cpv { coreutils.exe cp -vri @Args }
+function cpv { coreutils.exe cp -vri --preserve=timestamps @Args }
 function mvv { coreutils.exe mv -vi @Args }
 
 function rmv { coreutils.exe rm -vrI @Args }
