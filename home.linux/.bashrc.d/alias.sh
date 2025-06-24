@@ -119,6 +119,12 @@ eza_tree="${eza_base} \
 --tree \
 --no-quotes\
 "
+eza_tree_long="${eza_tree} \
+--long \
+--binary \
+--no-user \
+--time-style='${time_style_second}'\
+"
 eza_tree_permissions="${eza_tree} \
 --long \
 --group \
@@ -146,6 +152,7 @@ eza_tree_git_ignore="${eza_tree_git} \
 "
 
 alias  "et"="${eza_tree}"
+alias "etl"="${eza_tree_long}"
 alias "etp"="${eza_tree_permissions}"
 alias "ets"="${eza_tree_size}"
 
@@ -155,6 +162,10 @@ alias "etgi"="${eza_tree_git_ignore}"
 alias "et1"="et -L 1"
 alias "et2"="et -L 2"
 alias "et3"="et -L 3"
+
+alias "etl1"="etl -L 1"
+alias "etl2"="etl -L 2"
+alias "etl3"="etl -L 3"
 
 alias "etp1"="etp -L 1"
 alias "etp2"="etp -L 2"
