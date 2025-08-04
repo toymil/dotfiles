@@ -312,6 +312,7 @@ alias "mkv"="mkdir -vp"
 
 alias "cpv"="cp -vri --preserve=timestamps"
 alias "mvv"="mv -vi"
+alias "mvs"="mv -vi --exchange"
 
 alias "rmv"="rm -vrI"
 alias "rmf"="rm -vrf"
