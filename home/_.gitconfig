@@ -15,14 +15,6 @@
     #autocrlf = true
 
 
-[merge]
-    ff = false
-
-
-[pull]
-    ff = only
-
-
 [diff]
     colorMoved = default
 
@@ -88,6 +80,7 @@
     ms  = merge --gpg-sign
     mnc = merge --no-commit
     mff = merge --ff-only
+    mnf = merge --no-ff
 
     p   = push
     pa  = push --all
@@ -95,6 +88,7 @@
 
     fap = fetch --all --prune
     pff = pull --ff-only
+    pnf = pull --no-ff
 
     # blobless clone
     clbl = clone --filter=blob:none
