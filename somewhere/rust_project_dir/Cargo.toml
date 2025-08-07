@@ -1,5 +1,12 @@
 [lints.rust] # forbid > deny > warn > allow
-    unsafe_code = "deny"
+    unsafe_code = "allow"
+    unsafe_op_in_unsafe_fn = "warn"
+
+    unreachable_pub = "warn"
+    unnameable_types = "warn"
+
+    redundant_imports = "warn"
+    unused_qualifications = "warn"
 
 
 [lints.clippy] # forbid > deny > warn > allow
@@ -37,6 +44,7 @@
     ignored_unit_patterns = "allow"
     needless_continue = "allow"
     cast_lossless = "allow"
+    if_not_else = "allow"
 
 
     ### category: restriction   (default: allow) ###
