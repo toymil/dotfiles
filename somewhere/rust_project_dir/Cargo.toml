@@ -8,6 +8,8 @@
     redundant_imports = "warn"
     unused_qualifications = "warn"
 
+    explicit_outlives_requirements = "warn"
+
 
 [lints.clippy] # forbid > deny > warn > allow
     ### category: correctness   (default: deny) ###
