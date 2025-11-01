@@ -289,16 +289,6 @@ alias "cdigs"="cdig +short"
 alias "flat-update"="flatpak --user update"
 alias "flat-clean"="flatpak --user repair && flatpak --user uninstall --unused"
 
-# conda update
-alias "conda-update"="\
-conda update -n base conda \
-&& conda update -n base --all\
-"
-alias "conda-clean"="conda clean --all"
-
-# vim update
-alias "vim-update"="vim +PlugUpdate +PlugUpgrade +qa"
-
 #===========================================================
 #|                     q.o.l. aliases                     ||
 
