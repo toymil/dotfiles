@@ -96,11 +96,11 @@ eza_long="${eza_list_base} \
 "
 eza_extra_long="${eza_long} \
 --header \
+--inode \
 --group \
 --mounts\
 "
 eza_extra_extra_long="${eza_extra_long} \
---inode \
 --links \
 --flags \
 --context \
