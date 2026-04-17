@@ -73,14 +73,14 @@ add_newline = true
     disabled = false
     only_detached = true
     format = "[\\($hash\\)( \\[$tag\\])]($style)"
-    style = "#b8bb26"
+    style = "bold #98971a"
     tag_disabled = false
     tag_symbol = ""
 
 [git_state]
     disabled = false
     format = "[\\($state( $progress_current/$progress_total)\\)]($style)"
-    style = "#fabd2f"
+    style = "bold #fabd2f"
 
 [git_status]
     disabled = false
