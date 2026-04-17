@@ -69,10 +69,10 @@ if [ -x "$(command -v eza)" ] ; then
 
 export EZA_MIN_LUMINANCE=65
 eza_foundation="eza \
+--icons=never \
 --color=auto \
 --color-scale=all \
 --color-scale-mode=gradient \
---icons=never \
 --classify=auto \
 --all \
 --sort=name\
@@ -92,14 +92,14 @@ eza_single="${eza_base} \
 eza_long="${eza_base} \
 --long \
 --binary \
---no-quotes\
+--no-quotes \
+--mounts\
 "
 eza_long_long="${eza_long} \
 --header \
 --inode \
 --octal-permissions \
---group \
---mounts\
+--group\
 "
 eza_long_long_long="${eza_long_long} \
 --links \
