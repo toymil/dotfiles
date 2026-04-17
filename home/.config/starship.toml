@@ -1,4 +1,4 @@
-"$schema" = 'https://starship.rs/config-schema.json'
+"$schema" = "https://starship.rs/config-schema.json"
 
 format = """
 [>](bold #7c6f64) $username $hostname( $os)( $shell)( $time)( $status) [:](#928374)
