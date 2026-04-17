@@ -97,6 +97,7 @@ eza_long="${eza_list_base} \
 eza_extra_long="${eza_long} \
 --header \
 --inode \
+--octal-permissions \
 --group \
 --mounts\
 "
@@ -126,6 +127,7 @@ eza_tree_long="${eza_tree} \
 "
 eza_tree_permissions="${eza_tree} \
 --long \
+--octal-permissions \
 --group \
 --no-filesize \
 --no-time\
