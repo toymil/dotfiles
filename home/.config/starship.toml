@@ -40,15 +40,14 @@ add_newline = true
 
 [time]
     disabled = false
-    format = "[\\[[$time]($style)\\]](#928374)"
+    format = "[$time]($style)"
     style = "#ebdbb2"
-    time_format = "%Y-%m-%d %a %H:%M:%S %:z"
+    time_format = "--%m-%d %H:%M:%S %:z"
 
 [status]
     disabled = false
-    format = "[\\([$status]($style)\\)](#928374)"
+    format = "[$status]($style)"
     style = "bold #fb4934"
-    success_symbol = " "
     recognize_signal_code = false
 
 [directory]
