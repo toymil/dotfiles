@@ -2,11 +2,10 @@
 
 alias "zp-tup"="\
 zypper refresh \
-&& zypper dist-upgrade \
-&& zypper install-new-recommends --no-recommends\
+&& zypper --no-refresh dist-upgrade \
+&& zypper --no-refresh install-new-recommends --no-recommends \
+&& zypper --no-refresh install-new-recommends --dry-run\
 "
 
 alias "zp-rm"="zypper remove --clean-deps"
-alias "pkg-ls-unneeded"="zypper packages --unneeded"
-
-alias "pkg-ls-orphaned"="zypper packages --orphaned"
+alias "pkg-ls-stray"="zypper --no-refresh packages --orphaned --unneeded"
