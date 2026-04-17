@@ -6,7 +6,8 @@
 # the next command word following the alias is also checked for alias expansion.
 # " -- https://www.gnu.org/software/bash/manual/html_node/Aliases.html
 # Therefore, to make alias work after sudo, you need the following alias:
-alias "sudo"="sudo --preserve-env='http_proxy,https_proxy' "
+alias "sudo"="sudo "
+alias "sudop"="sudo --preserve-env='http_proxy,https_proxy' "
 
 #===========================================================
 #|          modernize/customize `ls` and `tree`           ||
