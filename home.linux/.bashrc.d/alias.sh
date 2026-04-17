@@ -68,7 +68,6 @@ alias "cts"="ct -sh --du"
 if [ -x "$(command -v eza)" ] ; then
 
 export EZA_MIN_LUMINANCE=65
-
 eza_foundation="eza \
 --color=auto \
 --color-scale=all \
@@ -78,6 +77,7 @@ eza_foundation="eza \
 --all \
 --sort=name\
 "
+
 eza_base="${eza_foundation} \
 --group-directories-first\
 "
@@ -85,7 +85,7 @@ eza_base="${eza_foundation} \
 eza_grid="${eza_base} \
 --grid\
 "
-eza_single_column="${eza_base} \
+eza_single="${eza_base} \
 --oneline\
 "
 
@@ -94,14 +94,14 @@ eza_long="${eza_base} \
 --binary \
 --no-quotes\
 "
-eza_extra_long="${eza_long} \
+eza_long_long="${eza_long} \
 --header \
 --inode \
 --octal-permissions \
 --group \
 --mounts\
 "
-eza_extra_extra_long="${eza_extra_long} \
+eza_long_long_long="${eza_long_long} \
 --links \
 --flags \
 --context \
@@ -109,10 +109,10 @@ eza_extra_extra_long="${eza_extra_long} \
 "
 
 alias    "e"="${eza_grid}"
-alias   "ee"="${eza_single_column}"
+alias   "ee"="${eza_single}"
 alias   "el"="${eza_long} --time-style='${time_style_minute}'"
-alias  "ell"="${eza_extra_long} --time-style='${time_style_second}'"
-alias "elll"="${eza_extra_extra_long} --time-style='${time_style_millisecond}'"
+alias  "ell"="${eza_long_long} --time-style='${time_style_second}'"
+alias "elll"="${eza_long_long_long} --time-style='${time_style_millisecond}'"
 
 eza_tree="${eza_foundation} \
 --group-directories-last \
