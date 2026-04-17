@@ -69,7 +69,7 @@ if [ -x "$(command -v eza)" ] ; then
 
 export EZA_MIN_LUMINANCE=65
 
-eza_base="eza \
+eza_foundation="eza \
 --color=auto \
 --color-scale=all \
 --color-scale-mode=gradient \
@@ -78,18 +78,18 @@ eza_base="eza \
 --all \
 --sort=name\
 "
-eza_list_base="${eza_base} \
+eza_base="${eza_foundation} \
 --group-directories-first\
 "
 
-eza_grid="${eza_list_base} \
+eza_grid="${eza_base} \
 --grid\
 "
-eza_single_column="${eza_list_base} \
+eza_single_column="${eza_base} \
 --oneline\
 "
 
-eza_long="${eza_list_base} \
+eza_long="${eza_base} \
 --long \
 --binary \
 --no-quotes\
@@ -114,7 +114,7 @@ alias   "el"="${eza_long} --time-style='${time_style_minute}'"
 alias  "ell"="${eza_extra_long} --time-style='${time_style_second}'"
 alias "elll"="${eza_extra_extra_long} --time-style='${time_style_millisecond}'"
 
-eza_tree="${eza_base} \
+eza_tree="${eza_foundation} \
 --group-directories-last \
 --tree \
 --no-quotes\
