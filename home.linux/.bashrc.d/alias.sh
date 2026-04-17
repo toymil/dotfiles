@@ -119,6 +119,7 @@ eza_tree="${eza_foundation} \
 --tree \
 --no-quotes\
 "
+
 eza_tree_long="${eza_tree} \
 --long \
 --binary \
