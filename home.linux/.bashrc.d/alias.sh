@@ -95,7 +95,6 @@ eza_long="${eza_list_base} \
 --no-quotes\
 "
 eza_extra_long="${eza_long} \
---all \
 --header \
 --group \
 --mounts\
