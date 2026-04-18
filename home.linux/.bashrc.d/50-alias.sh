@@ -295,19 +295,16 @@ alias "flat-clean"="flatpak --user repair && flatpak --user uninstall --unused"
 #===========================================================
 #|                   gpg q.o.l. aliases                   ||
 
-gpgl_base="\
+gpg_list_base="\
 gpg \
 --verbose \
---keyid-format long \
+--keyid-format 0xlong \
 --with-fingerprint \
 --with-subkey-fingerprint\
 "
 
-alias "gpgl"="${gpgl_base} --list-keys"
-alias "gpgll"="gpgl --with-keygrip"
-
-alias "gpgls"="${gpgl_base} --list-secret-keys"
-alias "gpglls"="gpgls --with-keygrip"
+alias "gpgl"="${gpg_list_base} --list-keys"
+alias "gpgls"="${gpg_list_base} --list-secret-keys"
 
 #===========================================================
 #|                     q.o.l. aliases                     ||
