@@ -93,14 +93,14 @@ eza_single="${eza_base} \
 eza_long="${eza_base} \
 --long \
 --binary \
---no-quotes \
---mounts\
+--no-quotes\
 "
 eza_long_long="${eza_long} \
 --header \
 --inode \
 --octal-permissions \
---group\
+--group \
+--mounts\
 "
 eza_long_long_long="${eza_long_long} \
 --links \
