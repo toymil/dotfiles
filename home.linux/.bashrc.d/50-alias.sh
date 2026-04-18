@@ -293,6 +293,23 @@ alias "flat-update"="flatpak --user update"
 alias "flat-clean"="flatpak --user repair && flatpak --user uninstall --unused"
 
 #===========================================================
+#|                   gpg q.o.l. aliases                   ||
+
+gpgl_base="\
+gpg \
+--verbose \
+--keyid-format long \
+--with-fingerprint \
+--with-subkey-fingerprint\
+"
+
+alias "gpgl"="${gpgl_base} --list-keys"
+alias "gpgll"="gpgl --with-keygrip"
+
+alias "gpgls"="${gpgl_base} --list-secret-keys"
+alias "gpglls"="gpgls --with-keygrip"
+
+#===========================================================
 #|                     q.o.l. aliases                     ||
 
 alias "cs"="scrcpy --video-bit-rate=8M --audio-bit-rate=128K"
