@@ -16,7 +16,7 @@ add_newline = true
 [hostname]
     ssh_only = false
     format = "[@](#d5c4a1)$ssh_symbol [$hostname]($style)"
-    ssh_symbol = "[⇌](#d3869b)"
+    ssh_symbol = "[⇌](bold #d3869b)"
     style = "bold #b8bb26"
 
 [os]
