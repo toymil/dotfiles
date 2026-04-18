@@ -20,7 +20,7 @@ alias "pkg-ls-leftover-config"="find /etc -name '*.dpkg-*' -o -name '*.ucf-*' -o
 # TODO: find dummy packages with `deborphan` (see debian release note "Upgrades" chapter)
 
 
-if [ ${UID} -ne 0 ] ; then
+if [ ${EUID} -ne 0 ] ; then
 
 alias "apt-update"="\
 sudo apt update \

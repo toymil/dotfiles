@@ -9,3 +9,15 @@ zypper refresh \
 
 alias "zp-rm"="zypper remove --clean-deps"
 alias "pkg-ls-stray"="zypper --no-refresh packages --orphaned --unneeded"
+
+
+if [ ${EUID} -ne 0 ] ; then
+
+alias "zp-tup"="\
+sudo zypper refresh \
+&& sudo zypper --no-refresh dist-upgrade \
+&& sudo zypper --no-refresh install-new-recommends --no-recommends \
+&& sudo zypper --no-refresh install-new-recommends --dry-run\
+"
+
+fi
