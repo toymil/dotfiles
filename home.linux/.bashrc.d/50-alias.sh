@@ -339,6 +339,7 @@ alias    ".."="cd ../"
 alias   "..."="cd ../../"
 alias  "...."="cd ../../../"
 alias "....."="cd ../../../../"
+export HISTIGNORE="${HISTIGNORE}:..:...:....:....."
 
 #===========================================================
 #|                 functionality aliases                  ||
