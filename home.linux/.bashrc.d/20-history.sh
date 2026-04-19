@@ -20,7 +20,7 @@ dotfiles__main() {
 
     shopt -s histappend
     # append to HISTFILE before each prompt
-    export PROMPT_COMMAND+=('history -a')
+    export PROMPT_COMMAND+=("history -a")
 }
 dotfiles__main
 unset -f dotfiles__main
