@@ -186,9 +186,9 @@ if [ -x "$(command -v batcat)" ] ; then
 fi
 
 if command -v bat &> /dev/null ; then
-    alias  "cat"="bat -p"
-    alias "catp"="bat -pp"  # cat plain
-    alias "catf"="bat --style=header,grid,numbers --wrap=never"  # cat fancy
+    alias  "cat"="bat -pp"  # no decorations, no paging
+    alias "catp"="bat -p"   # no decorations, auto paging
+    alias "catf"="bat --style=header,grid,numbers --wrap=never"
 fi
 
 #===========================================================
