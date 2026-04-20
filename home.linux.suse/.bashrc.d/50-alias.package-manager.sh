@@ -8,7 +8,7 @@ zypper refresh \
 alias "zp-rm"="zypper remove --clean-deps"
 alias "pkg-ls-stray"="zypper --no-refresh packages --orphaned --unneeded"
 
-alias "zynr"="zypper --no-refresh"
+alias "zpnr"="zypper --no-refresh"
 
 
 if [ "${EUID}" -ne 0 ] ; then
