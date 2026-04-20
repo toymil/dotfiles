@@ -11,7 +11,7 @@ alias "pkg-ls-stray"="zypper --no-refresh packages --orphaned --unneeded"
 alias "zynr"="zypper --no-refresh"
 
 
-if [ ${EUID} -ne 0 ] ; then
+if [ "${EUID}" -ne 0 ] ; then
 
 alias "zp-tup"="\
 sudo zypper refresh \
