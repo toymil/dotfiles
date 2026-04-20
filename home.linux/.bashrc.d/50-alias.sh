@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 # "
 # The first word of each simple command, if unquoted, is checked to see if it
 # has an alias. ... If the last character of the alias value is a blank, then

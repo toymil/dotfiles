@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 alias "zp-tup"="\
 zypper refresh \
 && zypper --no-refresh dist-upgrade \

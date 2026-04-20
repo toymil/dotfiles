@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 # `\[` - begin sequence of non-printing characters
 # `\]` - end sequence of non-printing characters
 # used for bash to correctly calculates the size of the prompt

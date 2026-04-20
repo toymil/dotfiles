@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 eval "$(starship init bash)"
 
 function set_title() {

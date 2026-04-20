@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 alias "apt-update"="\
 apt update \
 && apt upgrade \
