@@ -174,6 +174,27 @@ unset -f dotfiles__eza
 }
 
 
+dotfiles__file_ops() {
+alias "mkv"="mkdir -vp"
+
+alias "cpv"="cp -vri --preserve=timestamps"
+alias "mvv"="mv -vi"
+alias "mvs"="mv -vi --exchange"
+
+alias "rmv"="rm -vrI"
+alias "rmf"="rm -vrf"
+alias "rmi"="rm -ri"
+
+alias    ".."="cd ../"
+alias   "..."="cd ../../"
+alias  "...."="cd ../../../"
+alias "....."="cd ../../../../"
+export HISTIGNORE="${HISTIGNORE}:..:...:....:....."
+
+unset -f dotfiles__file_ops
+}
+
+
 dotfiles__bat() {
 local exe_name
 if [ -x "$(command -v bat)" ] ; then
@@ -329,6 +350,8 @@ dotfiles__ls
 dotfiles__tree
 dotfiles__eza
 
+dotfiles__file_ops
+
 
 dotfiles__bat
 dotfiles__fd
@@ -355,17 +378,6 @@ alias "cso"="cs --turn-screen-off"
 alias "csa"="scrcpy --video-bit-rate=1M --audio-codec=opus --audio-bit-rate=256K --turn-screen-off"
 
 
-alias "mkv"="mkdir -vp"
-
-alias "cpv"="cp -vri --preserve=timestamps"
-alias "mvv"="mv -vi"
-alias "mvs"="mv -vi --exchange"
-
-alias "rmv"="rm -vrI"
-alias "rmf"="rm -vrf"
-alias "rmi"="rm -ri"
-
-
 if [ -x "$(command -v tmux)" ] ; then
     alias "tmux"="tmux -u"
 fi
@@ -373,20 +385,12 @@ if [ -x "$(command -v zellij)" ] ; then
     alias "zj"="zellij"
 fi
 
-
 if [ -x "$(command -v nvim)" ] ; then
     alias "vim"="nvim"
     alias  "nv"="nvim"
     alias "nvr"="nvim -R"
     alias "nvp"="nvim -R -"
 fi
-
-
-alias    ".."="cd ../"
-alias   "..."="cd ../../"
-alias  "...."="cd ../../../"
-alias "....."="cd ../../../../"
-export HISTIGNORE="${HISTIGNORE}:..:...:....:....."
 
 
 dotfiles__misc
