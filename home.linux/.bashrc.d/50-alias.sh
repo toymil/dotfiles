@@ -223,7 +223,7 @@ else
     return
 fi
 
-alias "cf"="${exe_name} --hidden --no-ignore --glob --absolute-path"
+alias "cf"="${exe_name} --hidden --no-ignore --ignore-case --glob"
 
 unset -f dotfiles__fd
 }
@@ -385,8 +385,10 @@ if [ -x "$(command -v zellij)" ] ; then
     alias "zj"="zellij"
 fi
 
+
+alias "vimr"="vim -R"
+alias "vimp"="vim -R -"
 if [ -x "$(command -v nvim)" ] ; then
-    alias "vim"="nvim"
     alias  "nv"="nvim"
     alias "nvr"="nvim -R"
     alias "nvp"="nvim -R -"
