@@ -32,7 +32,7 @@ ls_base="ls \
 ls_grid="${ls_base} \
 -C\
 "
-ls_single_column="${ls_base} \
+ls_single="${ls_base} \
 -1\
 "
 
@@ -45,7 +45,7 @@ ls_long="${ls_long_base} \
 --no-group \
 --time-style='${time_style_minute}'\
 "
-ls_extra_long="${ls_long_base} \
+ls_long_long="${ls_long_base} \
 --all \
 --inode \
 --context \
@@ -53,9 +53,9 @@ ls_extra_long="${ls_long_base} \
 "
 
 alias   "l"="LC_COLLATE=C.UTF-8 ${ls_grid}"
-alias  "l1"="LC_COLLATE=C.UTF-8 ${ls_single_column}"
+alias  "l1"="LC_COLLATE=C.UTF-8 ${ls_single}"
 alias  "ll"="LC_COLLATE=C.UTF-8 ${ls_long}"
-alias "lll"="LC_COLLATE=C.UTF-8 ${ls_extra_long}"
+alias "lll"="LC_COLLATE=C.UTF-8 ${ls_long_long}"
 
 alias "lle"="LC_COLLATE=en_US.utf8 ${ls_long}"
 alias "llz"="LC_COLLATE=zh_CN.utf8 ${ls_long}"
