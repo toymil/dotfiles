@@ -1,28 +1,5 @@
-# "
-# The first word of each simple command, if unquoted, is checked to see if it
-# has an alias. ... If the last character of the alias value is a blank, then
-# the next command word following the alias is also checked for alias expansion.
-# " -- https://www.gnu.org/software/bash/manual/html_node/Aliases.html
-# Therefore, to make alias work after sudo, you need the following alias:
-alias "sudo"="sudo "
-alias "sudop"="sudo --preserve-env='http_proxy,https_proxy' "
-
-#===========================================================
-#|          modernize/customize `ls` and `tree`           ||
-
-time_style_minute="+\
-%Y-%m-%d %H %:::z
---%m-%d %H:%M %:::z\
-"
-time_style_second="+\
-%Y-%m-%d %H:%M:%S %:z
-   --%m-%d %H:%M:%S %:z\
-"
-time_style_millisecond="+\
-%Y-%m-%d %H:%M:%S.%3f %::z\
-"
-
-ls_base="ls \
+dotfiles__ls() {
+local ls_base="ls \
 --almost-all \
 --color=auto \
 --classify=auto \
@@ -36,11 +13,12 @@ ls_single="${ls_base} \
 -1\
 "
 
-ls_long_base="${ls_base} \
+local ls_long_base="${ls_base} \
 -l \
 --human-readable \
 --literal\
 "
+
 ls_long="${ls_long_base} \
 --no-group \
 --time-style='${time_style_minute}'\
@@ -60,14 +38,28 @@ alias "lll"="LC_COLLATE=C.UTF-8 ${ls_long_long}"
 alias "lle"="LC_COLLATE=en_US.utf8 ${ls_long}"
 alias "llz"="LC_COLLATE=zh_CN.utf8 ${ls_long}"
 
-alias  "ct"="LC_COLLATE=C.UTF-8 tree -aFC --dirsfirst"
-alias "ctp"="ct -fpugi"
-alias "cts"="ct -sh --du"
+unset -f dotfiles__ls
+}
 
-if [ -x "$(command -v eza)" ] ; then
+
+dotfiles__tree() {
+if [ ! -x "$(command -v tree)" ] ; then return ; fi
+
+local tree_base="LC_COLLATE=C.UTF-8 tree -aFC --dirsfirst"
+
+alias  "ct"="${tree_base}"
+alias "ctp"="${tree_base} -fpugi"
+alias "cts"="${tree_base} -sh --du"
+
+unset -f dotfiles__tree
+}
+
+
+dotfiles__eza() {
+if [ ! -x "$(command -v eza)" ] ; then return ; fi
 
 export EZA_MIN_LUMINANCE=65
-eza_foundation="eza \
+local eza_foundation="eza \
 --icons=never \
 --color=auto \
 --color-scale=all \
@@ -77,7 +69,8 @@ eza_foundation="eza \
 --sort=name\
 "
 
-eza_base="${eza_foundation} \
+
+local eza_base="${eza_foundation} \
 --group-directories-first\
 "
 
@@ -112,6 +105,7 @@ alias   "ee"="${eza_single}"
 alias   "el"="${eza_long} --time-style='${time_style_minute}'"
 alias  "ell"="${eza_long_long} --time-style='${time_style_second}'"
 alias "elll"="${eza_long_long_long} --time-style='${time_style_millisecond}'"
+
 
 eza_tree="${eza_foundation} \
 --group-directories-last \
@@ -176,35 +170,45 @@ alias "etg1"="etg -L 1"
 alias "etg2"="etg -L 2"
 alias "etg3"="etg -L 3"
 
+unset -f dotfiles__eza
+}
+
+
+dotfiles__bat() {
+local exe_name
+if [ -x "$(command -v bat)" ] ; then
+    exe_name="bat"
+elif [ -x "$(command -v batcat)" ] ; then
+    exe_name="batcat"
+else
+    return
 fi
 
-#===========================================================
-#|               modernize/customize `cat`                ||
+alias  "cat"="${exe_name} -pp"  # no decorations, no paging
+alias "catp"="${exe_name} -p"   # no decorations, auto paging
+alias "catf"="${exe_name} --style=header,grid,numbers --wrap=never"
 
-if [ -x "$(command -v batcat)" ] ; then
-    alias "bat"="batcat"
+unset -f dotfiles__bat
+}
+
+
+dotfiles__fd() {
+local exe_name
+if [ -x "$(command -v fd)" ] ; then
+    exe_name="fd"
+elif [ -x "$(command -v fdfind)" ] ; then
+    exe_name="fdfind"
+else
+    return
 fi
 
-if command -v bat &> /dev/null ; then
-    alias  "cat"="bat -pp"  # no decorations, no paging
-    alias "catp"="bat -p"   # no decorations, auto paging
-    alias "catf"="bat --style=header,grid,numbers --wrap=never"
-fi
+alias "cf"="${exe_name} --hidden --no-ignore --glob --absolute-path"
 
-#===========================================================
-#|               modernize/customize `find`               ||
+unset -f dotfiles__fd
+}
 
-if [ -x "$(command -v fdfind)" ] ; then
-    alias "fd"="fdfind"
-fi
 
-if command -v fd &> /dev/null ; then
-    alias "cf"="fd -HIg"
-fi
-
-#===========================================================
-#|           modernize/customize `cp` and `scp`           ||
-
+dotfiles__rsync() {
 # rsync
 #   --verbose
 #   --human-readable
@@ -248,10 +252,7 @@ fi
 #   --chmod=D0755,F0644
 #   --chown=USER:GROUP
 
-alias "crs-dae"="rsync --daemon --no-detach"
-
-alias "crs"="\
-rsync \
+local rsync_base="rsync \
 --human-readable \
 --info=progress2 \
 --info=stats \
@@ -264,9 +265,7 @@ rsync \
 --preallocate \
 --no-compress\
 "
-
-alias "crs-remote"="\
-crs \
+local rsync_remote="${rsync_base} \
 --verbose \
 --info=skip \
 --safe-links \
@@ -275,73 +274,16 @@ crs \
 --no-owner\
 "
 
-alias "crs-remote-644"="crs-remote --chmod=D0755,F0644"
+alias "crs-dae"="rsync --daemon --no-detach"
+alias "crs"="${rsync_base}"
+alias "crs-remote"="${rsync_remote}"
+alias "crs-remote-644"="${rsync_remote} --chmod=D0755,F0644"
 
-#===========================================================
-#|                    customize `dig`                     ||
+unset -f dotfiles__rsync
+}
 
-alias "cdig"="dig +all +nocookie"
-alias "cdigs"="cdig +short"
 
-#===========================================================
-#|                'update' q.o.l. aliases                 ||
-
-# flatpak update
-alias "flat-update"="flatpak --user update"
-alias "flat-clean"="flatpak --user repair && flatpak --user uninstall --unused"
-
-#===========================================================
-#|                   gpg q.o.l. aliases                   ||
-
-gpg_list_base="\
-gpg \
---verbose \
---keyid-format 0xlong \
---with-fingerprint \
---with-subkey-fingerprint\
-"
-
-alias "gpgl"="${gpg_list_base} --list-keys"
-alias "gpgls"="${gpg_list_base} --list-secret-keys"
-
-#===========================================================
-#|                     q.o.l. aliases                     ||
-
-alias "cs"="scrcpy --video-bit-rate=8M --audio-bit-rate=128K"
-alias "cso"="cs --turn-screen-off"
-alias "csa"="scrcpy --video-bit-rate=1M --audio-codec=opus --audio-bit-rate=256K --turn-screen-off"
-
-alias "tmux"="tmux -u"
-
-alias "mkv"="mkdir -vp"
-
-alias "cpv"="cp -vri --preserve=timestamps"
-alias "mvv"="mv -vi"
-alias "mvs"="mv -vi --exchange"
-
-alias "rmv"="rm -vrI"
-alias "rmf"="rm -vrf"
-alias "rmi"="rm -ri"
-
-if [ -x "$(command -v nvim)" ] ; then
-    alias "vim"="nvim"
-    alias  "nv"="nvim"
-    alias "nvr"="nvim -R"
-fi
-
-if [ -x "$(command -v zellij)" ] ; then
-    alias "zj"="zellij"
-fi
-
-alias    ".."="cd ../"
-alias   "..."="cd ../../"
-alias  "...."="cd ../../../"
-alias "....."="cd ../../../../"
-export HISTIGNORE="${HISTIGNORE}:..:...:....:....."
-
-#===========================================================
-#|                 functionality aliases                  ||
-
+dotfiles__misc() {
 # show local git repositories
 alias "show-repo"="cf -s -t d '.git' /"
 
@@ -356,3 +298,100 @@ alias "delete-latexaux-root"="cf --regex -s -t f '^.+\.(synctex\.gz|xdv)$' / -X 
 # kill vscode server (for vscode remote ssh)
 # see: https://code.visualstudio.com/docs/remote/troubleshooting#_cleaning-up-the-vs-code-server-on-the-remote
 alias "kill-vscode-server"="kill -9 \$(ps aux | grep vscode-server | grep \$USER | grep -v grep | awk '{print \$2}')"
+
+unset -f dotfiles__misc
+}
+
+
+dotfiles__main() {
+# "
+# The first word of each simple command, if unquoted, is checked to see if it
+# has an alias. ... If the last character of the alias value is a blank, then
+# the next command word following the alias is also checked for alias expansion.
+# " -- https://www.gnu.org/software/bash/manual/html_node/Aliases.html
+# Therefore, to make alias work after sudo, you need the following alias:
+alias "sudo"="sudo "
+alias "sudop"="sudo --preserve-env='http_proxy,https_proxy' "
+
+
+local time_style_minute="+\
+%Y-%m-%d %H %:::z
+--%m-%d %H:%M %:::z\
+"
+local time_style_second="+\
+%Y-%m-%d %H:%M:%S %:z
+   --%m-%d %H:%M:%S %:z\
+"
+local time_style_millisecond="+\
+%Y-%m-%d %H:%M:%S.%3f %::z\
+"
+dotfiles__ls
+dotfiles__tree
+dotfiles__eza
+
+
+dotfiles__bat
+dotfiles__fd
+dotfiles__rsync
+
+
+local dig_base="dig +all +nocookie"
+alias  "cdig"="${dig_base}"
+alias "cdigs"="${dig_base} +short"
+
+
+local gpg_list_base="gpg \
+--verbose \
+--keyid-format 0xlong \
+--with-fingerprint \
+--with-subkey-fingerprint\
+"
+alias  "gpgl"="${gpg_list_base} --list-keys"
+alias "gpgls"="${gpg_list_base} --list-secret-keys"
+
+
+alias "cs"="scrcpy --video-bit-rate=8M --audio-bit-rate=128K"
+alias "cso"="cs --turn-screen-off"
+alias "csa"="scrcpy --video-bit-rate=1M --audio-codec=opus --audio-bit-rate=256K --turn-screen-off"
+
+
+alias "mkv"="mkdir -vp"
+
+alias "cpv"="cp -vri --preserve=timestamps"
+alias "mvv"="mv -vi"
+alias "mvs"="mv -vi --exchange"
+
+alias "rmv"="rm -vrI"
+alias "rmf"="rm -vrf"
+alias "rmi"="rm -ri"
+
+
+if [ -x "$(command -v tmux)" ] ; then
+    alias "tmux"="tmux -u"
+fi
+if [ -x "$(command -v zellij)" ] ; then
+    alias "zj"="zellij"
+fi
+
+
+if [ -x "$(command -v nvim)" ] ; then
+    alias "vim"="nvim"
+    alias  "nv"="nvim"
+    alias "nvr"="nvim -R"
+    alias "nvp"="nvim -R -"
+fi
+
+
+alias    ".."="cd ../"
+alias   "..."="cd ../../"
+alias  "...."="cd ../../../"
+alias "....."="cd ../../../../"
+export HISTIGNORE="${HISTIGNORE}:..:...:....:....."
+
+
+dotfiles__misc
+
+
+}
+dotfiles__main
+unset -f dotfiles__main
