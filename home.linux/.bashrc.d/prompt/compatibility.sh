@@ -31,7 +31,7 @@ local status="\$?"
 local styled_user="${rst}${bcs}1;${c24}131;165;152${ecs}${user}${rst}"
 local styled_host="${rst}${bcs}1;${c24}184;187;38${ecs}${host}${rst}"
 local styled_path="${rst}${bcs}${c24}213;196;161${ecs}${path}${rst}"
-local styled_status="${rst}${bcs}1;${c24}251;73;52${ecs}${status}${rst}"
+local styled_status="${rst}${bcs}1;${c24}250;189;47${ecs}${status}${rst}"
 
 
 ############################### construct prompt ###############################

@@ -32,11 +32,11 @@ local date_time="\$(date +'--%m-%d %H:%M:%S %:z')"
 local styled_user="${rst}${bcs}1;${c24}131;165;152${ecs}${user}${rst}"
 local styled_host="${rst}${bcs}1;${c24}184;187;38${ecs}${host}${rst}"
 local styled_path="${rst}${bcs}${c24}213;196;161${ecs}${path}${rst}"
-local styled_status="${rst}${bcs}1;${c24}251;73;52${ecs}${status}${rst}"
+local styled_status="${rst}${bcs}1;${c24}250;189;47${ecs}${status}${rst}"
 local styled_date_time="${rst}${bcs}${c24}235;219;178${ecs}${date_time}${rst}"
 
 # git
-local git_info_line="\$(__git_ps1 '(%s) ')"
+local git_info="\$(__git_ps1 '(%s) ')"
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWSTASHSTATE=1
 export GIT_PS1_SHOWUNTRACKEDFILES=1
