@@ -2,13 +2,13 @@ dotfiles__set_prompt() {
 # `\[` - begin sequence of non-printing characters
 # `\]` - end sequence of non-printing characters
 # used for bash to correctly calculates the size of the prompt
-bnp="\["
-enp="\]"
+local bnp="\["
+local enp="\]"
 
-b_title="${bnp}\e]0;"
-e_title="\a${enp}"
-b_command="\$("
-e_command=")"
+local b_title="${bnp}\e]0;"
+local e_title="\a${enp}"
+local b_command="\$("
+local e_command=")"
 
 # more information: https://en.wikipedia.org/wiki/ANSI_escape_code
 # color sequence format:`[<PREFIX>];[<COLOR>];[<TEXT DECORATION>]`
@@ -16,9 +16,9 @@ e_command=")"
 #   prefix 256 colors background: `48;5`
 #   decoration bold: `1`
 #   decoration underline: `4`
-bcs="${bnp}\e["  # begin control sequence
-ecs="m${enp}"  # end control sequence
-reset_color="${bcs}0${ecs}"
+local bcs="${bnp}\e["  # begin control sequence
+local ecs="m${enp}"    # end control sequence
+local reset_color="${bcs}0${ecs}"
 
 
 directory="\w"
