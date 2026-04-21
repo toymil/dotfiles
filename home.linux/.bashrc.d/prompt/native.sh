@@ -23,12 +23,18 @@ local c24="38;2;"          # SGR 24bit color, follow by `<r>;<g>;<b>`
 local rst="${bcs}0${ecs}"  # reset SGR
 
 
-user="\u"
-host="\h"
-path="\w"
-status="\$?"
-date_time="\$(date +'--%m-%d %H:%M:%S %:z')"
-git_info_line="\$(__git_ps1 '(%s) ')"
+local user="\u"
+local host="\h"
+local path="\w"
+local status="\$?"
+local date_time="\$(date +'--%m-%d %H:%M:%S %:z')"
+local git_info_line="\$(__git_ps1 '(%s) ')"
+
+local styled_user=""
+local styled_host=""
+local styled_path=""
+local styled_status=""
+local styled_date_time=""
 
 # git
 export GIT_PS1_SHOWDIRTYSTATE=1

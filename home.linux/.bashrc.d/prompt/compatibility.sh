@@ -23,10 +23,15 @@ local c24="38;2;"          # SGR 24bit color, follow by `<r>;<g>;<b>`
 local rst="${bcs}0${ecs}"  # reset SGR
 
 
-user="\u"
-host="\h"
-path="\w"
-status="\$?"
+local user="\u"
+local host="\h"
+local path="\w"
+local status="\$?"
+
+local styled_user=""
+local styled_host=""
+local styled_path=""
+local styled_status=""
 
 
 ############################### construct prompt ###############################
