@@ -37,26 +37,22 @@ local styled_status="${rst}${bcs}1;${c24}250;189;47${ecs}${status}${rst}"
 ############################### construct prompt ###############################
 local title="${b_title}${user} @ ${host} : [ ${path} ]${e_title}"
 
-line_1="\
-${reset_color}\n\
-${bcs}38;5;213;1${ecs}> \
-${bcs}38;5;81${ecs}${username} \
-${bcs}38;5;7${ecs}@ \
-${bcs}38;5;84${ecs}${hostname} \
-${reset_color}${bcs}38;5;7${ecs}:\
-${reset_color}\n\
+local line_1="${rst}\
+${styled_status}\
+${bcs}${c24}124;111;100${ecs}>${rst}\
+ ${styled_user} \
+${bcs}${c24}213;196;161${ecs}@${rst}\
+ ${styled_host}\
 "
-line_2="\
-${bcs}38;5;213;1${ecs}- \
-${reset_color}${bcs}38;5;229${ecs}${directory}\
-${reset_color}\n\
+local line_2="${rst}\
+${bcs}${c24}124;111;100${ecs}-${rst} \
+${styled_path}\
 "
-line_3="\
-${bcs}38;5;202;1${ecs}\\$ \
-${reset_color}${bcs}38;5;253${ecs}\
+local line_3="${rst}\
+${bcs}1;${c24}251;73;52${ecs}\\\$${rst} \
 "
 
-dotfiles__prompt="${title}${line_1}${line_2}${line_3}"
+dotfiles__prompt="${title}\n${line_1}\n${line_2}\n${line_3}"
 
 
 ################################## set prompt ##################################
