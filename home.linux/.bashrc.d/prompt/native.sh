@@ -28,7 +28,6 @@ local host="\h"
 local path="\w"
 local status="\$?"
 local date_time="\$(date +'--%m-%d %H:%M:%S %:z')"
-local git_info_line="\$(__git_ps1 '(%s) ')"
 
 local styled_user=""
 local styled_host=""
@@ -37,6 +36,7 @@ local styled_status=""
 local styled_date_time=""
 
 # git
+local git_info_line="\$(__git_ps1 '(%s) ')"
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWSTASHSTATE=1
 export GIT_PS1_SHOWUNTRACKEDFILES=1
