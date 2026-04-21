@@ -46,7 +46,7 @@ export GIT_PS1_SHOWCOLORHINTS=1
 
 
 ############################### construct prompt ###############################
-title="${b_title}${user} @ ${host} : [ ${path} ]${e_title}"
+local title="${b_title}${user} @ ${host} : [ ${path} ]${e_title}"
 
 line_1="\
 ${reset_color}\n\
@@ -77,12 +77,12 @@ ${bcs}38;5;202;1${ecs}\\$ \
 ${reset_color}${bcs}38;5;253${ecs}\
 "
 
-dotfiles_prompt="${title}${line_1}${line_2}${line_3}"
-dotfiles_prompt_with_git="${title}${line_1}${line_2_with_git}${line_3}"
+dotfiles__prompt="${title}${line_1}${line_2}${line_3}"
+dotfiles__prompt_with_git="${title}${line_1}${line_2_with_git}${line_3}"
 
 
 ################################## set prompt ##################################
-export PS1="${dotfiles_prompt_with_git}"
+export PS1="${dotfiles__prompt_with_git}"
 
 
 }
