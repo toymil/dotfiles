@@ -19,6 +19,13 @@ local ecs="m${enp}"    # end control sequence
 local reset_color="${bcs}0${ecs}"
 
 
+user="\u"
+host="\h"
+path="\w"
+status="\$?"
+date_time="\$(date +'--%m-%d %H:%M:%S %:z')"
+git_info_line="\$(__git_ps1 '(%s) ')"
+
 # git
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWSTASHSTATE=1
@@ -26,13 +33,6 @@ export GIT_PS1_SHOWUNTRACKEDFILES=1
 export GIT_PS1_SHOWUPSTREAM="verbose name"
 export GIT_PS1_STATESEPARATOR=" | "
 export GIT_PS1_SHOWCOLORHINTS=1
-
-user="\u"
-host="\h"
-path="\w"
-status="\$?"
-date_time="\$(date +'--%m-%d %H:%M:%S %:z')"
-git_info_line="\$(__git_ps1 '(%s) ')"
 
 
 ############################### construct prompt ###############################
