@@ -7,8 +7,6 @@ local enp="\]"
 
 local b_title="${bnp}\e]0;"
 local e_title="\a${enp}"
-local b_command="\$("
-local e_command=")"
 
 # more information: https://en.wikipedia.org/wiki/ANSI_escape_code
 # color sequence format:`[<PREFIX>];[<COLOR>];[<TEXT DECORATION>]`
@@ -29,21 +27,16 @@ export GIT_PS1_SHOWUPSTREAM="verbose name"
 export GIT_PS1_STATESEPARATOR=" | "
 export GIT_PS1_SHOWCOLORHINTS=1
 
-command_number="\#"
-date_time="${b_command}date +'%Y-%m-%d %a %H:%M:%S %:z'${e_command}"
-directory="\w"
-git_info_line="${b_command}__git_ps1 '(%s) '${e_command}"
-hostname="\h"
-terminal="\l"
-username="\u"
+user="\u"
+host="\h"
+path="\w"
+status="\$?"
+date_time="\$(date +'--%m-%d %H:%M:%S %:z')"
+git_info_line="\$(__git_ps1 '(%s) ')"
 
 
 ############################### construct prompt ###############################
-title="\
-${b_title}\
-${username}@${hostname} {${terminal}} [${directory}]\
-${e_title}\
-"
+title="${b_title}${user} @ ${host} : [ ${path} ]${e_title}"
 
 line_1="\
 ${reset_color}\n\

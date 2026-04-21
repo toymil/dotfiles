@@ -7,8 +7,6 @@ local enp="\]"
 
 local b_title="${bnp}\e]0;"
 local e_title="\a${enp}"
-local b_command="\$("
-local e_command=")"
 
 # more information: https://en.wikipedia.org/wiki/ANSI_escape_code
 # color sequence format:`[<PREFIX>];[<COLOR>];[<TEXT DECORATION>]`
@@ -21,17 +19,14 @@ local ecs="m${enp}"    # end control sequence
 local reset_color="${bcs}0${ecs}"
 
 
-directory="\w"
-hostname="\h"
-username="\u"
+user="\u"
+host="\h"
+path="\w"
+status="\$?"
 
 
 ############################### construct prompt ###############################
-title="\
-${b_title}\
-${username}@${hostname} [${directory}]\
-${e_title}\
-"
+title="${b_title}${user} @ ${host} : [ ${path} ]${e_title}"
 
 line_1="\
 ${reset_color}\n\
