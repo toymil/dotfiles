@@ -1,22 +1,26 @@
 dotfiles__set_prompt() {
-# `\[` - begin sequence of non-printing characters
-# `\]` - end sequence of non-printing characters
-# used for bash to correctly calculates the size of the prompt
+# `\[`  : begin sequence of non-printing characters
+# `\]`  :   end sequence of non-printing characters
+# used for bash to correctly calculate the size of the prompt
 local bnp="\["
 local enp="\]"
 
 local b_title="${bnp}\e]0;"
 local e_title="\a${enp}"
 
-# more information: https://en.wikipedia.org/wiki/ANSI_escape_code
-# color sequence format:`[<PREFIX>];[<COLOR>];[<TEXT DECORATION>]`
-#   prefix 256 colors foreground: `38;5`
-#   prefix 256 colors background: `48;5`
-#   decoration bold: `1`
-#   decoration underline: `4`
-local bcs="${bnp}\e["  # begin control sequence
-local ecs="m${enp}"    # end control sequence
-local reset_color="${bcs}0${ecs}"
+# for more information see: https://en.wikipedia.org/wiki/ANSI_escape_code
+# Select Graphic Rendition (SGR):
+#   `1`              : bold or intense color
+#   `38;<color>`     : foreground color
+#   `48;<color>`     : background color
+# color:
+#   `5;<0-255>`      :  8bit color
+#   `2;<r>;<g>;<b>`  : 24bit color
+# delimit multiple SGR in the same control sequence by semicolon
+local bcs="${bnp}\e["      # begin control sequence
+local ecs="m${enp}"        #   end control sequence
+local c24="38;2;"
+local rst="${bcs}0${ecs}"  # reset SGR
 
 
 user="\u"
