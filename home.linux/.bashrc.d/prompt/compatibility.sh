@@ -20,12 +20,13 @@ bcs="${bnp}\e["  # begin control sequence
 ecs="m${enp}"  # end control sequence
 reset_color="${bcs}0${ecs}"
 
+
 directory="\w"
 hostname="\h"
 username="\u"
 
 
-# normal prompt
+############################### construct prompt ###############################
 title="\
 ${b_title}\
 ${username}@${hostname} [${directory}]\
@@ -51,11 +52,11 @@ ${bcs}38;5;202;1${ecs}\\$ \
 ${reset_color}${bcs}38;5;253${ecs}\
 "
 
-prompt_normal="${title}${line_1}${line_2}${line_3}"
+dotfiles_prompt="${title}${line_1}${line_2}${line_3}"
 
 
-# set prompt
-export PS1="${prompt_normal}"
+################################## set prompt ##################################
+export PS1="${dotfiles_prompt}"
 
 
 }

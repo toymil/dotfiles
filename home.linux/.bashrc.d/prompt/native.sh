@@ -20,6 +20,7 @@ bcs="${bnp}\e["  # begin control sequence
 ecs="m${enp}"  # end control sequence
 reset_color="${bcs}0${ecs}"
 
+
 # git
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWSTASHSTATE=1
@@ -37,7 +38,7 @@ terminal="\l"
 username="\u"
 
 
-# normal prompt
+############################### construct prompt ###############################
 title="\
 ${b_title}\
 ${username}@${hostname} {${terminal}} [${directory}]\
@@ -73,32 +74,12 @@ ${bcs}38;5;202;1${ecs}\\$ \
 ${reset_color}${bcs}38;5;253${ecs}\
 "
 
-prompt_normal="${title}${line_1}${line_2}${line_3}"
-prompt_normal_with_git="${title}${line_1}${line_2_with_git}${line_3}"
+dotfiles_prompt="${title}${line_1}${line_2}${line_3}"
+dotfiles_prompt_with_git="${title}${line_1}${line_2_with_git}${line_3}"
 
 
-# demo prompt
-date_time_demo="${b_command}date --utc +'%Y-%m-%d %H:%M Z'${e_command}"
-title_demo="${b_title}# DEMO MODE #${e_title}"
-
-line_1_demo="\
-${reset_color}\n\
-${bcs}38;5;213;1${ecs}> \
-${reset_color}${bcs}38;5;15${ecs}[${date_time_demo}] \
-${bcs}38;5;7${ecs}In \
-${bcs}38;5;15${ecs}[${command_number}] \
-${bcs}38;5;7${ecs}:\
-${reset_color}\n\
-"
-
-prompt_demo="${title_demo}${line_1_demo}${line_3}"
-
-
-# set prompt
-export PS1="${prompt_normal_with_git}"
-alias "prompt_normal"="export PS1=\"\${prompt_normal}\""
-alias "prompt_normal_with_git"="export PS1=\"\${prompt_normal_with_git}\""
-alias "prompt_demo"="export PS1=\"\${prompt_demo}\""
+################################## set prompt ##################################
+export PS1="${dotfiles_prompt_with_git}"
 
 
 }
