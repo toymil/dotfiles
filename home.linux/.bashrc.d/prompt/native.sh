@@ -19,7 +19,7 @@ local e_title="\a${enp}"
 # delimit multiple SGR in the same control sequence by semicolon
 local bcs="${bnp}\e["      # begin control sequence
 local ecs="m${enp}"        #   end control sequence
-local c24="38;2;"
+local c24="38;2;"          # SGR 24bit color, follow by `<r>;<g>;<b>`
 local rst="${bcs}0${ecs}"  # reset SGR
 
 
