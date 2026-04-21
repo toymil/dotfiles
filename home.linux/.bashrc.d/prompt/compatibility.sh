@@ -1,3 +1,4 @@
+dotfiles__set_prompt() {
 # `\[` - begin sequence of non-printing characters
 # `\]` - end sequence of non-printing characters
 # used for bash to correctly calculates the size of the prompt
@@ -55,3 +56,8 @@ prompt_normal="${title}${line_1}${line_2}${line_3}"
 
 # set prompt
 export PS1="${prompt_normal}"
+
+
+}
+dotfiles__set_prompt
+unset -f dotfiles__set_prompt

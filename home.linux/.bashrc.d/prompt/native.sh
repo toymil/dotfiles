@@ -1,3 +1,4 @@
+dotfiles__set_prompt() {
 # `\[` - begin sequence of non-printing characters
 # `\]` - end sequence of non-printing characters
 # used for bash to correctly calculates the size of the prompt
@@ -98,3 +99,8 @@ export PS1="${prompt_normal_with_git}"
 alias "prompt_normal"="export PS1=\"\${prompt_normal}\""
 alias "prompt_normal_with_git"="export PS1=\"\${prompt_normal_with_git}\""
 alias "prompt_demo"="export PS1=\"\${prompt_demo}\""
+
+
+}
+dotfiles__set_prompt
+unset -f dotfiles__set_prompt
