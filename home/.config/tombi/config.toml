@@ -22,3 +22,16 @@ toml-version = "v1.1.0"
     key-value-equals-sign-space-width = 1
     trailing-comment-alignment = false
     trailing-comment-space-width = 2
+
+[[schemas]]
+    path = "tombi://json.schemastore.org/tombi.json"
+    include = [ ".tombi.toml", "tombi.toml", "tombi/config.toml" ]
+
+    format.rules.table-keys-order.enabled = false
+
+[[schemas]]
+    path = "tombi://json.schemastore.org/cargo.json"
+    include = [ "Cargo.toml" ]
+    toml-version = "v1.1.0"
+
+    format.rules.table-keys-order.enabled = false
