@@ -28,6 +28,12 @@ toml-version = "v1.1.0"
     include = [ ".tombi.toml", "tombi.toml", "tombi/config.toml" ]
 
     format.rules.table-keys-order.enabled = false
+    overrides = [
+        {
+            targets = [ "format.rules" ],
+            format.rules.table-keys-order.enabled = true,
+        },
+    ]
 
 [[schemas]]
     path = "tombi://json.schemastore.org/cargo.json"
