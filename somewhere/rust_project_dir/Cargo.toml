@@ -1,4 +1,4 @@
-[lints.rust] # forbid > deny > warn > allow
+[lints.rust]  # forbid > deny > warn > allow
     unsafe_code = "allow"
     unsafe_op_in_unsafe_fn = "warn"
 
@@ -11,23 +11,17 @@
 
     explicit_outlives_requirements = "warn"
 
-
-[lints.clippy] # forbid > deny > warn > allow
+[lints.clippy]  # forbid > deny > warn > allow
     ### category: correctness   (default: deny) ###
 
-
     ### category: suspicious    (default: warn) ###
-
 
     ### category: style         (default: warn) ###
     needless_return = "allow"
 
-
     ### category: complexity    (default: warn) ###
 
-
     ### category: perf          (default: warn) ###
-
 
     ### category: pedantic      (default: allow) ###
     pedantic = { level = "warn", priority = -1 }
@@ -49,7 +43,6 @@
     cast_lossless = "allow"
     if_not_else = "allow"
 
-
     ### category: restriction   (default: allow) ###
     implicit_return = "allow"
 
@@ -62,7 +55,6 @@
     allow_attributes = "warn"
     allow_attributes_without_reason = "allow"
 
-
     ### category: nursery       (default: allow) ###
     nursery = { level = "warn", priority = -1 }
 
@@ -70,7 +62,6 @@
     redundant_pub_crate = "allow"
     iter_on_single_items = "allow"
     option_if_let_else = "allow"
-
 
     ### category: cargo         (default: allow) ###
     wildcard_dependencies = "deny"
