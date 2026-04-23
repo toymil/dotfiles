@@ -20,7 +20,6 @@
 
 
     ### category: style         (default: warn) ###
-    # see also: `implicit_return`
     needless_return = "allow"
 
 
@@ -52,7 +51,6 @@
 
 
     ### category: restriction   (default: allow) ###
-    # see also: `needless_return`
     implicit_return = "allow"
 
     unwrap_used = "warn"
