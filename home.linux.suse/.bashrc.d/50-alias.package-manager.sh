@@ -2,6 +2,7 @@ alias "zp-tup"="\
 zypper refresh \
 && zypper --no-refresh dist-upgrade \
 && zypper --no-refresh install-new-recommends --no-recommends \
+&& zypper --no-refresh locks --matches \
 && zypper --no-refresh install-new-recommends --dry-run\
 "
 
@@ -17,6 +18,7 @@ alias "zp-tup"="\
 sudo zypper refresh \
 && sudo zypper --no-refresh dist-upgrade \
 && sudo zypper --no-refresh install-new-recommends --no-recommends \
+&& sudo zypper --no-refresh locks --matches \
 && sudo zypper --no-refresh install-new-recommends --dry-run\
 "
 
