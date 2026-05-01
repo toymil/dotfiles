@@ -2,7 +2,7 @@ unstable_features = true
 edition = "2024"
 style_edition = "2024"
 
-
+### eol, indent, width                         ###
 newline_style = "Unix"
 tab_spaces = 4
 hard_tabs = false
@@ -10,22 +10,22 @@ hard_tabs = false
 max_width = 100
 use_small_heuristics = "Max"
 
-
+### order                                      ###
 reorder_imports = true
 imports_granularity = "Crate"
 group_imports = "StdExternalCrate"
 
 reorder_modules = false
 
-
+### macro                                      ###
 format_macro_matchers = true
 format_macro_bodies = true
 
-
+### numbers                                    ###
 hex_literal_case = "Upper"
 float_literal_trailing_zero = "IfNoPostfix"
 
-
+### misc                                       ###
 use_field_init_shorthand = true
 use_try_shorthand = true
 match_block_trailing_comma = true
