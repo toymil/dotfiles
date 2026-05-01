@@ -10,6 +10,9 @@ toml-version = "v1.1.0"
     indent-sub-tables = false
     indent-table-key-value-pairs = true
 
+    group-blank-lines-limit = 1
+    table-blank-lines = 1
+
     date-time-delimiter = "space"
     string-quote-style = "double"
 
