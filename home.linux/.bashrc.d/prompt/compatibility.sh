@@ -38,6 +38,7 @@ local styled_status="${rst}${bcs}1;${c24}250;189;47${ecs}${status}${rst}"
 local title="${b_title}${user} @ ${host} : [ ${path} ]${e_title}"
 
 local line_1="${rst}\
+${bcs}${c24}124;111;100${ecs}<${rst}\
 ${styled_status}\
 ${bcs}${c24}124;111;100${ecs}>${rst}\
  ${styled_user} \

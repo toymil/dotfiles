@@ -49,6 +49,7 @@ export GIT_PS1_SHOWCOLORHINTS=1
 local title="${b_title}${user} @ ${host} : [ ${path} ]${e_title}"
 
 local line_1="${rst}\
+${bcs}${c24}124;111;100${ecs}<${rst}\
 ${styled_status}\
 ${bcs}${c24}124;111;100${ecs}>${rst}\
  ${styled_user} \
