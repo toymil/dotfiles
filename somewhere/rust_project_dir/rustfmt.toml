@@ -20,13 +20,13 @@ group_imports = "StdExternalCrate"
 
 reorder_modules = false
 
-### macro ########################################
-format_macro_matchers = true
-format_macro_bodies = true
-
 ### numbers ######################################
 hex_literal_case = "Upper"
 float_literal_trailing_zero = "IfNoPostfix"
+
+### macro ########################################
+format_macro_matchers = true
+format_macro_bodies = true
 
 ### misc #########################################
 use_field_init_shorthand = true
