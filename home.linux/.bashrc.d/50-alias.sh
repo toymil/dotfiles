@@ -305,6 +305,9 @@ unset -f dotfiles__rsync
 
 
 dotfiles__misc() {
+# serve rust docs with local http server
+alias serve-rust-docs='cd "$(dirname "$(rustup +nightly doc --path)")" && python3 -m http.server 4725'
+
 # show local git repositories
 alias show-repo="cf -s -t d '.git' /"
 
