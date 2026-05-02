@@ -30,13 +30,13 @@ ls_long_long="${ls_long_base} \
 --time-style='${time_style_second}'\
 "
 
-alias   "l"="LC_COLLATE=C.UTF-8 ${ls_grid}"
-alias  "l1"="LC_COLLATE=C.UTF-8 ${ls_single}"
-alias  "ll"="LC_COLLATE=C.UTF-8 ${ls_long}"
-alias "lll"="LC_COLLATE=C.UTF-8 ${ls_long_long}"
+alias   l="LC_COLLATE=C.UTF-8 ${ls_grid}"
+alias  l1="LC_COLLATE=C.UTF-8 ${ls_single}"
+alias  ll="LC_COLLATE=C.UTF-8 ${ls_long}"
+alias lll="LC_COLLATE=C.UTF-8 ${ls_long_long}"
 
-alias "lle"="LC_COLLATE=en_US.utf8 ${ls_long}"
-alias "llz"="LC_COLLATE=zh_CN.utf8 ${ls_long}"
+alias lle="LC_COLLATE=en_US.utf8 ${ls_long}"
+alias llz="LC_COLLATE=zh_CN.utf8 ${ls_long}"
 
 unset -f dotfiles__ls
 }
@@ -47,9 +47,9 @@ if [ ! -x "$(command -v tree)" ] ; then return ; fi
 
 local tree_base="LC_COLLATE=C.UTF-8 tree -aFC --dirsfirst"
 
-alias  "ct"="${tree_base}"
-alias "ctp"="${tree_base} -fpugi"
-alias "cts"="${tree_base} -sh --du"
+alias  ct="${tree_base}"
+alias ctp="${tree_base} -fpugi"
+alias cts="${tree_base} -sh --du"
 
 unset -f dotfiles__tree
 }
@@ -100,11 +100,11 @@ eza_long_long_long="${eza_long_long} \
 --extended\
 "
 
-alias    "e"="${eza_grid}"
-alias   "ee"="${eza_single}"
-alias   "el"="${eza_long} --time-style='${time_style_minute}'"
-alias  "ell"="${eza_long_long} --time-style='${time_style_second}'"
-alias "elll"="${eza_long_long_long} --time-style='${time_style_millisecond}'"
+alias    e="${eza_grid}"
+alias   ee="${eza_single}"
+alias   el="${eza_long} --time-style='${time_style_minute}'"
+alias  ell="${eza_long_long} --time-style='${time_style_second}'"
+alias elll="${eza_long_long_long} --time-style='${time_style_millisecond}'"
 
 
 eza_tree="${eza_foundation} \
@@ -146,49 +146,49 @@ eza_tree_git_ignore="${eza_tree_git} \
 --git-ignore\
 "
 
-alias  "et"="${eza_tree}"
-alias "etl"="${eza_tree_long}"
-alias "etp"="${eza_tree_permissions}"
-alias "ets"="${eza_tree_size}"
+alias  et="${eza_tree}"
+alias etl="${eza_tree_long}"
+alias etp="${eza_tree_permissions}"
+alias ets="${eza_tree_size}"
 
-alias  "etg"="${eza_tree_git}"
-alias "etgi"="${eza_tree_git_ignore}"
+alias  etg="${eza_tree_git}"
+alias etgi="${eza_tree_git_ignore}"
 
-alias "et1"="et -L 1"
-alias "et2"="et -L 2"
-alias "et3"="et -L 3"
+alias et1="et -L 1"
+alias et2="et -L 2"
+alias et3="et -L 3"
 
-alias "etl1"="etl -L 1"
-alias "etl2"="etl -L 2"
-alias "etl3"="etl -L 3"
+alias etl1="etl -L 1"
+alias etl2="etl -L 2"
+alias etl3="etl -L 3"
 
-alias "etp1"="etp -L 1"
-alias "etp2"="etp -L 2"
-alias "etp3"="etp -L 3"
+alias etp1="etp -L 1"
+alias etp2="etp -L 2"
+alias etp3="etp -L 3"
 
-alias "etg1"="etg -L 1"
-alias "etg2"="etg -L 2"
-alias "etg3"="etg -L 3"
+alias etg1="etg -L 1"
+alias etg2="etg -L 2"
+alias etg3="etg -L 3"
 
 unset -f dotfiles__eza
 }
 
 
 dotfiles__file_ops() {
-alias "mkv"="mkdir -vp"
+alias mkv="mkdir -vp"
 
-alias "cpv"="cp -vri --preserve=timestamps"
-alias "mvv"="mv -vi"
-alias "mvs"="mv -vi --exchange"
+alias cpv="cp -vri --preserve=timestamps"
+alias mvv="mv -vi"
+alias mvs="mv -vi --exchange"
 
-alias "rmv"="rm -vrI"
-alias "rmf"="rm -vrf"
-alias "rmi"="rm -ri"
+alias rmv="rm -vrI"
+alias rmf="rm -vrf"
+alias rmi="rm -ri"
 
-alias    ".."="cd ../"
-alias   "..."="cd ../../"
-alias  "...."="cd ../../../"
-alias "....."="cd ../../../../"
+alias    ..="cd ../"
+alias   ...="cd ../../"
+alias  ....="cd ../../../"
+alias .....="cd ../../../../"
 export HISTIGNORE="${HISTIGNORE}:..:...:....:....."
 
 unset -f dotfiles__file_ops
@@ -205,9 +205,9 @@ else
     return
 fi
 
-alias  "cat"="${exe_name} -pp"  # no decorations, no paging
-alias "catp"="${exe_name} -p"   # no decorations, auto paging
-alias "catf"="${exe_name} --style=header,grid,numbers --wrap=never"
+alias  cat="${exe_name} -pp"  # no decorations, no paging
+alias catp="${exe_name} -p"   # no decorations, auto paging
+alias catf="${exe_name} --style=header,grid,numbers --wrap=never"
 
 unset -f dotfiles__bat
 }
@@ -223,7 +223,7 @@ else
     return
 fi
 
-alias "cf"="${exe_name} --hidden --no-ignore --ignore-case --glob"
+alias cf="${exe_name} --hidden --no-ignore --ignore-case --glob"
 
 unset -f dotfiles__fd
 }
@@ -295,10 +295,10 @@ local rsync_remote="${rsync_base} \
 --no-owner\
 "
 
-alias "crs-dae"="rsync --daemon --no-detach"
-alias "crs"="${rsync_base}"
-alias "crs-remote"="${rsync_remote}"
-alias "crs-remote-644"="${rsync_remote} --chmod=D0755,F0644"
+alias crs-dae="rsync --daemon --no-detach"
+alias crs="${rsync_base}"
+alias crs-remote="${rsync_remote}"
+alias crs-remote-644="${rsync_remote} --chmod=D0755,F0644"
 
 unset -f dotfiles__rsync
 }
@@ -306,19 +306,19 @@ unset -f dotfiles__rsync
 
 dotfiles__misc() {
 # show local git repositories
-alias "show-repo"="cf -s -t d '.git' /"
+alias show-repo="cf -s -t d '.git' /"
 
 # delete vim undo history files
-alias "delete-vimundo"="cf -s -t f '.*.un~' ./ -X rm -i {} \;"
-alias "delete-vimundo-root"="cf -s -t f '.*.un~' / -X rm -i {} \;"
+alias delete-vimundo="cf -s -t f '.*.un~' ./ -X rm -i {} \;"
+alias delete-vimundo-root="cf -s -t f '.*.un~' / -X rm -i {} \;"
 
 # delete LaTeX compile auxiliary files
-alias "delete-latexaux"="cf --regex -s -t f '^.+\.(synctex\.gz|xdv)$' ./ -X rm -i {} \;"
-alias "delete-latexaux-root"="cf --regex -s -t f '^.+\.(synctex\.gz|xdv)$' / -X rm -i {} \;"
+alias delete-latexaux="cf --regex -s -t f '^.+\.(synctex\.gz|xdv)$' ./ -X rm -i {} \;"
+alias delete-latexaux-root="cf --regex -s -t f '^.+\.(synctex\.gz|xdv)$' / -X rm -i {} \;"
 
 # kill vscode server (for vscode remote ssh)
 # see: https://code.visualstudio.com/docs/remote/troubleshooting#_cleaning-up-the-vs-code-server-on-the-remote
-alias "kill-vscode-server"="kill -9 \$(ps aux | grep vscode-server | grep \$USER | grep -v grep | awk '{print \$2}')"
+alias kill-vscode-server="kill -9 \$(ps aux | grep vscode-server | grep \$USER | grep -v grep | awk '{print \$2}')"
 
 unset -f dotfiles__misc
 }
@@ -331,8 +331,8 @@ dotfiles__main() {
 # the next command word following the alias is also checked for alias expansion.
 # " -- https://www.gnu.org/software/bash/manual/html_node/Aliases.html
 # Therefore, to make alias work after sudo, you need the following alias:
-alias "sudo"="sudo "
-alias "sudop"="sudo --preserve-env='http_proxy,https_proxy' "
+alias sudo="sudo "
+alias sudop="sudo --preserve-env='http_proxy,https_proxy' "
 
 
 local time_style_minute="+\
@@ -359,8 +359,8 @@ dotfiles__rsync
 
 
 local dig_base="dig +all +nocookie"
-alias  "cdig"="${dig_base}"
-alias "cdigs"="${dig_base} +short"
+alias  cdig="${dig_base}"
+alias cdigs="${dig_base} +short"
 
 
 local gpg_list_base="gpg \
@@ -369,29 +369,29 @@ local gpg_list_base="gpg \
 --with-fingerprint \
 --with-subkey-fingerprint\
 "
-alias  "gpgl"="${gpg_list_base} --list-keys"
-alias "gpgls"="${gpg_list_base} --list-secret-keys"
+alias  gpgl="${gpg_list_base} --list-keys"
+alias gpgls="${gpg_list_base} --list-secret-keys"
 
 
-alias "cs"="scrcpy --video-bit-rate=8M --audio-bit-rate=128K"
-alias "cso"="cs --turn-screen-off"
-alias "csa"="scrcpy --video-bit-rate=1M --audio-codec=opus --audio-bit-rate=256K --turn-screen-off"
+alias cs="scrcpy --video-bit-rate=8M --audio-bit-rate=128K"
+alias cso="cs --turn-screen-off"
+alias csa="scrcpy --video-bit-rate=1M --audio-codec=opus --audio-bit-rate=256K --turn-screen-off"
 
 
 if [ -x "$(command -v tmux)" ] ; then
-    alias "tmux"="tmux -u"
+    alias tmux="tmux -u"
 fi
 if [ -x "$(command -v zellij)" ] ; then
-    alias "zj"="zellij"
+    alias zj="zellij"
 fi
 
 
-alias "vimr"="vim -R"
-alias "vimp"="vim -R -"
+alias vimr="vim -R"
+alias vimp="vim -R -"
 if [ -x "$(command -v nvim)" ] ; then
-    alias  "nv"="nvim"
-    alias "nvr"="nvim -R"
-    alias "nvp"="nvim -R -"
+    alias  nv="nvim"
+    alias nvr="nvim -R"
+    alias nvp="nvim -R -"
 fi
 
 
