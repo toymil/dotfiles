@@ -37,8 +37,8 @@ function etg2 { etg -L 2 @args }
 function etg3 { etg -L 3 @args }
 
 
-function cat { bat -p @args }
-function catp { bat -pp @args }
+function  cat { bat -pp @args }
+function catp { bat -p @args }
 function catf { bat --style=header,grid,numbers --wrap=never @args }
 
 
@@ -51,11 +51,11 @@ function mkv { coreutils.exe mkdir -vp @args }
 
 function cpv { coreutils.exe cp -vri --preserve=timestamps @args }
 function mvv { coreutils.exe mv -vi @args }
+function mvs { coreutils.exe mv -vi --exchange @args }
 
 function rmv { coreutils.exe rm -vrI @args }
 function rmf { coreutils.exe rm -vrf @args }
 function rmi { coreutils.exe rm -ri @args }
-
 
 function    .. { Set-Location ../ }
 function   ... { Set-Location ../../ }
