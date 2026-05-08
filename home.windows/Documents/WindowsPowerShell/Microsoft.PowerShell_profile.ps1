@@ -41,16 +41,6 @@ function etg2 { etg -L 2 @args }
 function etg3 { etg -L 3 @args }
 
 
-function  cat { bat -pp @args }
-function catp { bat -p @args }
-function catf { bat --style=header,grid,numbers --wrap=never @args }
-
-
-function cs { scrcpy --video-bit-rate=8M --audio-bit-rate=128K @args }
-function cso { cs --turn-screen-off @args }
-function csa { scrcpy --video-bit-rate=1M --audio-codec=opus --audio-bit-rate=256K --turn-screen-off @args }
-
-
 function mkv { coreutils.exe mkdir -vp @args }
 
 function cpv { coreutils.exe cp -vri --preserve=timestamps @args }
@@ -65,3 +55,13 @@ function    .. { Set-Location ../ }
 function   ... { Set-Location ../../ }
 function  .... { Set-Location ../../../ }
 function ..... { Set-Location ../../../../ }
+
+
+function  cat { bat -pp @args }
+function catp { bat -p @args }
+function catf { bat --style=header,grid,numbers --wrap=never @args }
+
+
+function cs { scrcpy --video-bit-rate=8M --audio-bit-rate=128K @args }
+function cso { cs --turn-screen-off @args }
+function csa { scrcpy --video-bit-rate=1M --audio-codec=opus --audio-bit-rate=256K --turn-screen-off @args }
