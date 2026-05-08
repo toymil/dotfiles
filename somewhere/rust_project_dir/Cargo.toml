@@ -1,4 +1,5 @@
 [lints.rust]  # forbid > deny > warn > allow
+    # cautiously unsafe
     unsafe_code = "allow"
     unsafe_op_in_unsafe_fn = "warn"
 
@@ -28,14 +29,16 @@
 
     enum_glob_use = "deny"
 
+    # iterator
     explicit_iter_loop = "allow"
     from_iter_instead_of_collect = "allow"
     needless_for_each = "allow"
 
-    too_many_lines = "allow"
-    must_use_candidate = "allow"
+    # function
     missing_errors_doc = "allow"
     missing_panics_doc = "allow"
+    must_use_candidate = "allow"
+    too_many_lines = "allow"
     trivially_copy_pass_by_ref = "allow"
 
     cast_lossless = "allow"
@@ -44,16 +47,45 @@
     needless_continue = "allow"
 
     ### category: restriction     (default: allow) ###
-    implicit_return = "allow"
-
+    # dev/prod checks
     unwrap_used = "warn"
+    expect_used = "allow"
+    #
+    panic = "allow"
+    todo = "allow"
+    unimplemented = "allow"
+    unreachable = "allow"
+    #
+    dbg_macro = "allow"
+    print_stderr = "allow"
 
+    # lint suppression
+    allow_attributes = "warn"
+    allow_attributes_without_reason = "allow"
+
+    # cautiously unsafe
+    undocumented_unsafe_blocks = "warn"
+    multiple_unsafe_ops_per_block = "warn"
+    unnecessary_safety_doc = "warn"
+    unnecessary_safety_comment = "warn"
+
+    # indexing
+    get_unwrap = "warn"
+    indexing_slicing = "allow"
+    string_slice = "warn"
+
+    # shadowing
     shadow_same = "allow"
     shadow_reuse = "allow"
     shadow_unrelated = "warn"
 
-    allow_attributes = "warn"
-    allow_attributes_without_reason = "allow"
+    # must_use
+    let_underscore_must_use = "allow"
+    unused_result_ok = "deny"
+
+    assertions_on_result_states = "warn"
+    lossy_float_literal = "deny"
+    rc_mutex = "deny"
 
     ### category: nursery         (default: allow) ###
     nursery = { level = "warn", priority = -1 }
@@ -67,4 +99,4 @@
     wildcard_dependencies = "deny"
 
     negative_feature_names = "warn"
-    redundant_feature_names = "warn"
+    redundant_feature_names = "deny"
