@@ -38,10 +38,10 @@
     missing_panics_doc = "allow"
     trivially_copy_pass_by_ref = "allow"
 
-    ignored_unit_patterns = "allow"
-    needless_continue = "allow"
     cast_lossless = "allow"
     if_not_else = "allow"
+    ignored_unit_patterns = "allow"
+    needless_continue = "allow"
 
     ### category: restriction     (default: allow) ###
     implicit_return = "allow"
