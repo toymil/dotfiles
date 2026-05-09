@@ -3,12 +3,18 @@
     unsafe_code = "allow"
     unsafe_op_in_unsafe_fn = "warn"
 
+    # useable api
     unreachable_pub = "warn"
     unnameable_types = "warn"
 
+    # import
     unqualified_local_imports = "warn"
     redundant_imports = "warn"
     unused_qualifications = "warn"
+
+    # pointer<->integer cast
+    fuzzy_provenance_casts = "warn"
+    lossy_provenance_casts = "warn"
 
     explicit_outlives_requirements = "warn"
 
