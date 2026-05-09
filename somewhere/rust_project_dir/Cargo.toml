@@ -38,6 +38,7 @@
     needless_return = "allow"
 
     ### category: complexity       (default: warn) ###
+    precedence = "deny"
 
     ### category: perf             (default: warn) ###
 
@@ -100,9 +101,39 @@
     let_underscore_must_use = "allow"
     unused_result_ok = "deny"
 
+    # prefer no_std
+    std_instead_of_core = "warn"
+    std_instead_of_alloc = "warn"
+    alloc_instead_of_core = "warn"
+
+    as_pointer_underscore = "deny"
+    as_underscore = "deny"
     assertions_on_result_states = "warn"
+    cfg_not_test = "warn"
+    clone_on_ref_ptr = "warn"
+    decimal_literal_representation = "warn"
+    default_numeric_fallback = "warn"
+    deref_by_slicing = "warn"
+    doc_paragraphs_missing_punctuation = "warn"
+    infinite_loop = "warn"
     lossy_float_literal = "deny"
+    mixed_read_write_in_expression = "warn"
+    pattern_type_mismatch = "warn"
+    pointer_format = "warn"
+    precedence_bits = "deny"
+    pub_without_shorthand = "warn"
+    rc_buffer = "warn"
     rc_mutex = "deny"
+    redundant_test_prefix = "warn"
+    renamed_function_params = "warn"
+    rest_pat_in_fully_bound_structs = "warn"
+    semicolon_inside_block = "warn"
+    semicolon_outside_block = "warn"
+    str_to_string = "warn"
+    string_add = "warn"
+    tests_outside_test_module = "warn"
+    try_err = "warn"
+    unseparated_literal_suffix = "warn"
 
     ### category: nursery         (default: allow) ###
     nursery = { level = "warn", priority = -1 }
@@ -119,4 +150,4 @@
     wildcard_dependencies = "deny"
 
     negative_feature_names = "warn"
-    redundant_feature_names = "deny"
+    redundant_feature_names = "warn"
