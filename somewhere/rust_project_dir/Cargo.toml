@@ -90,10 +90,13 @@
     ### category: nursery         (default: allow) ###
     nursery = { level = "warn", priority = -1 }
 
-    missing_const_for_fn = "allow"
-    redundant_pub_crate = "allow"
+    debug_assert_with_mut_call = "deny"
+
+    iter_on_empty_collections = "allow"
     iter_on_single_items = "allow"
+    missing_const_for_fn = "allow"
     option_if_let_else = "allow"
+    redundant_pub_crate = "allow"
 
     ### category: cargo           (default: allow) ###
     wildcard_dependencies = "deny"
