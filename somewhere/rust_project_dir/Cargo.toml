@@ -58,8 +58,8 @@
     #
     dbg_macro = "allow"
     print_stderr = "allow"
-
-    # lint suppression
+    print_stdout = "allow"
+    #
     allow_attributes = "warn"
     allow_attributes_without_reason = "allow"
 
