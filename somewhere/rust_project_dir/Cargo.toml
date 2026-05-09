@@ -81,30 +81,30 @@
     allow_attributes = "warn"
     allow_attributes_without_reason = "allow"
 
-    # cautiously unsafe
-    undocumented_unsafe_blocks = "warn"
-    multiple_unsafe_ops_per_block = "warn"
-    unnecessary_safety_doc = "warn"
-    unnecessary_safety_comment = "warn"
+    # prefer no_std
+    std_instead_of_core = "warn"
+    std_instead_of_alloc = "warn"
+    alloc_instead_of_core = "warn"
+
+    # must_use
+    let_underscore_must_use = "allow"
+    unused_result_ok = "deny"
 
     # indexing
     get_unwrap = "warn"
     indexing_slicing = "allow"
     string_slice = "warn"
 
+    # cautiously unsafe
+    undocumented_unsafe_blocks = "warn"
+    multiple_unsafe_ops_per_block = "warn"
+    unnecessary_safety_doc = "warn"
+    unnecessary_safety_comment = "warn"
+
     # shadowing
     shadow_same = "allow"
     shadow_reuse = "allow"
     shadow_unrelated = "warn"
-
-    # must_use
-    let_underscore_must_use = "allow"
-    unused_result_ok = "deny"
-
-    # prefer no_std
-    std_instead_of_core = "warn"
-    std_instead_of_alloc = "warn"
-    alloc_instead_of_core = "warn"
 
     as_pointer_underscore = "deny"
     as_underscore = "deny"
