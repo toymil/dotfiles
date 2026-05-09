@@ -16,7 +16,18 @@
     fuzzy_provenance_casts = "warn"
     lossy_provenance_casts = "warn"
 
+    future-incompatible = "warn"
+
+    ambiguous_negative_literals = "deny"
+    closure_returning_async_block = "warn"
+    elided_lifetimes_in_paths = "warn"
     explicit_outlives_requirements = "warn"
+    let_underscore_drop = "deny"
+    missing_debug_implementations = "warn"
+    must_not_suspend = "deny"
+    non_ascii_idents = "deny"
+    non_exhaustive_omitted_patterns = "warn"
+    redundant_lifetimes = "warn"
 
 [lints.clippy]  # forbid > deny > warn > allow
     ### category: correctness      (default: deny) ###
