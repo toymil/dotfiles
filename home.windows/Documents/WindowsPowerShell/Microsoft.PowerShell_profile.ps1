@@ -65,3 +65,10 @@ function catf { bat --style=header,grid,numbers --wrap=never @args }
 function cs { scrcpy --video-bit-rate=8M --audio-bit-rate=128K @args }
 function cso { cs --turn-screen-off @args }
 function csa { scrcpy --video-bit-rate=1M --audio-codec=opus --audio-bit-rate=256K --turn-screen-off @args }
+
+
+# srd == serve-rust-docs ; because M$ doesn't approve my verb (`PSUseApprovedVerbs`)
+function srd {
+    Set-Location $(Split-Path -Path $(rustup +nightly doc --path) -Parent)
+    if ($?) { python3 -m http.server 4725 }
+}
