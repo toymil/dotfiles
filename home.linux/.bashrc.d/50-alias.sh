@@ -306,18 +306,16 @@ unset -f dotfiles__rsync
 
 dotfiles__misc() {
 # serve rust docs with local http server
-alias serve-rust-docs='cd "$(dirname "$(rustup +nightly doc --path)")" && python3 -m http.server 4725'
+alias use-rust-docs='cd "$(dirname "$(rustup +nightly doc --path)")" && python3 -m http.server 4725'
 
 # show local git repositories
-alias show-repo="cf -s -t d '.git' /"
+alias find-repos="cf -s -t d '.git' /"
 
 # delete vim undo history files
-alias delete-vimundo="cf -s -t f '.*.un~' ./ -X rm -i {} \;"
-alias delete-vimundo-root="cf -s -t f '.*.un~' / -X rm -i {} \;"
+alias remove-vimundos="cf -s -t f '.*.un~' ./ -X rm -i {} \;"
 
 # delete LaTeX compile auxiliary files
-alias delete-latexaux="cf --regex -s -t f '^.+\.(synctex\.gz|xdv)$' ./ -X rm -i {} \;"
-alias delete-latexaux-root="cf --regex -s -t f '^.+\.(synctex\.gz|xdv)$' / -X rm -i {} \;"
+alias remove-latexauxes="cf --regex -s -t f '^.+\.(synctex\.gz|xdv)$' ./ -X rm -i {} \;"
 
 # kill vscode server (for vscode remote ssh)
 # see: https://code.visualstudio.com/docs/remote/troubleshooting#_cleaning-up-the-vs-code-server-on-the-remote
