@@ -67,7 +67,7 @@ function cso { cs --turn-screen-off @args }
 function csa { scrcpy --video-bit-rate=1M --audio-codec=opus --audio-bit-rate=256K --turn-screen-off @args }
 
 
-function use-rust-docs {
+function serve-rust-docs {
     Set-Location $(Split-Path -Path $(rustup +nightly doc --path) -Parent)
     if ($?) { python3 -m http.server 4725 }
 }
