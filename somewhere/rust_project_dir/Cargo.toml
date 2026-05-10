@@ -86,20 +86,20 @@
     std_instead_of_alloc = "warn"
     alloc_instead_of_core = "warn"
 
-    # must_use
-    let_underscore_must_use = "allow"
-    unused_result_ok = "deny"
+    # cautiously unsafe
+    undocumented_unsafe_blocks = "warn"
+    multiple_unsafe_ops_per_block = "warn"
+    unnecessary_safety_doc = "warn"
+    unnecessary_safety_comment = "warn"
 
     # indexing
     get_unwrap = "warn"
     indexing_slicing = "allow"
     string_slice = "warn"
 
-    # cautiously unsafe
-    undocumented_unsafe_blocks = "warn"
-    multiple_unsafe_ops_per_block = "warn"
-    unnecessary_safety_doc = "warn"
-    unnecessary_safety_comment = "warn"
+    # must_use
+    let_underscore_must_use = "allow"
+    unused_result_ok = "deny"
 
     # shadowing
     shadow_same = "allow"
