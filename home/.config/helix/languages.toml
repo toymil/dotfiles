@@ -3,19 +3,18 @@
     auto-format = true
     indent = { tab-width = 4, unit = "    " }
 
-
 [[language]]
     name = "rust"
 
-    [language.language-server]
-        command = "rustup"
-        args = ["run", "stable", "rust-analyzer"]
+[language.language-server]
+    command = "rustup"
+    args = ["run", "stable", "rust-analyzer"]
 
-    [language.config]
-        check.command = "clippy"
-        imports.granularity.enforce = true
-        inlayHints.bindingModeHints.enable = true
-        inlayHints.closureReturnTypeHints.enable = "always"
-        inlayHints.expressionAdjustmentHints.enable = "always"
-        inlayHints.lifetimeElisionHints.enable = "skip_trivial"
-        rustfmt.extraArgs = ["+nightly"]
+[language.config]
+    check.command = "clippy"
+    imports.granularity.enforce = true
+    inlayHints.bindingModeHints.enable = true
+    inlayHints.closureReturnTypeHints.enable = "always"
+    inlayHints.expressionAdjustmentHints.enable = "always"
+    inlayHints.lifetimeElisionHints.enable = "skip_trivial"
+    rustfmt.extraArgs = ["+nightly"]
