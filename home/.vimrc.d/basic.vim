@@ -6,6 +6,7 @@
 set t_Co=256
 set termguicolors
 syntax enable
+colorscheme delek
 
 " encode
 set encoding=utf-8
