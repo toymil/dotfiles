@@ -6,7 +6,28 @@
 set t_Co=256
 set termguicolors
 syntax enable
-colorscheme delek
+
+"" colorscheme legacy
+"colorscheme delek
+
+" colorscheme bright
+colorscheme wildcharm
+set background=light
+
+"" colorscheme light
+"colorscheme retrobox
+"set background=light
+
+"" colorscheme dark
+"colorscheme retrobox
+"set background=dark
+
+"" colorscheme dark alt
+"colorscheme sorbet
+
+"" colorscheme contrast
+"colorscheme wildcharm
+"set background=dark
 
 " encode
 set encoding=utf-8
