@@ -79,20 +79,20 @@ vim.opt.termguicolors = true
 --vim.cmd.colorscheme("delek")
 
 ---- colorscheme bright
---vim.cmd.colorscheme("wildcharm")
 --vim.opt.background = "light"
+--vim.cmd.colorscheme("wildcharm")
 
 -- colorscheme light
-vim.cmd.colorscheme("retrobox")
 vim.opt.background = "light"
+vim.cmd.colorscheme("retrobox")
 
 ---- colorscheme dark
---vim.cmd.colorscheme("retrobox")
 --vim.opt.background = "dark"
+--vim.cmd.colorscheme("retrobox")
 
 ---- colorscheme dark alt
 --vim.cmd.colorscheme("sorbet")
 
 ---- colorscheme contrast
---vim.cmd.colorscheme("wildcharm")
 --vim.opt.background = "dark"
+--vim.cmd.colorscheme("wildcharm")

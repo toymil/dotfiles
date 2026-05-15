@@ -11,23 +11,23 @@ syntax enable
 "colorscheme delek
 
 " colorscheme bright
-colorscheme wildcharm
 set background=light
+colorscheme wildcharm
 
 "" colorscheme light
-"colorscheme retrobox
 "set background=light
+"colorscheme retrobox
 
 "" colorscheme dark
-"colorscheme retrobox
 "set background=dark
+"colorscheme retrobox
 
 "" colorscheme dark alt
 "colorscheme sorbet
 
 "" colorscheme contrast
-"colorscheme wildcharm
 "set background=dark
+"colorscheme wildcharm
 
 " encode
 set encoding=utf-8
