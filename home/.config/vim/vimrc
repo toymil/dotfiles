@@ -233,7 +233,7 @@ set encoding=utf-8
 " file encoding try list (this still won't work well, see:
 " https://edyfox.codecarver.org/html/vim_fileencodings_detection.html
 " and the `fencview` plugin)
-set fileencodings=ucs-bom,utf-8,prc,taiwan,japan,korea,default,latin1
+set fileencodings=ucs-bom,utf-8,prc,taiwan,japan,korea,latin1
 
 " end of line/file (see:
 " https://vimhelp.org/editing.txt.html#eol-and-eof )
