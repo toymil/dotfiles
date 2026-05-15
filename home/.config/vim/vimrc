@@ -251,3 +251,9 @@ set autoindent
 set nosmarttab
 "
 set breakindent
+
+" file type detection and syntax highlight
+set t_Co=256
+set termguicolors
+filetype plugin indent on
+syntax enable
