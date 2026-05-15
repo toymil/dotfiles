@@ -7,28 +7,6 @@ set t_Co=256
 set termguicolors
 syntax enable
 
-"" colorscheme legacy
-"colorscheme delek
-
-" colorscheme bright
-set background=light
-colorscheme wildcharm
-
-"" colorscheme light
-"set background=light
-"colorscheme retrobox
-
-"" colorscheme dark
-"set background=dark
-"colorscheme retrobox
-
-"" colorscheme dark alt
-"colorscheme sorbet
-
-"" colorscheme contrast
-"set background=dark
-"colorscheme wildcharm
-
 " encode
 set encoding=utf-8
 set fileencodings=ucs-bom,utf-8,gb2312,gb18030,gbk,big5,euc-jp,euc-kr,latin1
@@ -257,3 +235,26 @@ set t_Co=256
 set termguicolors
 filetype plugin indent on
 syntax enable
+
+
+"" colorscheme legacy
+"colorscheme delek
+
+" colorscheme bright
+set background=light
+colorscheme wildcharm
+
+"" colorscheme light
+"set background=light
+"colorscheme retrobox
+
+"" colorscheme dark
+"set background=dark
+"colorscheme retrobox
+
+"" colorscheme dark alt
+"colorscheme sorbet
+
+"" colorscheme contrast
+"set background=dark
+"colorscheme wildcharm
