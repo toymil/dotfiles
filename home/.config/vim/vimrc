@@ -222,3 +222,32 @@ endfunction
 call MapWindowOperation()
 autocmd WinEnter * call MapWindowOperation()
 autocmd WinEnter * call UnmapWindowOperation()
+
+
+
+
+" ################ redo
+
+" internal encoding
+set encoding=utf-8
+" file encoding try list (this still won't work well, see:
+" https://edyfox.codecarver.org/html/vim_fileencodings_detection.html
+" and the `fencview` plugin)
+set fileencodings=ucs-bom,utf-8,prc,taiwan,japan,korea,default,latin1
+
+" end of line/file (see:
+" https://vimhelp.org/editing.txt.html#eol-and-eof )
+set fileformats=unix,dos
+set fixendofline
+
+" indentation (see:
+" https://vimhelp.org/usr_30.txt.html#30.5 )
+set tabstop=8
+set expandtab
+set shiftwidth=4
+set softtabstop=-1
+"
+set autoindent
+set nosmarttab
+"
+set breakindent
