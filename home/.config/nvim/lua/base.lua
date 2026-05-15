@@ -7,9 +7,9 @@ vim.opt.encoding = "utf-8"
 -- }
 
 
-fileformats = { "unix", "dos" }
+vim.opt.fileformats = { "unix", "dos" }
 
-fixendofline = true
+vim.opt.fixendofline = true
 
 
 -- see: https://neovim.io/doc/user/options.html#'tabstop'
@@ -32,10 +32,6 @@ vim.opt.undolevels = 512
 
 
 vim.opt.mouse:remove("i")
-
-
-vim.opt.filetype = "on"
-vim.opt.syntax = "on"
 
 
 vim.opt.list = true
