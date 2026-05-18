@@ -5,6 +5,9 @@ set encoding=utf-8
 " and the `fencview` plugin)
 set fileencodings=ucs-bom,utf-8,prc,taiwan,japan,korea,latin1
 
+" auto reload on external change
+set autoread
+
 " end of line/file (see:
 " https://vimhelp.org/editing.txt.html#eol-and-eof )
 set fileformats=unix,dos
@@ -32,6 +35,13 @@ set undolevels=512
 set list
 set listchars=tab:\|-,trail:-,nbsp:~,precedes:<,extends:>
 
+" highlight search match
+set hlsearch
+" search when typing
+set incsearch
+" max match count shown for search status
+set maxsearchcount=999
+
 " always show status line
 set laststatus=2
 
@@ -51,6 +61,13 @@ set scrolloff=3
 set sidescrolloff=9
 set scrolljump=1
 set sidescroll=1
+
+" for some commands, move the cursor to the first non-blank of the line
+set startofline
+
+" mouse
+set mouse=nv
+set mousemodel=extend
 
 
 " no soft wrap by default

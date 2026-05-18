@@ -11,6 +11,9 @@ vim.opt.fileencodings = {
     "latin1",
 }
 
+-- auto reload on external change
+vim.opt.autoread = true
+
 -- end of line/file
 vim.opt.fileformats = { "unix", "dos" }
 vim.opt.fixendofline = true
@@ -42,6 +45,13 @@ vim.opt.listchars = {
     extends = ">",
 }
 
+-- highlight search match
+vim.opt.hlsearch = true
+-- search when typing
+vim.opt.incsearch = true
+-- max match count shown for search status
+vim.opt.maxsearchcount = 999
+
 -- always show status line
 vim.opt.laststatus = 2
 
@@ -61,6 +71,13 @@ vim.opt.scrolloff = 3
 vim.opt.sidescrolloff = 9
 vim.opt.scrolljump = 1
 vim.opt.sidescroll = 1
+
+-- for some commands, move the cursor to the first non-blank of the line
+vim.opt.startofline = true
+
+-- mouse
+vim.opt.mouse = "nv"
+vim.opt.mousemodel = "extend"
 
 
 -- no soft wrap by default
