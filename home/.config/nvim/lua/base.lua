@@ -71,9 +71,9 @@ vim.opt.termguicolors = true
 ---- colorscheme legacy
 --vim.cmd.colorscheme("delek")
 
----- colorscheme bright
---vim.opt.background = "light"
---vim.cmd.colorscheme("wildcharm")
+-- colorscheme bright
+vim.opt.background = "light"
+vim.cmd.colorscheme("wildcharm")
 
 ---- colorscheme light
 --vim.opt.background = "light"
