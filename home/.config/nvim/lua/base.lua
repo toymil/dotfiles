@@ -68,6 +68,7 @@ vim.opt.mouse:remove("i")
 
 vim.opt.termguicolors = true
 
+
 ---- colorscheme legacy
 --vim.cmd.colorscheme("delek")
 
