@@ -75,9 +75,9 @@ vim.opt.termguicolors = true
 --vim.opt.background = "light"
 --vim.cmd.colorscheme("wildcharm")
 
--- colorscheme light
-vim.opt.background = "light"
-vim.cmd.colorscheme("retrobox")
+---- colorscheme light
+--vim.opt.background = "light"
+--vim.cmd.colorscheme("retrobox")
 
 ---- colorscheme dark
 --vim.opt.background = "dark"
