@@ -1,72 +1,88 @@
+-- internal encoding
 vim.opt.encoding = "utf-8"
--- vim.opt.fileencodings = {
---     "ucs-bom",
---     "utf-8",
---     "default",
---     "latin1",
--- }
+-- file encoding try list
+vim.opt.fileencodings = {
+    "ucs-bom",
+    "utf-8",
+    "prc",
+    "taiwan",
+    "japan",
+    "korea",
+    "latin1",
+}
 
-
+-- end of line/file
 vim.opt.fileformats = { "unix", "dos" }
 vim.opt.fixendofline = true
 
-
--- see: https://neovim.io/doc/user/options.html#'tabstop'
+-- indentation
 vim.opt.tabstop = 8
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 4
-vim.opt.softtabstop = 4
-
+vim.opt.softtabstop = -1
+--
 vim.opt.autoindent = true
-vim.opt.smarttab = true
-
+vim.opt.smarttab = false
+--
 vim.opt.breakindent = true
 
-
+-- persistent undo history
 vim.opt.undodir = "."
 vim.opt.undofile = true
 vim.opt.undolevels = 512
 
 
+-- space visibility
 vim.opt.list = true
 vim.opt.listchars = {
     tab = "|-",
     trail = "-",
     nbsp = "~",
-
-    extends = ">",
     precedes = "<",
+    extends = ">",
 }
 
-
--- vim.opt.showtabline = 2
+-- always show status line
 vim.opt.laststatus = 2
 
+-- gutter line number
 vim.opt.number = true
+-- cursor position in status line
 vim.opt.ruler = true
--- vim.opt.colorcolumn = { "50", "80", "100", "120" }
+-- column wrap guides
+vim.opt.colorcolumn = { 81, 101, 121 }
 
+-- cursor line highlight
 vim.opt.cursorline = true
-vim.opt.cursorlineopt = { "number" }
+vim.opt.cursorlineopt = { "screenline", "number" }
 
-
-vim.opt.scrolloff = 5
+-- cursor to edge
+vim.opt.scrolloff = 3
 vim.opt.sidescrolloff = 10
-vim.opt.sidescroll = 10
+vim.opt.scrolljump = 1
+vim.opt.sidescroll = 1
 
 
+-- no soft wrap by default
 vim.opt.wrap = false
+-- wrap at word boundary
+vim.opt.linebreak = true
+-- no hard wrap
+vim.opt.textwidth = 0
+vim.opt.wrapmargin = 0
 
-vim.opt.whichwrap:append("<")
-vim.opt.whichwrap:append(">")
-vim.opt.whichwrap:append("[")
-vim.opt.whichwrap:append("]")
+-- keys to move over line boundary
+vim.opt.whichwrap = "b,s,<,>,[,]"
 
 
 vim.opt.mouse:remove("i")
 
 
+-- file type detection and syntax highlight
+--vim.opt.t_Co = 256
 vim.opt.termguicolors = true
+vim.cmd.filetype({ "plugin", "indent", "on" })
+vim.cmd.syntax("enable")
 
 
 ---- colorscheme legacy
