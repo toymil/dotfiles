@@ -1,4 +1,3 @@
-
 " internal encoding
 set encoding=utf-8
 " file encoding try list (this still won't work well, see:
@@ -64,7 +63,6 @@ set wrapmargin=0
 
 " keys to move over line boundary
 set whichwrap=b,s,<,>,[,]
-
 
 
 " file type detection and syntax highlight
