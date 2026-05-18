@@ -75,9 +75,6 @@ vim.opt.wrapmargin = 0
 vim.opt.whichwrap = "b,s,<,>,[,]"
 
 
-vim.opt.mouse:remove("i")
-
-
 -- file type detection and syntax highlight
 --vim.opt.t_Co = 256
 vim.opt.termguicolors = true
