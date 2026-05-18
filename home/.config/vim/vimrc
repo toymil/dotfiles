@@ -72,12 +72,12 @@ filetype plugin indent on
 syntax enable
 
 
-"" colorscheme legacy
-"colorscheme delek
+" colorscheme legacy
+colorscheme delek
 
-" colorscheme bright
-set background=light
-colorscheme wildcharm
+"" colorscheme bright
+"set background=light
+"colorscheme wildcharm
 
 "" colorscheme light
 "set background=light
