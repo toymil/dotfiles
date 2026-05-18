@@ -48,7 +48,7 @@ set cursorlineopt=screenline,number
 
 " cursor to edge
 set scrolloff=3
-set sidescrolloff=10
+set sidescrolloff=9
 set scrolljump=1
 set sidescroll=1
 

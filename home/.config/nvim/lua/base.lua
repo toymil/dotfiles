@@ -58,7 +58,7 @@ vim.opt.cursorlineopt = { "screenline", "number" }
 
 -- cursor to edge
 vim.opt.scrolloff = 3
-vim.opt.sidescrolloff = 10
+vim.opt.sidescrolloff = 9
 vim.opt.scrolljump = 1
 vim.opt.sidescroll = 1
 
