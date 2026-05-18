@@ -230,6 +230,50 @@ set nosmarttab
 "
 set breakindent
 
+" persistent undo history
+set undodir=.
+set undofile
+set undolevels=512
+
+
+" space visibility
+set list
+set listchars=tab:\|-,trail:-,nbsp:~,precedes:<,extends:>
+
+" always show status line
+set laststatus=2
+
+" gutter line number
+set number
+" cursor position in status line
+set ruler
+" column wrap guides
+set colorcolumn=81,101,121
+
+" cursor line highlight
+set cursorline
+set cursorlineopt=screenline,number
+
+" cursor to edge
+set scrolloff=3
+set sidescrolloff=10
+set scrolljump=1
+set sidescroll=1
+
+
+" no soft wrap by default
+set nowrap
+" wrap at word boundary
+set linebreak
+" no hard wrap
+set textwidth=0
+set wrapmargin=0
+
+" keys to move over line boundary
+set whichwrap=b,s,<,>,[,]
+
+
+
 " file type detection and syntax highlight
 set t_Co=256
 set termguicolors
