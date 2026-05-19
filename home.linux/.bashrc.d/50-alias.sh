@@ -388,11 +388,11 @@ if [ -x "$(command -v zellij)" ] ; then
 fi
 
 
-alias vimr="vim -R"
+alias vimr="vim -R -p"
 alias vimp="vim -R -"
 if [ -x "$(command -v nvim)" ] ; then
     alias  nv="nvim"
-    alias nvr="nvim -R"
+    alias nvr="nvim -R -p"
     alias nvp="nvim -R -"
 fi
 
