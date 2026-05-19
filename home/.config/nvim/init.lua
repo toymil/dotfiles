@@ -49,8 +49,6 @@ vim.opt.listchars = {
 vim.opt.hlsearch = true
 -- search when typing
 vim.opt.incsearch = true
--- max match count shown for search status
-vim.opt.maxsearchcount = 999
 
 -- always show status line
 vim.opt.laststatus = 2
