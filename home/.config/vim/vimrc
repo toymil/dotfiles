@@ -39,8 +39,6 @@ set listchars=tab:\|-,trail:-,nbsp:~,precedes:<,extends:>
 set hlsearch
 " search when typing
 set incsearch
-" max match count shown for search status
-set maxsearchcount=999
 
 " always show status line
 set laststatus=2
