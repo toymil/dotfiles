@@ -383,7 +383,8 @@ if [ -x "$(command -v tmux)" ] ; then
     alias tmux="tmux -u"
 fi
 if [ -x "$(command -v zellij)" ] ; then
-    alias zj="zellij"
+    alias  zj="zellij"
+    alias zja="zellij attach --create"
 fi
 
 
