@@ -100,13 +100,13 @@ vim.cmd.syntax("enable")
 ---- colorscheme legacy
 --vim.cmd.colorscheme("delek")
 
--- colorscheme bright
-vim.opt.background = "light"
-vim.cmd.colorscheme("wildcharm")
-
----- colorscheme light
+---- colorscheme bright
 --vim.opt.background = "light"
---vim.cmd.colorscheme("retrobox")
+--vim.cmd.colorscheme("wildcharm")
+
+-- colorscheme light
+vim.opt.background = "light"
+vim.cmd.colorscheme("retrobox")
 
 ---- colorscheme dark
 --vim.opt.background = "dark"
