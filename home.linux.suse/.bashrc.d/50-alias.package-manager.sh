@@ -3,7 +3,8 @@ zypper refresh \
 && zypper --no-refresh dist-upgrade --no-recommends \
 && zypper --no-refresh install-new-recommends --no-recommends \
 && zypper --no-refresh locks --matches \
-&& zypper --no-refresh install-new-recommends --dry-run\
+&& zypper --no-refresh packages --recommended --not-installed-only \
+&& zypper --no-refresh install-new-recommends\
 "
 
 alias zp-rm="zypper remove --clean-deps"
@@ -19,7 +20,8 @@ sudo zypper refresh \
 && sudo zypper --no-refresh dist-upgrade --no-recommends \
 && sudo zypper --no-refresh install-new-recommends --no-recommends \
 && sudo zypper --no-refresh locks --matches \
-&& sudo zypper --no-refresh install-new-recommends --dry-run\
+&& sudo zypper --no-refresh packages --recommended --not-installed-only \
+&& sudo zypper --no-refresh install-new-recommends\
 "
 
 fi
