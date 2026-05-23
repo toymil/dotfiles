@@ -7,10 +7,10 @@ zypper refresh \
 && zypper --no-refresh install-new-recommends\
 "
 
-alias zp-rm="zypper remove --clean-deps"
 alias pkg-ls-stray="zypper --no-refresh packages --orphaned --unneeded"
 
 alias zpnr="zypper --no-refresh"
+alias zp-rm="zypper remove --clean-deps"
 
 
 if [ "${EUID}" -ne 0 ] ; then
