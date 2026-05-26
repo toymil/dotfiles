@@ -72,6 +72,7 @@ local line_3="${rst}\
 ${bcs}1;${c24}251;73;52${ecs}\\\$${rst} \
 "
 
+# shellcheck disable=SC2034
 dotfiles__prompt="${title}\n${line_1}\n${line_2}\n${line_3}"
 dotfiles__prompt_with_git="${title}\n${line_1}\n${line_2_with_git}\n${line_3}"
 

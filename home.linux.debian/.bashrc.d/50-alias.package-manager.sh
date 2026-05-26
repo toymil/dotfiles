@@ -5,6 +5,7 @@ apt update \
 && apt install -f\
 "
 
+# shellcheck disable=SC2142
 alias apt-clean="\
 apt autoremove \
 && apt clean \
@@ -27,6 +28,7 @@ sudo apt update \
 && sudo apt install -f\
 "
 
+# shellcheck disable=SC2142
 alias apt-clean="\
 sudo apt autoremove \
 && sudo apt clean \

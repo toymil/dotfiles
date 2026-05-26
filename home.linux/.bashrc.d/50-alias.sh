@@ -304,6 +304,7 @@ unset -f dotfiles__rsync
 }
 
 
+# shellcheck disable=SC2120
 dotfiles__misc() {
 # serve rust docs with local http server
 alias serve-rust-docs='cd "$(dirname "$(rustup +nightly doc --path)")" && python3 -m http.server 4725'
@@ -319,6 +320,7 @@ alias remove-latexauxes="cf --regex -s -t f '^.+\.(synctex\.gz|xdv)$' ./ -X rm -
 
 # kill vscode server (for vscode remote ssh)
 # see: https://code.visualstudio.com/docs/remote/troubleshooting#_cleaning-up-the-vs-code-server-on-the-remote
+# shellcheck disable=SC2142
 alias kill-vscode-server="kill -9 \$(ps aux | grep vscode-server | grep \$USER | grep -v grep | awk '{print \$2}')"
 
 unset -f dotfiles__misc
