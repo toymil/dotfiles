@@ -223,7 +223,8 @@ else
     return
 fi
 
-alias cf="${exe_name} --hidden --no-ignore --ignore-case --glob"
+alias  cf="${exe_name} --hidden --no-ignore --ignore-case --glob"
+alias cfo="${exe_name} --hidden --no-ignore --ignore-case --glob --one-file-system"
 
 unset -f dotfiles__fd
 }
