@@ -49,6 +49,8 @@ vim.opt.listchars = {
 vim.opt.hlsearch = true
 -- search when typing
 vim.opt.incsearch = true
+-- show search count
+vim.opt.shortmess:remove("S")
 
 -- always show status line
 vim.opt.laststatus = 2
