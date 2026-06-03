@@ -13,6 +13,7 @@ $env:EZA_MIN_LUMINANCE=65
 function    e { eza --icons=never --color=auto --color-scale=all --color-scale-mode=gradient --classify=auto --all --sort=name --group-directories-first --grid @args }
 function   ee { eza --icons=never --color=auto --color-scale=all --color-scale-mode=gradient --classify=auto --all --sort=name --group-directories-first --oneline @args }
 function   el { eza --icons=never --color=auto --color-scale=all --color-scale-mode=gradient --classify=auto --all --sort=name --group-directories-first --long --binary --no-quotes --time-style='+%Y-%m-%d %H:%M:%S %:z' @args }
+function  elt { eza --icons=never --color=auto --color-scale=all --color-scale-mode=gradient --classify=auto --all --sort=name --group-directories-first --long --binary --no-quotes --sort=modified --time-style='+%Y-%m-%d %H:%M:%S %:z' @args }
 function  ell { eza --icons=never --color=auto --color-scale=all --color-scale-mode=gradient --classify=auto --all --sort=name --group-directories-first --long --binary --no-quotes --header --inode --octal-permissions --group --mounts --time-style='+%Y-%m-%d %H:%M:%S %:z' @args }
 function elll { eza --icons=never --color=auto --color-scale=all --color-scale-mode=gradient --classify=auto --all --sort=name --group-directories-first --long --binary --no-quotes --header --inode --octal-permissions --group --mounts --links --flags --context --extended --time-style='+%Y-%m-%d %H:%M:%S.%3f %::z' @args }
 
