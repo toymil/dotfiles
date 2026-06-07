@@ -7,7 +7,10 @@ zypper refresh \
 && zypper --no-refresh install-new-recommends\
 "
 
-alias pkg-ls-stray="zypper --no-refresh packages --orphaned --unneeded"
+alias pkg-ls-stray="\
+zypper --no-refresh packages --unneeded \
+&& zypper --no-refresh packages --orphaned\
+"
 
 alias zpnr="zypper --no-refresh"
 alias zp-rm="zypper remove --clean-deps"
