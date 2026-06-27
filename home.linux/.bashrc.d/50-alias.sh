@@ -86,9 +86,6 @@ eza_long="${eza_base} \
 --binary \
 --no-quotes\
 "
-eza_long_sort_modified="${eza_long} \
---sort=modified\
-"
 eza_long_long="${eza_long} \
 --header \
 --inode \
@@ -106,9 +103,11 @@ eza_long_long_long="${eza_long_long} \
 alias    e="${eza_grid}"
 alias   ee="${eza_single}"
 alias   el="${eza_long} --time-style='${time_style_minute}'"
-alias  elt="${eza_long_sort_modified} --time-style='${time_style_second}'"
 alias  ell="${eza_long_long} --time-style='${time_style_second}'"
 alias elll="${eza_long_long_long} --time-style='${time_style_millisecond}'"
+
+alias elt="${eza_long} --sort=modified --time-style='${time_style_second}'"
+alias els="${eza_long} --sort=size --time-style='${time_style_minute}'"
 
 
 eza_tree="${eza_foundation} \
