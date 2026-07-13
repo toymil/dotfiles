@@ -30,19 +30,19 @@
     redundant_lifetimes = "warn"
 
 [lints.clippy]  # forbid > deny > warn > allow
-    ### category: correctness      (default: deny) ###
+    ### category: correctness                (default: deny) ###
 
-    ### category: suspicious       (default: warn) ###
+    ### category: suspicious                 (default: warn) ###
 
-    ### category: style            (default: warn) ###
+    ### category: style                      (default: warn) ###
     needless_return = "allow"
 
-    ### category: complexity       (default: warn) ###
+    ### category: complexity                 (default: warn) ###
     precedence = "deny"
 
-    ### category: perf             (default: warn) ###
+    ### category: perf                       (default: warn) ###
 
-    ### category: pedantic        (default: allow) ###
+    ### category: pedantic                  (default: allow) ###
     pedantic = { level = "warn", priority = -1 }
 
     enum_glob_use = "deny"
@@ -64,7 +64,7 @@
     ignored_unit_patterns = "allow"
     needless_continue = "allow"
 
-    ### category: restriction     (default: allow) ###
+    ### category: restriction               (default: allow) ###
     # dev/prod checks
     unwrap_used = "warn"
     expect_used = "allow"
@@ -132,7 +132,7 @@
     tests_outside_test_module = "warn"
     try_err = "warn"
 
-    ### category: nursery         (default: allow) ###
+    ### category: nursery                   (default: allow) ###
     nursery = { level = "warn", priority = -1 }
 
     debug_assert_with_mut_call = "deny"
@@ -143,7 +143,7 @@
     option_if_let_else = "allow"
     redundant_pub_crate = "allow"
 
-    ### category: cargo           (default: allow) ###
+    ### category: cargo                     (default: allow) ###
     wildcard_dependencies = "deny"
 
     negative_feature_names = "warn"
